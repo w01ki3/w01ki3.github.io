@@ -1,77 +1,80 @@
+body,
+div.main {
+    text-align: center
+}
+
+div.main,
+div.main section.links {
+    box-sizing: border-box
+}
+
 @media only screen and (max-width:255px) {
     img {
-        display: none;
+        display: none
     }
 }
 
 body {
     font-family: 'Share Tech Mono', monospace;
     font-weight: 300;
-    text-align: center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-color: #333333;
+    background-color: #333;
     min-height: 100vh;
-    margin: 0;
+    margin: 0
 }
 
 div.main {
     width: 325px;
     background-color: #b3b3b3;
     border-radius: 5px;
-    text-align: center;
-    box-sizing: border-box;
     padding: 75px 25px;
     display: inline-block;
     height: 400px;
-    margin-top: calc(((100vh - 565px) / 2));
+    margin-top: calc(((100vh - 565px)/ 2))
 }
 
 div.main section.photo {
-    height: 165px;
+    height: 165px
 }
 
 div.main section.photo img {
     height: 165px;
-    border-radius: 40%;
+    border-radius: 10%
 }
 
 div.main section.info {
-    height: 100px;
+    height: 100px
 }
 
 div.main section.info h1 {
     font-weight: 400;
-    line-height: 20px;
+    line-height: 20px
 }
 
 div.main section.info h2 {
     font-size: 18px;
     font-weight: 300;
-    line-height: 20px;
-}
-
-div.main section.links {
-    box-sizing: border-box;
+    line-height: 20px
 }
 
 div.main section.links a {
     text-decoration: none;
-    display: inline-block;
+    display: inline-block
 }
 
 div.main section.links a svg {
     height: 25px;
-    width: auto;
+    width: auto
 }
 
 div.main section.links a svg path {
     fill: white;
-    transition: fill 0.25s ease;
+    transition: fill .25s
 }
 
 div.main section.links a:hover svg path {
-    fill: #333333;
+    fill: #333333
 }
 
 footer {
@@ -79,5 +82,5 @@ footer {
     position: absolute;
     bottom: 0;
     right: 0;
-    color: #b3b3b3;
+    color: #b3b3b3
 }
