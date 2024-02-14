@@ -33,10 +33,11 @@ div.main {
     height: 400px;
     margin-top: calc(((100vh - 565px)/ 2));
     box-shadow: 0 1px 5px 0 white, 0 5px 50px 0 white;
+    transition: 1000ms;
 }
 
 div.main section.photo {
-    height: 200px
+    height: 200px;
 }
 
 div.main section.photo img {
@@ -51,12 +52,13 @@ div.main section.info {
 
 div.main section.info h1 {
     font-weight: 100;
+    font-size: 20pt;
     line-height: 20px;
     text-shadow: 1px 1px 2px whitesmoke;
 }
 
 div.main section.info h2 {
-    font-size: 18px;
+    font-size: 16pt;
     font-weight: 100;
     line-height: 0px;
     text-shadow: 1px 1px 2px whitesmoke;
@@ -88,4 +90,10 @@ footer {
     right: 0;
     color: #b3b3b3;
     text-shadow: 1px 1px 2px black;
+}
+
+div.main:hover {
+    box-shadow: 0px -20px 50px 5px white, 0px 20px 50px 5px white;
+    scale: 1.1;
+    cursor: pointer;
 }
