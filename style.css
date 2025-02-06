@@ -36,12 +36,12 @@ div.main {
     transition: 1000ms;
 }
 
-div.main section.photo {
+/* div.main section.photo {
     height: 200px;
-}
+} */
 
 div.main section.photo img {
-    height: 200px;
+    /* height: 200px; */
     border-radius: 3%;
     box-shadow: 0 1px 5px 0 white, 0 5px 50px 0 white;
 }
