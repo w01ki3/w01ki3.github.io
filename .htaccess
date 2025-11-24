@@ -1,0 +1,13 @@
+# Enable gzip compression
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/plain text/css application/javascript application/json
+</IfModule>
+
+# For Brotli (if the module is installed)
+<IfModule mod_brotli.c>
+  AddOutputFilterByType BROTLI_COMPRESS text/html text/plain text/css application/javascript application/json
+</IfModule>
+
+<FilesMatch "\.(jpg|jpeg|png|gif|webp|css|js|svg)$">
+  Header set Cache-Control "max-age=31536000, public"
+</FilesMatch>

@@ -1,3 +1,14 @@
+/* latin */
+
+@font-face {
+    font-family: 'Share Tech Mono';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/sharetechmono/v16/J7aHnp1uDWRBEqV98dVQztYldFcLowEF.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
 body,
 div.main {
     text-align: center
@@ -28,26 +39,21 @@ div.main {
     width: 300px;
     background: linear-gradient(-135deg, #111, #999);
     border-radius: 7px;
-    padding: 50px 25px;
+    padding: 40px 10px;
     display: inline-block;
-    height: 400px;
+    height: 520px;
     margin-top: calc(((100vh - 565px)/ 2));
     box-shadow: 0 1px 5px 0 white, 0 5px 50px 0 white;
     transition: 1000ms;
 }
 
-/* div.main section.photo {
-    height: 200px;
-} */
-
 div.main section.photo img {
-    /* height: 200px; */
     border-radius: 3%;
     box-shadow: 0 1px 5px 0 white, 0 5px 50px 0 white;
 }
 
 div.main section.info {
-    height: 80px
+    height: 60px
 }
 
 div.main section.info h1 {
@@ -55,6 +61,39 @@ div.main section.info h1 {
     font-size: 20pt;
     line-height: 20px;
     text-shadow: 1px 1px 2px whitesmoke;
+}
+
+hr {
+    height: 1px;
+    border: 0;
+    border-top: 3px solid gray;
+    border-radius: 50%;
+}
+
+.projects {
+    text-shadow: 1px 1px 2px whitesmoke;
+    text-decoration: underline;
+    margin-bottom: 0.4rem;
+}
+
+ul {
+    padding-inline-start: 0;
+}
+
+li {
+    list-style: none;
+}
+
+li>a {
+    color: white;
+    text-shadow: none !important;
+    text-decoration: none;
+    transition: 400ms;
+    min-height: 24px;
+}
+
+li>a:hover {
+    color: #333333;
 }
 
 div.main section.info h2 {
@@ -65,7 +104,6 @@ div.main section.info h2 {
 }
 
 div.main section.links a {
-    text-decoration: none;
     display: inline-block;
 }
 
