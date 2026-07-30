@@ -91,6 +91,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <section class="home-hero simple-hero">
                 <img src="${getLogoSrc(document.documentElement.getAttribute('data-theme'))}" class="hero-logo" alt="TSH logo" />
                 <h1>Türk Sahası Eğitim Programı</h1>
+                <a href="#genel-onsoz">Okuyama Başla</a>
             </section>
         `;
     }
