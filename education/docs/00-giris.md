@@ -19,8 +19,8 @@ Bu eğitim boyunca altı ana adımda düşmanlığın kökenlerinden teşkilatla
 
 Geleceği inşa etmek, geçmişin üzerindeki sis perdesini kaldırmakla başlar. Bu çalışma; ezberletilmiş kalıpları yıkmak, gerçeklerle yüzleşmek ve Atatürk’ün çizdiği aydınlık geleceğe bilincimizi tazeleyerek yürümek için bir rehberdir.
 
-> **Biz Türk'üz Türk Milletiyiz.<br>
+> _**Biz Türk'üz Türk Milletiyiz.<br>
 Ergenokandan beri her zor durumdan çıkmayı bilen milletiz.<br>
-Geleceğimizi eğitimle yeniden inşa edeceğiz.**
+Geleceğimizi eğitimle yeniden inşa edeceğiz.**_
 
 <a href="#b0100">O zaman birinci derse geçelim [Neden Biz ?]>></a>

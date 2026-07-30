@@ -568,3 +568,11 @@ body {
         padding: 18px;
     }
 }
+
+.markdown-body table tr:nth-child(2n) {
+    background-color: transparent;
+}
+
+.markdown-body table tr {
+    background-color: transparent;
+}

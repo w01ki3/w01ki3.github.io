@@ -6,7 +6,7 @@
 
 Bu dönemin en büyük etkisi Balamir emrindeki Hunların yeni bir yurt arayışı sonrası olmuştur. Tarihleri ile birlikte önemli olaylar;
 
-- İdil (Volga) ve Don Nehirlerinin Geçilmesi (374-375) (<a href="https://waterwaymap.org/">Nehirler</a>)
+- İdil (Volga) ve Don Nehirlerinin Geçilmesi (374-375) (<a href="https://waterwaymap.org/" target="_blank">Nehirler</a>)
 - Ostrogot (Doğu Got) Krallığı'nın Yıkılması (375)
 - Vizigotların (Batı Gotları) Gece Baskınıyla Ezilmesi (376)
 - Tüm bunların sonucu oluşan **Kavimler Göçü**
@@ -15,13 +15,13 @@ Balamir'in önünden kaçan Cermen, Kelt toplulukları domino etkisiyle Roma sı
 
 Esasında Balamir'in amacı yeni bir yurt arayışıydı, bir var olma mücadelesiydi, Asya'daki şiddetli kuraklıklar/iklim değişiklikleri ve artan Çin baskısı Hun boylarını batıya göçe zorladı. Karadeniz'in kuzeyine geldiklerinde karşılarında Alanlar, Ostrogotlar ve Vizigotlar gibi güçlü ve savaşçı kavimler buldular. Kendi varlıklarını güvenceye almak için bu kavimleri ya bölgeden sürmek ya da kendi ordularına katmak zorundaydılar. Bölgeye geldiklerinde hâkimiyet kurmak, bölgedeki kabileleri vergiye bağlamak, insan kaynağını asker güce çevirmek duruma göre gelişen bir olaydır.
 
-Objektif kaynaklara ve Türk tarihi kaynaklarına baktığımız zaman bu sıradan bir savaş ilerlemesidir. Örneğin; Prof. Dr. Ahmet Taşağıl - Bozkırın İlk İmparatorluğu: Hunlar isimli kitabında Asya'dan Avrupa'ya geçen Hun kollarının Balamir idaresinde Karadeniz'in kuzeyinde oluşturduğu askeri baskıyı ve Got krallıklarının çöküşünü, savaş sonrasında, boyunduruk ve vergilendirmeyi anlatır. Kendisine itaat eden toplulukları (örneğin Ostrogotların büyük bir kısmını) vergiye bağlayıp kendi ordusuna müttefik asker olarak katmıştır. Dolayısıyla Balamir'in amacı sistematik bir soykırım veya imha değil; siyasi meşruiyet sağlama ve hâkimiyet kurmaktı. Yine bazı kaynaklarda Türk soyundan geldiği belirtilen Alanlar savaşmadan gönüllü olarak Balamir emri altına girmişlerdir.
+Objektif kaynaklara ve Türk tarihi kaynaklarına baktığımız zaman bu sıradan bir savaş ilerlemesidir. Örneğin; <a href="https://kutuphane.ttk.gov.tr/details?id=602137&materialType=KT&query=HUNLAR+--+TAR%C4%B0H." target="_blank">Prof. Dr. Ahmet Taşağıl - Bozkırın İlk İmparatorluğu: Hunlar</a> isimli kitabında Asya'dan Avrupa'ya geçen Hun kollarının Balamir idaresinde Karadeniz'in kuzeyinde oluşturduğu askeri baskıyı ve Got krallıklarının çöküşünü, savaş sonrasında, boyunduruk ve vergilendirmeyi anlatır. Kendisine itaat eden toplulukları (örneğin Ostrogotların büyük bir kısmını) vergiye bağlayıp kendi ordusuna müttefik asker olarak katmıştır. Dolayısıyla Balamir'in amacı sistematik bir soykırım veya imha değil; siyasi meşruiyet sağlama ve hâkimiyet kurmaktı. Yine bazı kaynaklarda Türk soyundan geldiği belirtilen Alanlar savaşmadan gönüllü olarak Balamir emri altına girmişlerdir.
 
 <a href="https://dergipark.org.tr/en/download/article-file/58555" target="_blank">Bu tarihsel zincirde Got halkına yönelik gerçek sistematik istismar ve zulüm, Balamir'den ziyade Roma idarecileri tarafından uygulandı. Balamir'in askeri baskısından kaçan Gotlar, Tuna'yı geçip Roma'ya sığındıklarında; Romalı valiler Lupicinus ve Maximus bu aç insanları sömürdü.</a>
 
 <a href="https://dergipark.org.tr/tr/download/article-file/3740385" target="_blank">Sığınmacı Gotlara çürük köpek eti satıp karşılığında çocuklarını köleleştirenler Romalı makamlardı. Gotları isyana ve 378 Edirne Savaşı'na (Adrianople) götüren kırılma noktası da Balamir'in takibinden çok, Roma sınırındaki bu insani kriz ve zulümdü</a>
 
-Romalı tarihçiler (özellikle Ammianus Marcellinus) ve Got kökenli tarihçiler (Jordanes), Hunları "_dünyayı kasıp kavuran, acımasız ve vahşi_" bir güç olarak tasvir ederler. Bu anlatılarda Balamir ve Hun ordusu, medeniyeti tehdit eden bir felaket gibi gösterilir. Ancak modern tarihçiler (örneğin Edward Thompson, Ali Ahmetbeyoğlu, Ahmet Taşağıl), bu tasvirlerin büyük oranda bozkır savaş taktiklerinin yarattığı dehşet psikolojisinden ve Batı'nın barbar algısından kaynaklandığını belirtir.
+Romalı tarihçiler (özellikle Ammianus Marcellinus) ve Got kökenli tarihçiler (Jordanes), Hunları "_dünyayı kasıp kavuran, acımasız ve vahşi_" bir güç olarak tasvir ederler. Bu anlatılarda Balamir ve Hun ordusu, medeniyeti tehdit eden bir felaket gibi gösterilir. Ancak modern tarihçiler (**örneğin Edward Thompson, Dr. Ali Ahmetbeyoğlu, Prof. Dr. Ahmet Taşağıl**), bu tasvirlerin büyük oranda bozkır savaş taktiklerinin yarattığı dehşet psikolojisinden ve Batı'nın barbar algısından kaynaklandığını belirtir.
 
 ### Atilla dönemi
 >**_"Tanrının Kırbacı"_**
