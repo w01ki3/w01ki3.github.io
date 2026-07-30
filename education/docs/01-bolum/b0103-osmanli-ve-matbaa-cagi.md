@@ -27,3 +27,5 @@ Dünyanın en büyük ilk yalan propagandası işte bu ve buna benzer çizimlerd
 
 Önceki evrelerde tohumu atıldı, filizlendi dediğimiz Türk düşmanlığı artık bir mevye verecek bir ağaç haline geldi.
 Şimdi bir sonraki evrede mevyelerini görelim.
+
+<a href="#b0104">Devam et [4. EVRE: Aydınlanma ve Modern Çağ]>></a>

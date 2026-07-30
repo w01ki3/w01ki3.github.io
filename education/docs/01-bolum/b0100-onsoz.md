@@ -15,3 +15,5 @@ Bu yazdıklarımdan özetle; Avrupa kendi yalan hümanizmasını inşa ederken, 
 Birinci dersimizde bu önsözü detaylarıyla birlikte toplamda 4 evrede işleyeceğiz, kaynakları sizlere sunacağız. Bu konuyu işlediğimizde “neden dünya bizimle uğraşıyor?” sorusuna kafanızda cevap bulmuş olacaksınız. Birçok kişinin bu soruyu kendi kendine sorduğunu tahmin edebiliyorum, hatta bazılarınız özeleştiri yaparak “biz aslında abartıyoruz, böyle bir şey yok, biz kendimizi dünyanın merkezinde gördüğümüz için böyle hissediyoruz” demiş bile olabilirsiniz. Aslında böyle olmadığını, bu dersi işlediğimizde daha iyi anlayacak ve tüm dünyanın gözünde ne olduğumuzu bilecek, köklerinize ve kültürünüze daha sıkı bağlanacaksınız. Atalarınızın azmine ve merhamet anlayışına hayran kalacak, Türk olduğunuz için bir kez daha gurur duyacaksınız.
 
 > **_“Ulusun, korkma! Nasıl böyle bir îmânı boğar”_**
+
+<a href="#b0101">Devam et [1. EVRE: Hun Çağı] >></a>

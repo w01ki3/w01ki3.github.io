@@ -22,3 +22,5 @@ Geleceği inşa etmek, geçmişin üzerindeki sis perdesini kaldırmakla başlar
 > **Biz Türk'üz Türk Milletiyiz.<br>
 Ergenokandan beri her zor durumdan çıkmayı bilen milletiz.<br>
 Geleceğimizi eğitimle yeniden inşa edeceğiz.**
+
+<a href="#b0100">O zaman birinci derse geçelim [Neden Biz ?]>></a>
