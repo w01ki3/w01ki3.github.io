@@ -1,0 +1,3 @@
+Bu çalışma hazırlanıyor.
+Ters bir durum olmazsa bu akşama biter sanırım...
+# VK.
