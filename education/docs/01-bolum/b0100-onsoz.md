@@ -16,4 +16,6 @@ Birinci dersimizde bu önsözü detaylarıyla birlikte toplamda 4 evrede işleye
 
 > **_“Ulusun, korkma! Nasıl böyle bir îmânı boğar”_**
 
+<br><br><br>
 <a href="#b0101">Devam et [1. EVRE: Hun Çağı] >></a>
+<br><br><br>

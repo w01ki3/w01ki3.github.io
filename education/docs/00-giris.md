@@ -23,4 +23,6 @@ Geleceği inşa etmek, geçmişin üzerindeki sis perdesini kaldırmakla başlar
 Ergenokandan beri her zor durumdan çıkmayı bilen milletiz.<br>
 Geleceğimizi eğitimle yeniden inşa edeceğiz.**_
 
+<br><br><br>
 <a href="#b0100">O zaman birinci derse geçelim [Neden Biz ?]>></a>
+<br><br><br>
