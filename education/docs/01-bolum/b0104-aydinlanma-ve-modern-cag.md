@@ -118,7 +118,10 @@ Bazı Yunanlı araştırmacılar Tripoliçe’de yaşananları katliam olarak ni
 > #### Şahsi yorum içeren bir soru: <br>
 > Mademki bu senin bağımsızlık savaşın... Her şeyi hikâyeleştirip filmini çekip destan yapmaya meraklıyken, bu konu nasıl eğitim müfredatında bile kısa tutuluyor?
 
-Sonuç: Mora Yarımadası’nda dört asırlık Türk medeniyetinin izleri hunharca silinmiştir. (<a href="https://ttk.gov.tr/wp-content/uploads/2024/05/myTam-Metin.pdf" target="_blank">Kaynak: Mora Katliamı ve Anadolu’da Yunan Mezalimi Sempozyumu – Bildiriler Kitabı</a>)
+Sonuç: Mora Yarımadası’nda dört asırlık Türk medeniyetinin izleri hunharca silinmiştir. 
+Kaynaklar : <br>
+- <a href="https://ttk.gov.tr/wp-content/uploads/2024/05/myTam-Metin.pdf" target="_blank">Mora Katliamı ve Anadolu’da Yunan Mezalimi Sempozyumu – Bildiriler Kitabı</a>
+- <a href="https://dergipark.org.tr/tr/download/article-file/701016" target="_blank">Yunanistan’ın bağımsızlığı sürecinde yok edilen Mora Türkleri</a>
 
 ### İngiliz Siyaseti: Gladstone ve Lloyd George
 
@@ -144,4 +147,8 @@ Lloyd George'un politikaları, Avrupa'nın "İkiyüzlü Hümanizması"nın zirve
 Avrupa'nın "Aydınlanma" dediği, Rönesans'la başlatıp hümanizmle süslediği o büyük zihniyet devrimi, konu Türkler olduğunda kaskatı bir Haçlı bağnazlığına dönüşmüştür.
 
 İster 1821'de Mora'da, ister 1912'de Rumeli'de, isterse 1915'te Doğu Anadolu'de; emperyalizmin kurgusu hiç değişmedi. Bugün denedikleri K*rdistan gibi... Yunanı, Bulgarı, Sırbı veya Ermeniyi kendi jeopolitik çıkarları için birer mayın eşeği gibi kullanan Batılı devletler; bu topraklarda yaşanan yüzyıllık acıların, yıkımların ve etnik kıyımların asıl mühendisleridir. Kendilerine felsefede, sanatta ve hukukta yüksek bir medeniyet atfeden bu güçler, asırlık Türk yurdunda işlenen cinayetleri finanse etmiş, kışkırtmış ve nihayetinde bu kan deryasını kendi "medeniyetlerinin" bir zaferi olarak tarih kitaplarına yazmışlardır.
+
+<br><br><br>
+<a href="#b0105">Devam et [SON: Günümüzde devam eden propaganda]>></a>
+<br><br><br>
 

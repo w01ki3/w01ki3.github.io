@@ -12,6 +12,7 @@ const docsConfig = [
     { id: 'b0102', title: '[2. EVRE: Orta Çağ ve Haçlı Seferleri]', file: 'docs/01-bolum/b0102-orta-cag-ve-hacli-seferleri.md', category: 'Bölüm 1: Neden Biz? (Düşman Tanımı)' },
     { id: 'b0103', title: '[3. EVRE: Osmanlı ve Matbaa Dönemi]', file: 'docs/01-bolum/b0103-osmanli-ve-matbaa-cagi.md', category: 'Bölüm 1: Neden Biz? (Düşman Tanımı)' },
     { id: 'b0104', title: '[4. EVRE: Aydınlanma ve Modern Çağ]', file: 'docs/01-bolum/b0104-aydinlanma-ve-modern-cag.md', category: 'Bölüm 1: Neden Biz? (Düşman Tanımı)' },
+    { id: 'b0105', title: '[SON: Günümüzde devam eden propaganda]', file: 'docs/01-bolum/b0105-gunumuzde-devam-eden-propaganda.md', category: 'Bölüm 1: Neden Biz? (Düşman Tanımı)' },
 
     // --------------------------------------------------
     // BÖLÜM 2

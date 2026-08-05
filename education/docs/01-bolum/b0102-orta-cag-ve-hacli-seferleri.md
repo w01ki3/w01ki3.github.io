@@ -20,6 +20,9 @@ Haçlı Seferleri sadece Kudüs'ü alma savaşı değildi; Hunların döneminde 
 Kudüs 1099'da haçlılarca kuşatıldığında, şehir birkaç ay önce Türklerin (Artukluların) elinden Mısır merkezli Şii Fatımi Devleti'nin eline geçmişti. Ancak batı propaganda aygıtı, şehri "Türk barbarlığından kurtarılan kutsal toprak" olarak pazarlamaya devam etti. 15 Temmuz 1099 günü Fatımîlerin teslim olmasına rağmen şehre giren haçlı askerleri o gün öğleden sonra, akşamüstü ve ertesi sabah haçlılar Kudüs'teki tüm Müslümanları ve Yahudileri öldürüp büyük bir soykırım gerçekleştirmiştir. Kudüs'te iki gün içinde şehirdeki yetmiş binden fazla kişi katledilmiştir.
 
 1187'de Selahaddin Eyyubi'nin Hıttin Savaşı sonrası Kudüs'ü geri alması, Avrupa'da devasa bir travma ve nefret dalgası yaratmasına rağmen. Bizim tarafımızda geri alma sürecinde hiçbir intikam hareketine izin vermedi. Şehirdeki Hristiyanların fidye ödeyerek güvenle eşyalarıyla birlikte şehirden ayrılmasına izin verdi. Fidye ödeyemeyen binlerce fakir Hristiyan'ın fidyesini Selahaddin Eyyubi ve Melik Âdil kişisel servetlerinden ödeyerek serbest bıraktı. Türk'ün asilliği ve alicenaplığı.
+<center>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/c/c6/BalianofIbelin1490.jpg" alt="Küdus teslim ediliyor" />
+</center>
 
 **Sonuç olarak;**
 
