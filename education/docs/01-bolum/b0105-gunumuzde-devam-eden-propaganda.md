@@ -34,7 +34,7 @@ Bizlerin esasen bilmesi gereken şunlardır;
 - Roma ve ardından Bizans İmparatorluğu (Doğu Roma) döneminde, Yunanca konuşan halklar kendilerini "Helen" değil, "Rhomaioi" (Romalılar/Rumlar) olarak tanımlamışlardır. Hatta uzun bir dönem boyunca kilise literatüründe "Helen" kelimesi "Pagan/Putperest" anlamında aşağılayıcı bir terim olarak kullanılmıştır. Modern Helen kimliği, 18. ve 19. yüzyıldaki Yunan Aydınlanması (Adamantios Korais gibi isimler) tarafından Avrupa'daki Antik Yunan hayranlığının (Philhellenism) da etkisiyle yeniden canlandırılmıştır.
 
 Tüm bunları aşağıdaki kaynaklar doğrular;
-- <a href="https://academic.oup.com/ahr/article-abstract/115/2/636/14155?redirectedFrom=fulltext">Peter Mackridge (Oxford)</a>
+- <a href="https://academic.oup.com/ahr/article-abstract/115/2/636/14155?redirectedFrom=fulltext" target="_blank">Peter Mackridge (Oxford)</a>
 - <a href="https://www.wiley.com/en-fr/shop/general-introductory-history/a-history-of-the-archaic-greek-world-ca.-1200-479-bce-2nd-edition-p-9781118301272" target="_blank">Jonathan Hall (Univercity of Chicago-leading authority on ancient identity)</a>
 - <a href="https://academic.oup.com/edited-volume/60425/chapter-abstract/537169728?login=false&redirectedFrom=fulltext" target="_blank">Harris Mylonas (University of George Washington) </a>
 
