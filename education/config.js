@@ -17,7 +17,7 @@ const docsConfig = [
     // --------------------------------------------------
     // BÖLÜM 2
     // --------------------------------------------------
-    // { id: 'b2-giris', title: 'Ne Yapmalı? (Bölüm Önsözü)', file: 'docs/02-bolum/b2-giris.md', category: 'Bölüm 2: Ne Yapmalı?' },
+    { id: 'b0200', title: 'Önsöz', file: 'docs/02-bolum/02-onsoz.md', category: 'Bölüm 2: Teşkilat' },
     // { id: 'b2-teskilatlar', title: 'Türk Tarihinde Teşkilatlar', file: 'docs/02-bolum/b2-teskilatlar.md', category: 'Bölüm 2: Ne Yapmalı?' },
     // { id: 'b2-ittihat', title: 'İttihat ve Terakki', file: 'docs/02-bolum/b2-ittihat.md', category: 'Bölüm 2: Ne Yapmalı?' },
     // { id: 'b2-neden', title: 'Neden Teşkilatlanmalı?', file: 'docs/02-bolum/b2-neden.md', category: 'Bölüm 2: Ne Yapmalı?' },
