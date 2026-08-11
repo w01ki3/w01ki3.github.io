@@ -10,3 +10,7 @@ Bu ders, üniformasız kahramanların, teşkilatçı zekânın ve vatan savunmas
 > **_Bu teşkilat organize edilebilirse vatan da millet de kurtulur._**
 >
 >**Mustafa Kemal Paşa** (Şubat 1919)
+
+<!-- <br><br><br>
+<a href="#b0201">Devam et [Türk Tarihinde Teşkilatlar] >></a>
+<br><br><br> -->
