@@ -1,3 +1,5 @@
+<center><h1>TÖREMİZ</h1></center>
+
 ## 1. Liyakat Esaslı Komisyonlu Atama ve Görevlendirme
 
 ### Amacımız:
@@ -75,12 +77,18 @@
 - Gündem Bağımsızlığı
     - Teşkilatın söylemlerini günlük siyasetin kısır tartışmaları değil; kendi belirlediği ilkeler, vizyon ve ilkeli duruş belirler.
 
-## 6. Zorunlu Görev Rotasyonu
+## 6. Liyakat Esaslı Rotasyon ve Periyodik Komisyon Denetimi
 
 ### Amacımız:
-### Makam koltuğuna yapışmayı, feodal yapılanmayı ve "makam zehirlenmesini" engelleyen zaman sınırlaması. Koltuk sevdası biter, yeni yeteneklerin önü açılır, teşkilat içinde mevki çöreklenmeleri engellenir.
+### Makam koltuğuna yapışmayı, feodal yapılanmayı ve "makam zehirlenmesini" engelleyen zaman sınırlaması. Koltuk sevdası biter, yeni yeteneklerin önü açılır, teşkilat içinde mevki çöreklenmeleri engellenir. 
 
-- Süre Sınırı
-    - Hiçbir üye, aynı idari görevde (örneğin Koordinatörlük) seçimsiz 1 yıldan (veya maksimum 2 dönemden) fazla kalamaz. Görev süresi dolduğunda seçime gidilir.
-- Vazgeçilmezlik İllüzyonunun Yıkılması
-    - Sistem, "o olmasa bu iş yürümez" anlayışını reddeder. Her yönetici, görev süresi boyunca kendi yerine geçebilecek yeni kişileri eğitmekle yükümlüdür.
+- Periyodik Komisyon Denetimi (Güvenoyu Sistemi) 
+    - Görev alan kişiler görev süreleri boyunca periyodik olarak tarafsız bir Değerlendirme Komisyonu tarafından liyakat ve performans denetimine tabi tutulurlar. Bu değerlendirme sonucu olumlu ise; Kurul kararıyla yöneticiye "Güvenoyu" verilir ve görev süresi bir dönem daha uzatılır. Aksi bir durumda birim için derhal seçim sürecine gidilir.
+    - Olası bir sağlık sorunu vb. ihtimaller dahilinde her yönetici, görev süresi boyunca kendi yerine geçebilecek yeni kişileri eğitmekle yükümlüdür.
+<br><br><br><br>
+
+>İstiklal, istikbal, hürriyet, her şey adaletle kaimdir
+> - Mustafa Kemal (1925)
+
+
+<br><br><br><br>
