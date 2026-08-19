@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="tr" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kök-Törü</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.5.1/github-markdown.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css" id="highlight-theme">
+    <link rel="icon" href="images/logo.png">
+    <link rel="apple-touch-icon" href="images/logo.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="mobile-header">
+        <button id="mobile-menu-btn" class="mobile-menu-btn" aria-label="Menüyü Aç">☰</button>
+        <img src="images/logo-white.png" class="mobile-logo" alt="TSH logo" />
+        <button id="theme-toggle-mobile" class="theme-btn" title="Temayı Değiştir">
+            <span class="theme-icon">🌞</span>
+        </button>
+    </header>
+
+    <header class="topbar">
+        <a href="#home" class="brand">
+            <span class="brand-mark"><img src="images/logo-white.png" class="brand-logo" alt="TSH logo"></span>
+            <span class="brand-text">
+                <strong>Kök-Törü</strong>
+                <small></small>
+            </span>
+        </a>
+
+        <nav class="topnav">
+            <a href="#home">Ana Sayfa</a>
+        </nav>
+    </header>
+
+    <div class="app-container">
+        <div class="sidebar-overlay" id="sidebar-overlay"></div>
+
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <h2>İçerik</h2>
+                <button id="theme-toggle" class="theme-btn" title="Temayı Değiştir">
+                    <span class="theme-icon">🌞</span>
+                </button>
+            </div>
+
+            <div class="search-container">
+                <input type="text" id="search-input" placeholder="İçeriklerde ara...">
+                <ul id="search-results" class="search-dropdown hidden"></ul>
+            </div>
+
+            <nav class="sidebar-nav" id="sidebar-nav"></nav>
+        </aside>
+
+        <main class="main-content">
+            <div class="content-shell">
+                <article class="markdown-body" id="content"></article>
+            </div>
+        </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script src="config.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
