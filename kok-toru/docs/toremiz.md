@@ -81,8 +81,6 @@
 ### Makam koltuğuna yapışmayı, feodal yapılanmayı ve "makam zehirlenmesini" engelleyen zaman sınırlaması. Koltuk sevdası biter, yeni yeteneklerin önü açılır, teşkilat içinde mevki çöreklenmeleri engellenir.
 
 - Süre Sınırı
-    - Hiçbir üye, aynı idari görevde (örneğin Koordinatörlük) aralıksız 1 yıldan (veya maksimum 2 dönemden) fazla kalamaz.
-- Zorunlu Dinlenme / Rol Değişimi
-    - Görev süresi dolan kişi, otomatik olarak o rolden ayrılır. Ya farklı bir işlevsel role geçer ya da saha çalışmasına/danışman kuruluna çekilir.
+    - Hiçbir üye, aynı idari görevde (örneğin Koordinatörlük) seçimsiz 1 yıldan (veya maksimum 2 dönemden) fazla kalamaz. Görev süresi dolduğunda seçime gidilir.
 - Vazgeçilmezlik İllüzyonunun Yıkılması
     - Sistem, "o olmasa bu iş yürümez" anlayışını reddeder. Her yönetici, görev süresi boyunca kendi yerine geçebilecek yeni kişileri eğitmekle yükümlüdür.
