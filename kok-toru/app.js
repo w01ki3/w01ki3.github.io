@@ -90,8 +90,9 @@ document.addEventListener('DOMContentLoaded', () => {
         contentEl.innerHTML = `
             <section class="home-hero simple-hero">
                 <img src="${getLogoSrc(document.documentElement.getAttribute('data-theme'))}" class="hero-logo" alt="TSH logo" />
-                <h1></h1>
-                <a href="#toremiz">TÖREMİZ</a>
+                <a href="#toremiz" style="background-color: #00bcd4; color: white; padding: 10px 20px; text-decoration: none; border-radius: 8px; font-family: sans-serif; font-weight: bold; display: inline-block; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+                    TÖREMİZ
+                </a>
             </section>
         `;
     }

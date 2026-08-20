@@ -2,7 +2,7 @@ const docsConfig = [
     // --------------------------------------------------
     // GENEL GİRİŞ
     // --------------------------------------------------
-    { id: 'toremiz', title: 'Töremiz', file: 'docs/toremiz.md', category: '' },
+    { id: 'toremiz', title: 'TÖREMİZ', file: 'docs/toremiz.md', category: '' },
     // { id: 'toremizin-amaci', title: 'Töremizin amacı', file: 'docs/toremizin-amaci.md', category: '' },
 
     // --------------------------------------------------

@@ -86,9 +86,6 @@
     - Görev alan kişiler görev süreleri boyunca periyodik olarak tarafsız bir Değerlendirme Komisyonu tarafından liyakat ve performans denetimine tabi tutulurlar. Bu değerlendirme sonucu olumlu ise; Kurul kararıyla yöneticiye "Güvenoyu" verilir ve görev süresi bir dönem daha uzatılır. Aksi bir durumda birim için derhal seçim sürecine gidilir.
     - Olası bir sağlık sorunu vb. ihtimaller dahilinde her yönetici, görev süresi boyunca kendi yerine geçebilecek yeni kişileri eğitmekle yükümlüdür.
 <br><br><br><br>
-
->İstiklal, istikbal, hürriyet, her şey adaletle kaimdir
-> - Mustafa Kemal (1925)
-
+>**_İstiklal, istikbal, hürriyet, her şey adaletle kaimdir_**<br>_Mustafa Kemal (1925)_
 
 <br><br><br><br>
