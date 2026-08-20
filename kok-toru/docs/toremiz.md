@@ -3,10 +3,10 @@
 ## 1. Liyakat Esaslı Komisyonlu Atama ve Görevlendirme
 
 ### Amacımız:
-### Tek bir liderin veya yöneticinin "ben yaptım oldu" diyerek kendi yakınlarını veya biat edenleri bir göreve getirmesini imkansız kılan sistemdir. Bireysel sadakat değil, ehliyet ve liyakat ödüllendirilir.
+### Tek bir liderin veya yöneticinin "ben yaptım oldu" diyerek kendi yakınlarını veya biat edenleri bir göreve getirmesini imkansız kılmaktır. Bireysel sadakat değil, ehliyet ve liyakat.
 
 - Atama Komisyonu Yapısı
-    - Atamalar tek kişi tarafından değil; hiyerarşik olarak tarafsız olan ve minimum 3 kişiden oluşan bir "Değerlendirme Komisyonu" tarafından yapılır.
+    - Atamalar tek kişi tarafından değil; hiyerarşik olarak tarafsız olan ve en az 3 kişiden oluşan bir "Değerlendirme Komisyonu" tarafından yapılır.
 
 - Açık Görev Tanımı ve Kriterler
     - Her idari veya operasyonel rolün gerektirdiği yetkinlikler (teknik beceri, tecrübe, devamlılık, iletişim yeteneği) önceden yazılı olarak belirlenir.
@@ -21,7 +21,7 @@
 ## 2. Güvenceli İhraç ve Görevden Alma Sistemi
 
 ### Amacımız:
-### Şahsi hırslar, kişisel anlaşmazlıklar veya koltuk sevdası yüzünden başarılı/doğrucu kişilerin "harcanmasını" engeller. Teşkilat içinde biat etmeyen ama işini iyi yapan üyeler güvence altına alınır; yöneticilerin şahsi iktidar alanı daraltılır.
+### Şahsi hırslar, kişisel anlaşmazlıklar veya koltuk sevdası yüzünden başarılı/doğrucu kişilerin "harcanması" engellenir. Teşkilat içinde biat etmeyen ama işini iyi yapan üyeler güvence altına alınır; yöneticilerin şahsi iktidar alanı daraltılır.
 
 - Etik ve Disiplin Komisyonu
     - Görevden alma veya ihraç yetkisi hiçbir şekilde tek bir idarecinin elinde olamaz. Bu yetki sadece bağımsız Etik ve Disiplin Komisyonu'ndadır.
@@ -33,13 +33,13 @@
     - Hakkında iddia bulunan üyeye iddialar yazılı olarak bildirilir ve en az 1 gün yazılı/sözlü savunma hakkı verilir.
 
 - Karar Yeter Sayısı
-    - İhraç gibi ağır kararlar için komisyonda nitelikli çoğunluk (örn. 2/3 veya oy birliği) aranır.
+    - İhraç gibi ağır kararlar için komisyonda nitelikli çoğunluk ve oy birliği aranır.
 
 
 ## 3. Kurallara Bağlı ve Ölçülü Üye İletişimi
 
 ### Amacımız:
-### İkili ilişkilerde mobbing, duygusal baskı, laubalilik ve taciz ortamını sıfıra indiren insani ama sınırları belli bir iletişim modeli. Kadın ve erkek tüm üyelerin kendilerini güvende hissettiği, saygın bir çalışma ortamı oluşur.
+### İkili ilişkilerde mobbing, duygusal baskı, laubalilik ve taciz ortamını sıfıra indiren insani ama sınırları belli olan iletişim modeli ile kadın ve erkek tüm üyelerin kendilerini güvende hissettiği, saygın bir çalışma ortamı oluşurmaktır.
 
 - Rıza ve Sınır İlkesi
     - Hiç kimse hiyerarşik konumunu kullanarak bir başka üyeye rızası dışında iletişim dayatamaz. "Hayır", "Müsait değilim" veya "Gruptan konuşalım" ifadesi kesin bir sınırdır.
@@ -56,7 +56,7 @@
 ## 4. "Ünvan" Değil "İşlevsel Rol" Modeli (Ego Engeli)
 
 ### Amacımız:
-### Şahısların parlatılmasını, feodal "başkanlık" ağalıklarını ve kişisel egoları kıran yapısal model. Teşkilatı kendi şahsi basamağı olarak kullanmak isteyen egoist figürler sistemden doğal olarak elenir.
+### Şahısların parlatılmasını, feodal "başkanlık" ağalıklarını ve kişisel egoları kıran yapısal model ile teşkilatı kendi şahsi basamağı olarak kullanmak isteyen egoist figürler sistemden doğal olarak elenir.
 
 - Sıfatların Kaldırılması
     - "Genel Başkan", "İl Başkanı", "Reis" gibi statü belirten ve ego şişiren ünvanlar kullanılamaz.
@@ -80,7 +80,7 @@
 ## 6. Liyakat Esaslı Rotasyon ve Periyodik Komisyon Denetimi
 
 ### Amacımız:
-### Makam koltuğuna yapışmayı, feodal yapılanmayı ve "makam zehirlenmesini" engelleyen zaman sınırlaması. Koltuk sevdası biter, yeni yeteneklerin önü açılır, teşkilat içinde mevki çöreklenmeleri engellenir. 
+### Makam koltuğuna yapışmayı, feodal yapılanmayı ve "makam zehirlenmesini" engellemektir. Koltuk sevdası biter, yeni yeteneklerin önü açılır, teşkilat içinde mevki çöreklenmeleri engellenir. 
 
 - Periyodik Komisyon Denetimi (Güvenoyu Sistemi) 
     - Görev alan kişiler görev süreleri boyunca periyodik olarak tarafsız bir Değerlendirme Komisyonu tarafından liyakat ve performans denetimine tabi tutulurlar. Bu değerlendirme sonucu olumlu ise; Kurul kararıyla yöneticiye "Güvenoyu" verilir ve görev süresi bir dönem daha uzatılır. Aksi bir durumda birim için derhal seçim sürecine gidilir.
