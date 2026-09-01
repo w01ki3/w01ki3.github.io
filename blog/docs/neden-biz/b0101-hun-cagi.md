@@ -1,4 +1,4 @@
-# \[1. EVRE: Hun Çağı\] 
+# Hun Çağı <br>\[I. EVRE\]
 ### _Şeytanlaştırma ve Tanrının Kırbacı Miti_
 
 ### Balamir dönemi 
@@ -74,5 +74,5 @@ Tüm bu savaş taktikleri, kullanılan araç ve gereçler kültürel etkileşiml
 - M.S. 449'da Attila'nın otağına giden Doğu Roma elçisi Priskos, Hun sarayında Hun gibi giyinen, Roma vatandaşı olan Yunanlı bir tüccarla karşılaşmasını aktarır. Tüccar, Hun toplumundaki özgürlük, düşük vergi ve adalet anlayışının Roma'nın yozlaşmış bürokrasisinden çok daha iyi olduğunu söyleyerek Hun yaşam tarzını savunmuştur.
 
 <br><br><br>
-<a href="#b0102">Devam et [2. EVRE: Orta Çağ ve Haçlı Seferleri]>></a>
+<a href="#b0102-orta-cag-ve-hacli-seferleri">Devam et [2. EVRE: Orta Çağ ve Haçlı Seferleri]>></a>
 <br><br><br>

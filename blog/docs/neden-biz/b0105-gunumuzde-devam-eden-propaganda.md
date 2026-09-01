@@ -1,4 +1,4 @@
-# [SON: Günümüzde devam eden propaganda]
+# Günümüzde devam eden propaganda <br>[SON]
 
 Günümüzde Devam Eden Propagandalar ve Algı Mühendisliği
 Geçmişte Papaların vaazlarıyla, filozofların kitaplarıyla ve devlet adamlarının mektuplarıyla yürütülen Türk düşmanlığı, günümüzde form değiştirmiş; dijital ansiklopediler ve sahte ulusların eğitim müfredatları aracılığıyla çok daha sinsi bir "algı mühendisliğine" dönüşmüştür.
@@ -52,4 +52,4 @@ Kaynak : <a href="https://dergipark.org.tr/tr/download/article-file/4526149" tar
 Bugün Wikipedia gibi dijital platformlarda veya sınır komşularımızın ders kitaplarında gördüğümüz bu tablo, tesadüfi hatalar silsilesi değildir. Bu, 11. yüzyılda başlayan Haçlı zihniyetinin, 19. yüzyıldaki emperyalist Şark Meselesi'nin günümüzdeki kurumsal ve dijital versiyonudur. Düşman değişmemiş, sadece silahını ve platformunu güncellemiştir.
 
 
-### Tüm bunlara çare Millileşmektir. Eğitim, sağlık, savunma, istihbarat, gıda vs. alanlarda Millileşmek şarttır. Millileşebilmenin önceki adımı teşkilatlanmadır. Bir sonraki dersimizde Türk tarihindeki teşkilatları, yapılarını, nasıl başarılı olduklarını ele alacağız ve detaylı işleyeceğiz.
+### Tüm bunlara çare Millileşmektir. Eğitim, sağlık, savunma, istihbarat, gıda vs. alanlarda Millileşmek şarttır.

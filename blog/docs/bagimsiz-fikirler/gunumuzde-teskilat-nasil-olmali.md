@@ -1,8 +1,8 @@
-<center><h1>TÖREMİZ</h1></center>
+<center><h1>Günümüzde teşkilat nasıl olmalı?</h1></center>
 
 ## 1. Liyakat Esaslı Komisyonlu Atama ve Görevlendirme
 
-### Amacımız:
+### Amaç:
 ### Tek bir liderin veya yöneticinin "ben yaptım oldu" diyerek kendi yakınlarını veya biat edenleri bir göreve getirmesini imkansız kılmaktır. Bireysel sadakat değil, ehliyet ve liyakat.
 
 - Atama Komisyonu Yapısı
@@ -15,12 +15,12 @@
     - Bir görev boşaldığında, şartları taşıyan her üye aday olabilir veya komisyon tarafından önerilebilir.
 
 - Karar Mekanizması
-    - Komisyon, adayı liyakat kriterlerine göre değerlendirir ve oylama ile karar verir. Karar tutanağı gerekçesiyle birlikte teşkilatın online dosya sisteminde saklanır.
+    - Komisyon, adayı liyakat kriterlerine göre değerlendirir ve oylama ile karar verir. Karar tutanağı gerekçesiyle birlikte teşkilatın online ya da fiziksel dosya sisteminde saklanır.
 
 
-## 2. Güvenceli İhraç ve Görevden Alma Sistemi
+## 2. Güvenceli İhraç ve Görevden Alma
 
-### Amacımız:
+### Amaç:
 ### Şahsi hırslar, kişisel anlaşmazlıklar veya koltuk sevdası yüzünden başarılı/doğrucu kişilerin "harcanması" engellenir. Teşkilat içinde biat etmeyen ama işini iyi yapan üyeler güvence altına alınır; yöneticilerin şahsi iktidar alanı daraltılır.
 
 - Etik ve Disiplin Komisyonu
@@ -38,7 +38,7 @@
 
 ## 3. Kurallara Bağlı ve Ölçülü Üye İletişimi
 
-### Amacımız:
+### Amaç:
 ### İkili ilişkilerde mobbing, duygusal baskı, laubalilik ve taciz ortamını sıfıra indiren insani ama sınırları belli olan iletişim modeli ile kadın ve erkek tüm üyelerin kendilerini güvende hissettiği, saygın bir çalışma ortamı oluşurmaktır.
 
 - Rıza ve Sınır İlkesi
@@ -53,9 +53,9 @@
 - Sıfır Tolerans
     - Taciz, ısrarlı takip, teşkilat dışı kişisel fotoğraf talebi kesin ihraç sebebidir.
 
-## 4. "Ünvan" Değil "İşlevsel Rol" Modeli (Ego Engeli)
+## 4. "Ünvan" Değil "İşlevsel Rol" (Ego Engeli)
 
-### Amacımız:
+### Amaç:
 ### Şahısların parlatılmasını, feodal "başkanlık" ağalıklarını ve kişisel egoları kıran yapısal model ile teşkilatı kendi şahsi basamağı olarak kullanmak isteyen egoist figürler sistemden doğal olarak elenir.
 
 - Sıfatların Kaldırılması
@@ -69,7 +69,7 @@
 
 ## 5. Siyaset Üstü ve Partiler Dışı Bağımsızlık Kalkanı
 
-### Amacımız:
+### Amaç:
 ### Teşkilatın herhangi bir siyasi odağın, partinin veya finansörün "fonlanmış aparatı" olmasını engeller. Satın alınamaz, manipüle edilemez, başkalarının siyasi çıkar kavgalarında piyon olarak kullanılamaz tam bağımsız bir yapı kurulur.
 
 - Siyasi Organ Organik Bağ Yasağı
@@ -79,7 +79,7 @@
 
 ## 6. Liyakat Esaslı Rotasyon ve Periyodik Komisyon Denetimi
 
-### Amacımız:
+### Amaç:
 ### Makam koltuğuna yapışmayı, feodal yapılanmayı ve "makam zehirlenmesini" engellemektir. Koltuk sevdası biter, yeni yeteneklerin önü açılır, teşkilat içinde mevki çöreklenmeleri engellenir. 
 
 - Periyodik Komisyon Denetimi (Güvenoyu Sistemi) 

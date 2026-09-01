@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Theme
     function getLogoSrc(theme) {
-        return theme === 'light' ? 'images/logo-white.png' : 'images/logo.png';
+        return theme === 'light' ? 'https://raw.githubusercontent.com/w01ki3/w01ki3/main/img/vkIcon.png' : 'https://raw.githubusercontent.com/w01ki3/w01ki3/main/img/vkIcon.png';
     }
 
     function updateLogos(theme) {
@@ -89,10 +89,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function renderHome() {
         contentEl.innerHTML = `
             <section class="home-hero simple-hero">
-                <img src="${getLogoSrc(document.documentElement.getAttribute('data-theme'))}" class="hero-logo" alt="TSH logo" />
-                <a href="#toremiz" style="background-color: #00bcd4; color: white; padding: 10px 20px; text-decoration: none; border-radius: 8px; font-family: sans-serif; font-weight: bold; display: inline-block; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
-                    TÖREMİZ
-                </a>
+                <img src="${getLogoSrc(document.documentElement.getAttribute('data-theme'))}" class="hero-logo" alt="logo" />
             </section>
         `;
     }

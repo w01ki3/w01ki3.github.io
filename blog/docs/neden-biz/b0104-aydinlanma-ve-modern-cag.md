@@ -1,4 +1,4 @@
-# \[4. EVRE: Aydınlanma ve Modern Çağ]
+# Aydınlanma ve Modern Çağ <br>\[IV. EVRE\]
 ### _Entelektüel Düşmanlık, İkiyüzlü Hümanizma_
 
 ### Yunan Hayranlığı (Philhellenism) ve Antik Çağ Romantizmi
@@ -149,6 +149,6 @@ Avrupa'nın "Aydınlanma" dediği, Rönesans'la başlatıp hümanizmle süsledi�
 İster 1821'de Mora'da, ister 1912'de Rumeli'de, isterse 1915'te Doğu Anadolu'de; emperyalizmin kurgusu hiç değişmedi. Bugün denedikleri K*rdistan gibi... Yunanı, Bulgarı, Sırbı veya Ermeniyi kendi jeopolitik çıkarları için birer mayın eşeği gibi kullanan Batılı devletler; bu topraklarda yaşanan yüzyıllık acıların, yıkımların ve etnik kıyımların asıl mühendisleridir. Kendilerine felsefede, sanatta ve hukukta yüksek bir medeniyet atfeden bu güçler, asırlık Türk yurdunda işlenen cinayetleri finanse etmiş, kışkırtmış ve nihayetinde bu kan deryasını kendi "medeniyetlerinin" bir zaferi olarak tarih kitaplarına yazmışlardır.
 
 <br><br><br>
-<a href="#b0105">Devam et [SON: Günümüzde devam eden propaganda]>></a>
+<a href="#b0105-gunumuzde-devam-eden-propaganda">Devam et [SON: Günümüzde devam eden propaganda]>></a>
 <br><br><br>
 

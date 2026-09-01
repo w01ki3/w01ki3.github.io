@@ -1,7 +1,7 @@
-# \[3. EVRE: Osmanlı ve Matbaa Çağı\]  
+# Osmanlı ve Matbaa Çağı <br>\[III. EVRE\]
 ### _İstanbul'un Fethi ve Kitlesel Propaganda_
 
-1453 yılında Fatih Sultan Mehmet'in İstanbul'u fethetmesi ve ardından Osmanlı'nın Balkanlar üzerinden Viyana kapılarına kadar dayanması, Avrupa'da psikolojik bir patlamaya yol açtı. Bu dönem Alman literatürüne "Türkenfurcht" (Türk Korkusu) olarak geçti. Evet "Türkenfurcht" bu kelimeye dikkat edin dersin sonunda bu kelimeyi tekrar edeceğiz.
+1453 yılında Fatih Sultan Mehmet'in İstanbul'u fethetmesi ve ardından Osmanlı'nın Balkanlar üzerinden Viyana kapılarına kadar dayanması, Avrupa'da psikolojik bir patlamaya yol açtı. Bu dönem Alman literatürüne "Türkenfurcht" (Türk Korkusu) olarak geçti.
 
 
 ### Missa ayinleri
@@ -54,5 +54,5 @@ Fakat bu gerçeği herkes bilmiyor. <br>
 Şimdi bir sonraki evrede mevyelerini görelim.
 
 <br><br><br>
-<a href="#b0104">Devam et [4. EVRE: Aydınlanma ve Modern Çağ]>></a>
+<a href="#b0104-aydinlanma-ve-modern-cag">Devam et [4. EVRE: Aydınlanma ve Modern Çağ]>></a>
 <br><br><br>
