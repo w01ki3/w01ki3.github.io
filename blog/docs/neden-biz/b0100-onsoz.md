@@ -1,4 +1,4 @@
-# Bölüm 1 Önsöz
+# Önsöz (Neden Biz?)
 
 Atalarımız, Hun İmparatorluğu… Balamir’den itibaren başlayan Avrupa seferleri Atilla ile birlikte zirveye çıkmış, Roma İmparatorluğu haraca bağlanmıştır. Atalarımızı Avrupa’daki halklar Tanrının gazabı, Tanrının kırbacı olarak tanımlamışlardır.
 
@@ -12,10 +12,10 @@ Yüz sene önce tüm bu düzeneğin içinde Türk düşmanlığı ile beslenen a
 
 Bu yazdıklarımdan özetle; Avrupa kendi yalan hümanizmasını inşa ederken, bir "öteki" ye ihtiyaç duydu. Türkler, Avrupa’nın aydınlanmış ve medeni kimliğini tanımlamak için kullandığı (karanlık, barbar) zıt kutup haline getirildi. Böylece Türklere yapılacak her türlü muamele, medeniyet adına meşrulaştırıldı. İşte bu Türk düşmanlığıdır. Yüce şair Mehmet Akif’in deyimiyle; “_Medeniyet dediğin tek dişi kalmış canavar”_ sana düşmandır, dünya sana düşmandır.
 
-Birinci dersimizde bu önsözü detaylarıyla birlikte toplamda 4 evrede işleyeceğiz, kaynakları sizlere sunacağız. Bu konuyu işlediğimizde “neden dünya bizimle uğraşıyor?” sorusuna kafanızda cevap bulmuş olacaksınız. Birçok kişinin bu soruyu kendi kendine sorduğunu tahmin edebiliyorum, hatta bazılarınız özeleştiri yaparak “biz aslında abartıyoruz, böyle bir şey yok, biz kendimizi dünyanın merkezinde gördüğümüz için böyle hissediyoruz” demiş bile olabilirsiniz. Aslında böyle olmadığını, bu dersi işlediğimizde daha iyi anlayacak ve tüm dünyanın gözünde ne olduğumuzu bilecek, köklerinize ve kültürünüze daha sıkı bağlanacaksınız. Atalarınızın azmine ve merhamet anlayışına hayran kalacak, Türk olduğunuz için bir kez daha gurur duyacaksınız.
+"**_Neden biz?_**" yazı dizinde tüm bu önsüzü detaylarıyla birlikte anlatmaya çalışacağım ve kaynakları sunacağım. Bu yazıyı okuduğunuzda “neden dünya bizimle uğraşıyor?” sorusuna kafanızda cevap bulmuş olacaksınız. Birçok kişinin bu soruyu kendi kendine sorduğunu tahmin edebiliyorum, hatta bazılarınız özeleştiri yaparak “biz aslında abartıyoruz, biz kendimizi dünyanın merkezinde gördüğümüz için böyle hissediyoruz” demiş bile olabilir. Bu yazı dizisini okuduğunuzda olayları daha iyi anlayacak, tüm dünyanın gözünde ne olduğumuzu bilecek, köklerinize ve kültürünüze daha sıkı bağlanacaksınız. Atalarınızın azmine ve merhamet anlayışına hayran kalacak, Türk olduğunuz için bir kez daha gurur duyacaksınız.
 
 > **_“Ulusun, korkma! Nasıl böyle bir îmânı boğar”_**
 
 <br><br><br>
-<a href="#b0101">Devam et [1. EVRE: Hun Çağı] >></a>
+<a href="#b0101-hun-cagi">Devam et [1. EVRE: Hun Çağı] >></a>
 <br><br><br>
