@@ -87,6 +87,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Render simple homepage (only logo + title)
     function renderHome() {
+        if (window.MilliTakvim) window.MilliTakvim.destroy();
         contentEl.innerHTML = `
             <section class="home-hero simple-hero">
                 <img src="${getLogoSrc(document.documentElement.getAttribute('data-theme'))}" class="hero-logo" alt="logo" />
@@ -94,13 +95,67 @@ document.addEventListener('DOMContentLoaded', () => {
         `;
     }
 
-    // Load a markdown doc
+    let calendarAssetsLoaded = false;
+
+    function loadScriptOnce(id, src) {
+        return new Promise((resolve, reject) => {
+            const existing = document.getElementById(id);
+            if (existing) {
+                if (existing.getAttribute('data-loaded') === '1') {
+                    resolve();
+                    return;
+                }
+                existing.addEventListener('load', () => resolve(), { once: true });
+                existing.addEventListener('error', reject, { once: true });
+                return;
+            }
+            const script = document.createElement('script');
+            script.id = id;
+            script.src = src;
+            script.onload = () => {
+                script.setAttribute('data-loaded', '1');
+                resolve();
+            };
+            script.onerror = reject;
+            document.body.appendChild(script);
+        });
+    }
+
+    function ensureCalendarAssets() {
+        return new Promise((resolve, reject) => {
+            if (!document.getElementById('mt-calendar-css')) {
+                const link = document.createElement('link');
+                link.id = 'mt-calendar-css';
+                link.rel = 'stylesheet';
+                link.href = 'docs/milli-takvim/takvim.css';
+                document.head.appendChild(link);
+            }
+            if (window.MilliTakvim) {
+                calendarAssetsLoaded = true;
+                resolve();
+                return;
+            }
+            loadScriptOnce('mt-events-js', 'docs/milli-takvim/olaylar.js')
+                .then(() => loadScriptOnce('mt-calendar-js', 'docs/milli-takvim/script.js'))
+                .then(() => {
+                    calendarAssetsLoaded = true;
+                    resolve();
+                })
+                .catch(reject);
+        });
+    }
+
     async function loadDoc(doc) {
+        if (window.MilliTakvim) window.MilliTakvim.destroy();
         try {
             const res = await fetch(doc.file);
             if (!res.ok) throw new Error('Not found');
             const text = await res.text();
             contentEl.innerHTML = marked.parse(text);
+            if (doc.id === 'milli-takvim') {
+                await ensureCalendarAssets();
+                if (window.MilliTakvim) window.MilliTakvim.init();
+            }
         } catch (e) {
             contentEl.innerHTML = `<h1>Erişim Hatası</h1><p><strong>${doc.file}</strong> yüklenemedi.</p>`;
         }
