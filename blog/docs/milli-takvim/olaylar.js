@@ -50,6 +50,17 @@ window.MILLI_TAKVIM_EVENTS = [
     { date: "08-08", year: 1964, title: "Cengiz Topel", description: "Kıbrıs’ta hava uyarı uçuşu sırasında uçağı düşürülen ve Rumlarca şehit edilen ilk Türk jet pilotu Cengiz Topel.", category: "anma" },
     { date: "10-21", year: 1999, title: "Ahmet Taner Kışlalı", description: "Siyasetbilimci, yazar ve eski Kültür Bakanı Prof. Dr. Ahmet Taner Kışlalı suikast sonucu şehit edildi.", category: "anma" },
     { date: "12-05", year: 1934, title: "Kadınlara Seçme ve Seçilme Hakkı", description: "Türk kadınlarına milletvekili seçme ve seçilme hakkı tanıyan anayasa değişikliği kabul edildi.", category: "tarih" },
-    { date: "12-18", year: 2002, title: "Necip Hablemitoğlu", description: "Tarihçi ve akademisyen Dr. Necip Hablemitoğlu evinin önünde uğradığı suikast sonucu şehit edildi.", category: "anma" }
+    { date: "12-18", year: 2002, title: "Necip Hablemitoğlu", description: "Tarihçi ve akademisyen Dr. Necip Hablemitoğlu evinin önünde uğradığı suikast sonucu şehit edildi.", category: "anma" },
+    { date: "01-13", year: 2012, title: "Rauf Denktaş", description: "KKTC Kurucu Cumhurbaşkanı, Kıbrıs davasının ve Türk mukavemetinin lideri hayatını kaybetti.", category: "anma" },
+    { date: "01-26", year: 1948, title: "Kâzım Karabekir", description: "Doğu Cephesi Komutanı, Şark Fatihi ve 'Yetimler Babası' Orgeneral Kâzım Karabekir vefat etti.", category: "anma" },
+    { date: "03-11", year: 1935, title: "Yusuf Akçura", description: "Türk milliyetçiliğinin öncülerinden, 'Üç Tarz-ı Siyaset' eserinin yazarı ve Türk Tarih Kurumu Başkanı vefat etti.", category: "anma" },
+    { date: "04-10", year: 1950, title: "Mareşal Fevzi Çakmak’ı Anma", description: "Milli Mücadele’nin Genelkurmay Başkanı, Türkiye Cumhuriyeti’nin tek hayattaki Mareşali vefat etti.", category: "anma" },
+    { date: "05-03", year: 1944, title: "Türkçülük Günü", description: "3 Mayıs 1944 olayları anısına Milliyetçiler ve Türkçülük Günü olarak idrak edilir.", category: "tarih" },
+    { date: "05-22", year: 1955, title: "Nene Hatun", description: "93 Harbi’nde Erzurum Aziziye Tabyası savunmasında destan yazan Türk kadını Nene Hatun vefat etti.", category: "anma" },
+    { date: "08-22", year: 2000, title: "Ebülfez Elçibey", description: "Azerbaycan Cumhurbaşkanı, 'Tek Millet İki Devlet' ve Türk Birliği ülküsünün lideri Elçibey vefat etti.", category: "anma" },
+    { date: "09-24", year: 1914, title: "Gaspıralı İsmail", description: "'Dilde, fikirde, işte birlik' parolasıyla Türk dünyasını aydınlatan Kırımlı düşünür ve gazeteci vefat etti.", category: "anma" },
+    { date: "10-25", year: 1924, title: "Ziya Gökalp", description: "Türk sosyolojisinin kurucusu ve Türkçülüğün Esasları eserinin yazarı düşünür Ziya Gökalp vefat etti.", category: "anma" },
+    { date: "12-27", year: 1936, title: "Mehmet Akif Ersoy’u Anma", description: "İstiklal Marşı şairimiz, vatan ve hürriyet şairi Mehmet Akif Ersoy İstanbul’da vefat etti.", category: "anma" }
 ];
+
 
