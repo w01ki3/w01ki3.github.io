@@ -91,4 +91,12 @@ window.MILLI_TAKVIM_EVENTS = [
 
 ];
 
+const onBesTemmuzSehitleri = [
+    { date: "07-15", year: 2016, title: "Ömer Halisdemir", description: "Özel Kuvvetler Komutanlığı'nda darbeci generali vurarak darbe teşebbüsünün seyrini değiştiren ve şehit düşen Piyade Astsubay Kıdemli Başçavuş.", category: "anma" },
+    { date: "07-15", year: 2016, title: "Erol Olçok ve Abdullah Tayyip Olçok", description: "15 Temmuz Şehitler Köprüsü'nde darbecilere karşı dururken birlikte şehit düşen baba ve 16 yaşındaki oğlu.", category: "anma" },
+    { date: "07-15", year: 2016, title: "Gölbaşı Özel Harekât Şehitleri", description: "Ankara Gölbaşı Özel Harekât Daire Başkanlığı'na düzenlenen hava saldırısında şehit düşen 51 kahraman polisimiz.", category: "anma" },
+];
+
+window.MILLI_TAKVIM_EVENTS.push(...onBesTemmuzSehitleri);
+
 
