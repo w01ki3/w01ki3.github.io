@@ -84,6 +84,10 @@ window.MILLI_TAKVIM_EVENTS = [
     { date: "07-27", year: 2015, title: "Binbaşı Arslan Kulaksız", description: "Muş Malazgirt İlçe Jandarma Komutanı iken ailesiyle birlikteyken uğradığı hain pusu sonucu şehit edilen subayımız.", category: "anma" },
     { date: "07-31", year: 2018, title: "Nurcan Karakaya ve Bedirhan Bebek", description: "Hakkâri Yüksekova'da üs bölgesindeki eşini ziyaretten dönen anne Nurcan Karakaya ve 11 aylık bebeği Bedirhan, PKK'nın patlattığı EYP ile şehit oldu.", category: "anma" },
     { date: "10-26", year: 1993, title: "Neşe Alten", description: "Diyarbakır Bismil'e atandıktan 25 gün sonra babasıyla birlikte teröristler tarafından şehit edilen 21 yaşındaki öğretmen.", category: "anma" },
+    { date: "10-06", year: 1990, title: "Bahriye Üçok", description: "İlahiyatçı, akademisyen ve siyasetçi Doç. Dr. Bahriye Üçok, evine gönderilen bombalı paket sonucu şehit edildi.", category: "anma" },
+    { date: "08-05", year: 1921, title: "Mustafa Kemal Paşa’ya Başkomutanlık Yetkisinin Verilmesi", description: "TBMM, Meclis’in yetkilerini fiilen kullanmak üzere Mustafa Kemal Paşa’yı Başkomutan olarak görevlendirdi.", category: "tarih" },
+
+    
 
 ];
 
