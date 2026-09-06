@@ -68,7 +68,7 @@ window.MILLI_TAKVIM_EVENTS = [
     { date: "01-09", year: 1964, title: "Halide Edib Adıvar", description: "Sultanahmet Mitingi'nin coşkulu hatibi, Millî Mücadele’nin 'Onbaşı Halide'si ve yazar Halide Edib Adıvar vefat etti.", category: "anma" },
     { date: "01-10", year: 1968, title: "Ali Fuat Cebesoy", description: "Amasya Genelgesi imzacılarından, Batı Cephesi ilk komutanı ve Moskova Sefiri Orgeneral Ali Fuat Cebesoy vefat etti.", category: "anma" },
     { date: "03-17", year: 1922, title: "Gördesli Makbule", description: "Yunan işgaline karşı müfrezesiyle Kocayayla'da savaşırken henüz 20 yaşında şehit düşen kadın kahraman.", category: "anma" },
-    { date: "03-22", year: 1922, title: "Sütçü İmam", description: "Maraş'ta düşmana ilk kurşunu sıkarak şehirdeki direniş meşalesini yakan Sütçü İmam vefat etti.", category: "anma" },
+    { date: "11-25", year: 1922, title: "Sütçü İmam", description: "Maraş'ta düşmana ilk kurşunu sıkarak şehirdeki direniş meşalesini yakan Sütçü İmam vefat etti.", category: "anma" },
     { date: "03-28", year: 1920, title: "Şahin Bey", description: "Antep savunmasında Fransız kuvvetlerine karşı 'Düşman cesedimi çiğnemeden Antep'e giremez' diyerek şehit düşen Kuva-yı Millîye komutanı.", category: "anma" },
     { date: "07-02", year: 1955, title: "Kara Fatma (Fatma Seher)", description: "Kendi müfrezesiyle Bursa ve İzmit cephelerinde savaşan İstiklal Madalyalı kadın milis komutanı Üsteğmen Kara Fatma vefat etti.", category: "anma" },
     { date: "07-16", year: 1964, title: "Rauf Orbay", description: "Millî Mücadele liderlerinden, Amasya Genelgesi imzacısı ve Türkiye’nin ilk Başbakanlarından Rauf Orbay vefat etti.", category: "anma" },
