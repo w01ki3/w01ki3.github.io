@@ -87,14 +87,9 @@ window.MILLI_TAKVIM_EVENTS = [
     { date: "10-06", year: 1990, title: "Bahriye Üçok", description: "İlahiyatçı, akademisyen ve siyasetçi Doç. Dr. Bahriye Üçok, evine gönderilen bombalı paket sonucu şehit edildi.", category: "anma" },
     { date: "08-05", year: 1921, title: "Mustafa Kemal Paşa’ya Başkomutanlık Yetkisinin Verilmesi", description: "TBMM, Meclis’in yetkilerini fiilen kullanmak üzere Mustafa Kemal Paşa’yı Başkomutan olarak görevlendirdi.", category: "tarih" },
     { date: "11-22", year: 1948, title: "Fahrettin Paşa (Çöl Kaplanı)", description: "Medine Müdafii, Kutsal Emanetleri İstanbul’a ulaştırarak koruyan 'Çöl Kaplanı' Ömer Fahrettin Paşa vefat etti.", category: "anma" },
-];
-
-const onBesTemmuzSehitleri = [
     { date: "07-15", year: 2016, title: "Ömer Halisdemir", description: "Özel Kuvvetler Komutanlığı'nda darbeci generali vurarak darbe teşebbüsünün seyrini değiştiren ve şehit düşen Piyade Astsubay Kıdemli Başçavuş.", category: "anma" },
     { date: "07-15", year: 2016, title: "Erol Olçok ve Abdullah Tayyip Olçok", description: "15 Temmuz Şehitler Köprüsü'nde darbecilere karşı dururken birlikte şehit düşen baba ve 16 yaşındaki oğlu.", category: "anma" },
     { date: "07-15", year: 2016, title: "Gölbaşı Özel Harekât Şehitleri", description: "Ankara Gölbaşı Özel Harekât Daire Başkanlığı'na düzenlenen hava saldırısında şehit düşen 51 kahraman polisimiz.", category: "anma" },
+    { date: "09-06", year: 2015, title: "Dağlıca Şehitleri", description: "Hakkâri Dağlıca'da PKK'lı teröristlerin patlayıcı tuzağı ve pususunda Tabur Komutanı Kurmay Yarbay İlker Çelikcan ile 16 kahraman askerimiz şehit oldu.", category: "anma" },
+    { date: "10-21", year: 2007, title: "Dağlıca Baskını", description: "Hakkâri Yüksekova Dağlıca'daki komando taburuna PKK'lı teröristlerce düzenlenen hain saldırıda 12 askerimiz şehit düştü.", category: "anma" },
 ];
-
-window.MILLI_TAKVIM_EVENTS.push(...onBesTemmuzSehitleri);
-
-

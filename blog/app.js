@@ -90,6 +90,9 @@ document.addEventListener('DOMContentLoaded', () => {
         if (window.MilliTakvim) window.MilliTakvim.destroy();
         contentEl.innerHTML = `
             <section class="home-hero simple-hero">
+                <p>Hafızasını kaybeden bir toplum, geleceğin mücadelesini veremez. <br> Buradaki içeriklerin tamamını, geçmişten günümüze tüm değerlerimizi ve şehitlerimizin mirasını diri tutmak, çağlar boyunca biçim değiştirerek devam eden Türk düşmanlığı ile hesaplaşmak amacıyla yazdım. </p>
+                <p>Ve burada kaybedilen milli hafızayı tekrar oluşturmaya çalışıyor, yarının ihtiyaç duyduğu bağımsız düşüncelerimi paylaşıyorum.</p>
+                <p>Belki bir gün bir vatansever burayı okur ve rehber edinir...<br>O zaman ne mutlu bana derim.<br>Başka gayem yoktur.</p>
                 <img src="${getLogoSrc(document.documentElement.getAttribute('data-theme'))}" class="hero-logo" alt="logo" />
             </section>
         `;
