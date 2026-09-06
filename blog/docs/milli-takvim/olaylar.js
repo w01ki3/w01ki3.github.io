@@ -86,9 +86,7 @@ window.MILLI_TAKVIM_EVENTS = [
     { date: "10-26", year: 1993, title: "Neşe Alten", description: "Diyarbakır Bismil'e atandıktan 25 gün sonra babasıyla birlikte teröristler tarafından şehit edilen 21 yaşındaki öğretmen.", category: "anma" },
     { date: "10-06", year: 1990, title: "Bahriye Üçok", description: "İlahiyatçı, akademisyen ve siyasetçi Doç. Dr. Bahriye Üçok, evine gönderilen bombalı paket sonucu şehit edildi.", category: "anma" },
     { date: "08-05", year: 1921, title: "Mustafa Kemal Paşa’ya Başkomutanlık Yetkisinin Verilmesi", description: "TBMM, Meclis’in yetkilerini fiilen kullanmak üzere Mustafa Kemal Paşa’yı Başkomutan olarak görevlendirdi.", category: "tarih" },
-
-    
-
+    { date: "11-22", year: 1948, title: "Fahrettin Paşa (Çöl Kaplanı)", description: "Medine Müdafii, Kutsal Emanetleri İstanbul’a ulaştırarak koruyan 'Çöl Kaplanı' Ömer Fahrettin Paşa vefat etti.", category: "anma" },
 ];
 
 const onBesTemmuzSehitleri = [
