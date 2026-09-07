@@ -90,10 +90,32 @@ document.addEventListener('DOMContentLoaded', () => {
         if (window.MilliTakvim) window.MilliTakvim.destroy();
         contentEl.innerHTML = `
             <section class="home-hero simple-hero">
-                <p>Hafızasını kaybeden bir toplum, geleceğin mücadelesini veremez. <br> Buradaki içeriklerin tamamını, geçmişten günümüze tüm değerlerimizi ve şehitlerimizin mirasını diri tutmak, çağlar boyunca biçim değiştirerek devam eden Türk düşmanlığı ile hesaplaşmak amacıyla yazdım. </p>
-                <p>Ve burada kaybedilen milli hafızayı tekrar oluşturmaya çalışıyor, yarının ihtiyaç duyduğu bağımsız düşüncelerimi paylaşıyorum.</p>
-                <p>Belki bir gün bir vatansever burayı okur ve rehber edinir...<br>O zaman ne mutlu bana derim.<br>Başka gayem yoktur.</p>
-                <img src="${getLogoSrc(document.documentElement.getAttribute('data-theme'))}" class="hero-logo" alt="logo" />
+                <div class="hero-intro">
+                    <p class="hero-lead">Hafızasını kaybeden bir toplum, geleceğin mücadelesini veremez.<br>
+                    Buradaki içeriklerin tamamını, geçmişten günümüze tüm değerlerimizi ve başta vatanı için kendini feda edenlerin mirasını diri tutmak için yazdım...</p>
+                    <p class="hero-lead">Çağlar boyunca biçim değiştirerek devam eden Türk düşmanlığı ile hesaplaşmak ve unutturulmak istenen milli hafızayı yeniden inşa etmek temel hedefimdir.</p>
+                    <p class="hero-lead">Burada, yarının ihtiyaç duyduğu bağımsız düşüncelerimi paylaşıyorum.</p>
+                    <p class="hero-quote">Belki bir gün bir vatansever bu yazıları okur ve bu fikirlerden bir meşale devralır...<br>O zaman "Ne mutlu bana" derim.<br>Başka gayem yoktur.</p>
+                </div>
+                <div class="hero-links">
+                    <a href="#milli-takvim" class="hero-link-card">
+                        <div class="hero-link-content">
+                            <h3>Milli Takvim</h3>
+                            <p>Tarihteki önemli olaylar ve milli günler</p>
+                        </div>
+                        <span class="hero-link-arrow">→</span>
+                    </a>
+                    <a href="#b0100-onsoz" class="hero-link-card">
+                        <div class="hero-link-content">
+                            <h3>Neden Biz?</h3>
+                            <p>neden Türkiye hedef? neden Türk hedef?</p>
+                        </div>
+                        <span class="hero-link-arrow">→</span>
+                    </a>
+                </div>
+                <div class="hero-signature">
+                    <img src="${getLogoSrc(document.documentElement.getAttribute('data-theme'))}" class="hero-logo" alt="logo" />
+                </div>
             </section>
         `;
     }
