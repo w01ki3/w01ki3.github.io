@@ -1,6 +1,7 @@
 # Günümüzde devam eden propaganda <br>[SON]
 
-Günümüzde Devam Eden Propagandalar ve Algı Mühendisliği
+### Günümüzde Devam Eden Propagandalar ve Algı Mühendisliği
+
 Geçmişte Papaların vaazlarıyla, filozofların kitaplarıyla ve devlet adamlarının mektuplarıyla yürütülen Türk düşmanlığı, günümüzde form değiştirmiş; dijital ansiklopediler ve sahte ulusların eğitim müfredatları aracılığıyla çok daha sinsi bir "algı mühendisliğine" dönüşmüştür.
 
 ### Dijital İkiyüzlülük ve Bilgi Tekeli
