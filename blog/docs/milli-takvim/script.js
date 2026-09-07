@@ -94,6 +94,7 @@
             const offset = mondayOffset(year, m);
             const total = daysInMonth(year, m);
             let cellCount = 0;
+            let monthHasMatch = !searchQuery;
 
             for (let i = 0; i < offset; i++) {
                 const empty = document.createElement('span');
@@ -121,7 +122,11 @@
                     badge.textContent = dayEvents.length > 1 ? String(dayEvents.length) : '';
                     el.appendChild(badge);
 
-                    if (dayEvents.some(matchesSearch)) el.classList.add('mt-day--match');
+                    const dayMatches = dayEvents.some(matchesSearch);
+                    if (dayMatches) {
+                        el.classList.add('mt-day--match');
+                        monthHasMatch = true;
+                    }
 
                     el.addEventListener('click', function() {
                         openEventModal(m, d, dayEvents);
@@ -141,6 +146,7 @@
             }
 
             monthEl.appendChild(grid);
+            if (!monthHasMatch) monthEl.classList.add('mt-month--hidden');
             container.appendChild(monthEl);
         }
     }
@@ -246,6 +252,13 @@
         });
 
         document.addEventListener('keydown', onEscape);
+
+        const todayEvents = eventsForDay(today.getMonth(), today.getDate());
+        if (todayEvents.length > 0) {
+            window.setTimeout(function() {
+                openEventModal(today.getMonth(), today.getDate(), todayEvents);
+            }, 650);
+        }
     }
 
     function destroy() {

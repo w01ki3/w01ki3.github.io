@@ -1,5 +1,5 @@
 window.MILLI_TAKVIM_EVENTS = [
-    { date: "01-05", year: 2017, title: "Fethi Sekin", description: "İzmir Adliyesi'ne yönelik terör saldırısını canı pahasına kahramanca çatışarak önleyen ve şehit düşen Polis Memuru.", category: "anma" },
+    { date: "01-05", year: 2017, title: "Fethi Sekin", description: "İzmir Adliyesi'ne yönelik terör saldırısını canı pahasına kahramanca çatışarak önleyen ve şehit düşen Polis Memuru. Ruhu şâd olsun.", category: "anma" },
     { date: "01-07", year: 1220, title: "Sultan I. İzzeddin Keykavus", description: "Anadolu Selçuklu Devleti'ni deniz ticaretine ve Akdeniz-Karadeniz hakimiyetine açan hükümdar vefat etti.", category: "anma" },
     { date: "01-08", year: 1920, title: "Yahya Kaptan", description: "Gebze ve çevresinde Kuva-yı Millîye teşkilatını kuran Milis Komutanı Yahya Kaptan şehit edildi.", category: "anma" },
     { date: "01-09", year: 1964, title: "Halide Edib Adıvar", description: "Sultanahmet Mitingi'nin coşkulu hatibi, Millî Mücadele’nin 'Onbaşı Halide'si ve yazar Halide Edib Adıvar vefat etti.", category: "anma" },
