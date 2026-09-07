@@ -1,4 +1,4 @@
-(function () {
+(function() {
     const MONTH_NAMES = [
         'Ocak', 'Şubat', 'Mart', 'Nisan', 'Mayıs', 'Haziran',
         'Temmuz', 'Ağustos', 'Eylül', 'Ekim', 'Kasım', 'Aralık'
@@ -26,7 +26,7 @@
 
     function eventsForDay(monthIndex, day) {
         const key = toKey(monthIndex, day);
-        return HISTORICAL_EVENTS.filter(function (ev) {
+        return HISTORICAL_EVENTS.filter(function(ev) {
             return ev.date === key;
         });
     }
@@ -81,7 +81,7 @@
 
             const weekRow = document.createElement('div');
             weekRow.className = 'mt-weekdays';
-            WEEKDAYS.forEach(function (d) {
+            WEEKDAYS.forEach(function(d) {
                 const el = document.createElement('span');
                 el.textContent = d;
                 weekRow.appendChild(el);
@@ -123,7 +123,7 @@
 
                     if (dayEvents.some(matchesSearch)) el.classList.add('mt-day--match');
 
-                    el.addEventListener('click', function () {
+                    el.addEventListener('click', function() {
                         openEventModal(m, d, dayEvents);
                     });
                 }
@@ -147,14 +147,14 @@
 
     function openModal(el) {
         el.hidden = false;
-        requestAnimationFrame(function () {
+        requestAnimationFrame(function() {
             el.classList.add('is-open');
         });
     }
 
     function closeModal(el) {
         el.classList.remove('is-open');
-        window.setTimeout(function () {
+        window.setTimeout(function() {
             if (!el.classList.contains('is-open')) el.hidden = true;
         }, 280);
     }
@@ -170,25 +170,44 @@
 
         kicker.textContent = categoryLabel(first.category);
         title.textContent = first.title;
-        meta.textContent = day + ' ' + MONTH_NAMES[monthIndex] + ' · ' + year +
-            (first.year ? ' · Olay yılı: ' + first.year : '');
+        meta.textContent = day + ' ' + MONTH_NAMES[monthIndex] + (first.year ? ' ' + first.year : '');
         desc.textContent = first.description || '';
         list.innerHTML = '';
 
         if (dayEvents.length > 1) {
+            const categoryOrder = ['bayram', 'tarih', 'anma'];
+            const grouped = {};
+            dayEvents.forEach(function(ev) {
+                const cat = ev.category || 'tarih';
+                if (!grouped[cat]) grouped[cat] = [];
+                grouped[cat].push(ev);
+            });
+
             title.textContent = day + ' ' + MONTH_NAMES[monthIndex];
             desc.textContent = '';
-            meta.textContent = year;
-            dayEvents.forEach(function (ev) {
-                const item = document.createElement('article');
-                item.className = 'mt-event-card';
-                const h = document.createElement('h3');
-                h.textContent = ev.title;
-                const p = document.createElement('p');
-                p.textContent = (ev.year ? ev.year + ' · ' : '') + (ev.description || '');
-                item.appendChild(h);
-                item.appendChild(p);
-                list.appendChild(item);
+            meta.textContent = '';
+            kicker.textContent = '';
+
+            categoryOrder.forEach(function(cat) {
+                const events = grouped[cat];
+                if (!events || events.length === 0) return;
+
+                const groupHeader = document.createElement('h5');
+                groupHeader.className = 'mt-event-group-title';
+                groupHeader.textContent = categoryLabel(cat);
+                list.appendChild(groupHeader);
+
+                events.forEach(function(ev) {
+                    const item = document.createElement('article');
+                    item.className = 'mt-event-card';
+                    const h = document.createElement('h4');
+                    h.textContent = ev.title;
+                    const p = document.createElement('p');
+                    p.textContent = (ev.year ? ev.year + ' · ' : '') + (ev.description || '');
+                    item.appendChild(h);
+                    item.appendChild(p);
+                    list.appendChild(item);
+                });
             });
         }
 
@@ -217,13 +236,13 @@
 
         refresh();
 
-        search.addEventListener('input', function () {
+        search.addEventListener('input', function() {
             searchQuery = search.value.trim().toLowerCase();
             refresh();
         });
 
-        eventModal.querySelectorAll('[data-mt-close]').forEach(function (el) {
-            el.addEventListener('click', function () { closeModal(eventModal); });
+        eventModal.querySelectorAll('[data-mt-close]').forEach(function(el) {
+            el.addEventListener('click', function() { closeModal(eventModal); });
         });
 
         document.addEventListener('keydown', onEscape);

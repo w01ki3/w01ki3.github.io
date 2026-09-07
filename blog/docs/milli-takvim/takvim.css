@@ -87,10 +87,21 @@
     display: inline-block;
 }
 
-.mt-dot-tarih { background: #c2410c; }
-.mt-dot-bayram { background: #36ca04; }
-.mt-dot-anma { background: #64748b; }
-.mt-dot-today { background: var(--accent-color); }
+.mt-dot-tarih {
+    background: #c2410c;
+}
+
+.mt-dot-bayram {
+    background: #36ca04;
+}
+
+.mt-dot-anma {
+    background: #64748b;
+}
+
+.mt-dot-today {
+    background: var(--accent-color);
+}
 
 .mt-year-grid {
     display: grid;
@@ -172,18 +183,37 @@
     opacity: 1;
 }
 
-.mt-day--tarih { background: rgba(194, 65, 12, 0.18); color: #9a3412; }
-.mt-day--bayram { background: rgba(202, 138, 4, 0.22); color: #16850e; }
-.mt-day--anma { background: rgba(100, 116, 139, 0.22); color: #334155; }
+.mt-day--tarih {
+    background: rgba(194, 65, 12, 0.18);
+    color: #9a3412;
+}
+
+.mt-day--bayram {
+    background: rgba(202, 138, 4, 0.22);
+    color: #16850e;
+}
+
+.mt-day--anma {
+    background: rgba(100, 116, 139, 0.22);
+    color: #334155;
+}
 
 .mt-day--today.mt-day--event {
     background: var(--accent-color);
     color: #fff;
 }
 
-[data-theme="dark"] .mt-day--tarih { color: #fdba74; }
-[data-theme="dark"] .mt-day--bayram { color: #62fd47; }
-[data-theme="dark"] .mt-day--anma { color: #cbd5e1; }
+[data-theme="dark"] .mt-day--tarih {
+    color: #fdba74;
+}
+
+[data-theme="dark"] .mt-day--bayram {
+    color: #62fd47;
+}
+
+[data-theme="dark"] .mt-day--anma {
+    color: #cbd5e1;
+}
 
 .mt-badge {
     position: absolute;
@@ -218,8 +248,13 @@
 }
 
 @keyframes mt-pulse {
-    0%, 100% { transform: scale(1); }
-    50% { transform: scale(1.06); }
+    0%,
+    100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.06);
+    }
 }
 
 .mt-modal {
@@ -295,6 +330,21 @@
     line-height: 1.55;
 }
 
+.mt-event-group-title {
+    font-size: 0.5rem;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--accent-color);
+    margin: 16px 0 6px;
+    padding: 0;
+    border: none;
+}
+
+.mt-event-group-title:first-child {
+    margin-top: 8px;
+}
+
 .mt-event-card {
     margin-top: 10px;
     padding: 10px 12px;
@@ -302,10 +352,12 @@
     border-radius: 12px;
 }
 
-.mt-event-card h3 {
+.mt-event-card h3,
+.mt-event-card h4 {
     font-size: 0.95rem;
     margin: 0 0 4px;
     border: none;
+    padding: 0;
 }
 
 @media (max-width: 1024px) {
@@ -318,7 +370,6 @@
     .mt-year-grid {
         grid-template-columns: 1fr;
     }
-
     .mt-modal-panel {
         right: 12px;
         left: 12px;
