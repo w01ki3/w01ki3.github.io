@@ -73,6 +73,7 @@ window.MILLI_TAKVIM_EVENTS = [
     { date: "08-15", year: 1389, title: "I. Kosova Zaferi", description: "Sultan I. Murad komutasındaki Osmanlı ordusu Haçlı müttefik ordusunu mağlup etti; Sultan Murad savaş meydanında şehit düştü.", category: "tarih" },
     { date: "08-15", year: 1984, title: "Eruh ve Şemdinli Terör Saldırıları", description: "PKK terör örgütünün Siirt Eruh ve Hakkâri Şemdinli'de gerçekleştirdiği ilk hain eylemde Süleyman Aydın şehit düştü.", category: "anma" },
     { date: "08-16", year: 1919, title: "Alaşehir Kongresi", description: "Ege Kuva-yı Millîye teşkilatlarının ikmal ve savunma hatlarını güçlendiren Alaşehir Kongresi toplandı.", category: "tarih" },
+    { date: "08-20", year: 1957, title: "Halil Kut Paşa", description: "Kut'ül Amâre Fatihi, Irak ve Şark Orduları Komutanı Kümandan Halil Kut Paşa vefat etti.", category: "anma" },
     { date: "08-22", year: 2000, title: "Ebülfez Elçibey", description: "Azerbaycan Cumhurbaşkanı, 'Tek Millet İki Devlet' ve Türk Birliği ülküsünün lideri Elçibey vefat etti.", category: "anma" },
     { date: "08-26", year: 1071, title: "Malazgirt Zaferi", description: "Sultan Alparslan komutasındaki Selçuklu ordusu Bizans’ı mağlup ederek Anadolu’nun kapılarını Türklere açtı. (Yurt Açan)", category: "tarih" },
     { date: "08-26", year: 1922, title: "Büyük Taarruz’un Başlaması", description: "26 Ağustos 1922’de Afyon cephesinde başlayan Büyük Taarruz, Milli Mücadele’nin kesin zaferini hazırladı.", category: "tarih" },
