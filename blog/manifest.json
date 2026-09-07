@@ -1,0 +1,48 @@
+{
+    "name": "VK | Günce",
+    "short_name": "VK Günce",
+    "description": "Ne mutlu Türk'üm diyene",
+    "start_url": "./#milli-takvim",
+    "scope": "./",
+    "display": "standalone",
+    "orientation": "portrait-primary",
+    "background_color": "#f6f8fb",
+    "theme_color": "#0969da",
+    "lang": "tr",
+    "dir": "ltr",
+    "categories": ["education", "news", "books"],
+    "icons": [{
+            "src": "https://raw.githubusercontent.com/w01ki3/w01ki3/main/img/vkIcon.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "https://raw.githubusercontent.com/w01ki3/w01ki3/main/img/vkIcon.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "any maskable"
+        }
+    ],
+    "shortcuts": [{
+            "name": "Milli Takvim",
+            "short_name": "Takvim",
+            "description": "Milli Takvim",
+            "url": "./#milli-takvim",
+            "icons": [{
+                "src": "https://raw.githubusercontent.com/w01ki3/w01ki3/main/img/vkIcon.png",
+                "sizes": "192x192"
+            }]
+        },
+        {
+            "name": "Neden Biz?",
+            "short_name": "Neden Biz?",
+            "description": "neden Türkiye hedef? neden Türk hedef?",
+            "url": "./#b0100-onsoz",
+            "icons": [{
+                "src": "https://raw.githubusercontent.com/w01ki3/w01ki3/main/img/vkIcon.png",
+                "sizes": "192x192"
+            }]
+        }
+    ]
+}
