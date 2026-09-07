@@ -31,6 +31,7 @@ window.MILLI_TAKVIM_EVENTS = [
     { date: "03-28", year: 1920, title: "Şahin Bey", description: "Antep savunmasında Fransız kuvvetlerine karşı 'Düşman cesedimi çiğnemeden Antep'e giremez' diyerek şehit düşen Kuva-yı Millîye komutanı.", category: "anma" },
     { date: "04-01", year: 1921, title: "İkinci İnönü Zaferi", description: "İkinci İnönü Muharebesi zaferle sonuçlandı; Milli Mücadele’nin zafere olan inancı pekişti.", category: "tarih" },
     { date: "04-10", year: 1950, title: "Mareşal Fevzi Çakmak", description: "Milli Mücadele’nin Genelkurmay Başkanı, Türkiye Cumhuriyeti’nin hayattaki son Mareşali vefat etti.", category: "anma" },
+    { date: "04-14", year: 1915, title: "Süleyman Askeri Bey", description: "Teşkilat-ı Mahsusa'nın kurucusu, ilk başkanı ve Irak Havalisi Komutanı Yarbay Süleyman Askeri Bey vefat etti.", category: "anma" },
     { date: "04-23", year: 1920, title: "Ulusal Egemenlik ve Çocuk Bayramı", description: "Türkiye Büyük Millet Meclisi 23 Nisan 1920’de Ankara’da açıldı. Egemenliğin millete ait olduğu ilan edildi.", category: "bayram" },
     { date: "04-25", year: 1915, title: "Çanakkale Kara Savaşları Başlangıcı", description: "İtilaf Devletleri'nin Gelibolu Yarımadası'na çıkışıyla kara savaşları ve Anzak Çıkarması başladı.", category: "tarih" },
     { date: "04-29", year: 1916, title: "Kut’ül Amâre Zaferi", description: "Osmanlı ordusu, Irak cephesinde İngiliz birliklerini kuşatarak büyük bir zafer elde etti.", category: "tarih" },
