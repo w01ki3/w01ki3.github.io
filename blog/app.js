@@ -147,23 +147,26 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function ensureCalendarAssets() {
+        const __v = window.APP_VERSION || 'v0';
+        const cssId = 'mt-calendar-css-' + __v;
+        const evId = 'mt-events-js-' + __v;
+        const scId = 'mt-calendar-js-' + __v;
         return new Promise((resolve, reject) => {
-            if (!document.getElementById('mt-calendar-css')) {
+            if (!document.getElementById(cssId)) {
                 const link = document.createElement('link');
-                link.id = 'mt-calendar-css';
+                link.id = cssId;
                 link.rel = 'stylesheet';
-                link.href = 'docs/milli-takvim/takvim.css';
+                link.href = 'docs/milli-takvim/takvim.css?v=' + __v;
                 document.head.appendChild(link);
             }
-            if (window.MilliTakvim) {
-                calendarAssetsLoaded = true;
+            if (window.MilliTakvim && window.MilliTakvim.__v === __v) {
                 resolve();
                 return;
             }
-            loadScriptOnce('mt-events-js', 'docs/milli-takvim/olaylar.js')
-                .then(() => loadScriptOnce('mt-calendar-js', 'docs/milli-takvim/script.js'))
+            loadScriptOnce(evId, 'docs/milli-takvim/olaylar.js?v=' + __v)
+                .then(() => loadScriptOnce(scId, 'docs/milli-takvim/script.js?v=' + __v))
                 .then(() => {
-                    calendarAssetsLoaded = true;
+                    if (window.MilliTakvim) window.MilliTakvim.__v = __v;
                     resolve();
                 })
                 .catch(reject);
@@ -252,7 +255,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if ('serviceWorker' in navigator) {
         window.addEventListener('load', () => {
-            navigator.serviceWorker.register('sw.js').catch(() => {});
+            navigator.serviceWorker.register('sw.js', {
+                updateViaCache: 'none'
+            }).then(reg => {
+                reg.update();
+                setInterval(() => reg.update(), 60 * 1000);
+                if (reg.installing) {
+                    reg.installing.addEventListener('statechange', () => {
+                        if (reg.installing && reg.installing.state === 'installed' && navigator.serviceWorker.controller) {
+                            window.location.reload();
+                        }
+                    });
+                }
+            }).catch(() => {});
         });
     }
 });
