@@ -91,7 +91,7 @@ window.MILLI_TAKVIM_EVENTS = [
     { date: "09-04", year: 1919, title: "Sivas Kongresi", description: "Milli Mücadele dernekleri Anadolu ve Rumeli Müdafaa-i Hukuk Cemiyeti altında birleştirildi.", category: "tarih" },
     { date: "09-06", year: 2015, title: "Dağlıca Şehitleri", description: "Hakkâri Dağlıca'da PKK'lı teröristlerin patlayıcı tuzağı ve pususunda Tabur Komutanı Kurmay Yarbay İlker Çelikcan ile 16 kahraman askerimiz şehit oldu.", category: "anma" },
     { date: "09-09", year: 1922, title: "İzmir’in Kurtuluşu", description: "9 Eylül 1922’de İzmir düşman işgalinden kurtarıldı.", category: "tarih" },
-    { date: "09-13", year: 1921, title: "Sakarya Meydan Muharebesi Zaferi", description: "22 gün 22 gece süren Türk tarihinin en uzun meydan muharebesi büyük zaferle sonuçlandı.", category: "tarih" },
+    { date: "09-13", year: 1921, title: "Sakarya Meydan Muharebesi Zaferi", description: "22 gün 22 gece süren dünya harp tarihinin en uzun meydan muharebesi büyük zaferle sonuçlandı.", category: "tarih" },
     { date: "09-17", year: 1176, title: "Miryokefalon Zaferi", description: "Sultan II. Kılıç Arslan komutasındaki Selçuklu ordusu Bizans'ı bozguna uğratarak Anadolu'nun Türk yurdu olduğunu kesinleştirdi. (Yurt Tutan)", category: "tarih" },
     { date: "09-23", year: 1951, title: "Yörük Ali Efe", description: "Aydın ve Ege bölgesinde Kuva-yı Millîye direnişini organize eden ve Malgaç Baskını ile Yunan ordusunu durduran Efe vefat etti.", category: "anma" },
     { date: "09-24", year: 1914, title: "Gaspıralı İsmail", description: "'Dilde, fikirde, işte birlik' parolasıyla Türk dünyasını aydınlatan Kırımlı düşünür ve gazeteci vefat etti.", category: "anma" },
