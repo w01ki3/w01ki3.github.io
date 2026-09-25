@@ -105,11 +105,12 @@ div.main section.info h2 {
 
 div.main section.links a {
     display: inline-block;
+    vertical-align: middle;
 }
 
 div.main section.links a svg {
     height: 30px;
-    width: auto
+    width: 30px
 }
 
 div.main section.links a svg path {
@@ -119,6 +120,40 @@ div.main section.links a svg path {
 
 div.main section.links a:hover svg path {
     fill: #333333;
+}
+
+div.main section.links a.icon-blog {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: white;
+    box-sizing: border-box;
+    padding: 5px 3px 2px 3px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: background .25s;
+    vertical-align: middle;
+}
+
+div.main section.links a.icon-blog svg {
+    height: 100%;
+    width: 100%;
+    display: block;
+    transform: translateY(1.5px);
+}
+
+div.main section.links a.icon-blog svg path {
+    fill: #333333;
+    transition: fill .25s;
+}
+
+div.main section.links a.icon-blog:hover {
+    background: #333333;
+}
+
+div.main section.links a.icon-blog:hover svg path {
+    fill: white;
 }
 
 footer {
