@@ -95,6 +95,7 @@ window.MILLI_TAKVIM_EVENTS = [
     { date: "09-17", year: 1176, title: "Miryokefalon Zaferi", description: "Sultan II. Kılıç Arslan komutasındaki Selçuklu ordusu Bizans'ı bozguna uğratarak Anadolu'nun Türk yurdu olduğunu kesinleştirdi. (Yurt Tutan)", category: "tarih" },
     { date: "09-23", year: 1951, title: "Yörük Ali Efe", description: "Aydın ve Ege bölgesinde Kuva-yı Millîye direnişini organize eden ve Malgaç Baskını ile Yunan ordusunu durduran Efe vefat etti.", category: "anma" },
     { date: "09-24", year: 1914, title: "Gaspıralı İsmail", description: "'Dilde, fikirde, işte birlik' parolasıyla Türk dünyasını aydınlatan Kırımlı düşünür ve gazeteci vefat etti.", category: "anma" },
+    { date: "09-25", year: 1993, title: "Şehit Ümit Yılbar", description: "Pentagram grubunun eski gitaristi olan Komando Asteğmen Ümit Yılbar, Siirt'in Eruh ilçesi Cirav Dağı'nda terör örgütüyle girilen çatışmada şehit oldu.", category: "anma"},
     { date: "09-25", year: 1396, title: "Niğbolu Zaferi", description: "Sultan I. Bayezid (Yıldırım) komutasındaki Osmanlı ordusu, Haçlı müttefik ordusunu Niğbolu'da imha etti.", category: "tarih" },
     { date: "09-26", year: 1371, title: "Çirmen Zaferi", description: "Osmanlı kuvvetleri Meriç Nehri kıyısında Sırp ordusunu mağlup ederek Makedonya ve Balkanlar'ın kapısını açtı.", category: "tarih" },
     { date: "09-26", year: 1932, title: "Dil Bayramı", description: "Türk Dil Kurumu’nun kuruluşu ve Dil Bayramı (26 Eylül 1932).", category: "tarih" },
