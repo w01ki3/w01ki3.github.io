@@ -101,6 +101,7 @@ window.MILLI_TAKVIM_EVENTS = [
     { date: "09-26", year: 1932, title: "Dil Bayramı", description: "Türk Dil Kurumu’nun kuruluşu ve Dil Bayramı (26 Eylül 1932).", category: "tarih" },
     { date: "09-27", year: 2020, title: "27 Eylül - Azerbaycan Anma Günü", description: "Azerbaycan'ın toprak bütünlüğü uğruna başlayan 44 günlük Vatan Muharebesi'nin ilk günü ve şehitlerin aziz hatırasına adanan Anma Günü.", category: "anma"},
     { date: "09-28", year: 1538, title: "Preveze Deniz Zaferi", description: "Barbaros Hayreddin Paşa komutasındaki Osmanlı donanması Haçlı donanmasını mağlup ederek Akdeniz’i Türk gölü haline getirdi.", category: "tarih" },
+    { date: "09-28", year: 2023, title: "Ganire Paşayeva'nın Vefatı", description: "Azerbaycan Milletvekili, Türk dünyasının ve Türkiye-Azerbaycan kardeşliğinin adanmış savunucusu Dr. Ganire Paşayeva vefat etti.", category: "anma" },
     { date: "10-03", year: 2008, title: "Aktütün Karakolu Baskını", description: "Hakkâri Şemdinli'deki Aktütün Sınır Bölüğü'ne terör örgütü PKK tarafından düzenlenen saldırıda 17 askerimiz şehit düştü.", category: "anma" },
     { date: "10-06", year: 1923, title: "İstanbul’un Kurtuluşu", description: "6 Ekim 1923’te işgal kuvvetlerinin İstanbul’dan ayrılmasıyla şehir fiilen kurtuldu.", category: "tarih" },
     { date: "10-06", year: 1990, title: "Bahriye Üçok", description: "İlahiyatçı, akademisyen ve siyasetçi Doç. Dr. Bahriye Üçok, evine gönderilen bombalı paket sonucu şehit edildi.", category: "anma" },
