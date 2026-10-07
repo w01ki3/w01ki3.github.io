@@ -61,7 +61,6 @@ window.MILLI_TAKVIM_EVENTS = [
     { date: "07-02", year: 1955, title: "Kara Fatma (Fatma Seher)", description: "Kendi müfrezesiyle Bursa ve İzmit cephelerinde savaşan İstiklal Madalyalı kadın milis komutanı Üsteğmen Kara Fatma vefat etti.", category: "anma" },
     { date: "07-05", year: 1993, title: "Başbağlar Katliamı", description: "Erzincan'ın Başbağlar köyünde PKK'lı teröristler tarafından 33 sivil vatandaşın katledildiği katliam günü.", category: "anma" },
     { date: "07-15", year: 2016, title: "Ömer Halisdemir", description: "Özel Kuvvetler Komutanlığı'nda darbeci generali vurarak darbe teşebbüsünün seyrini değiştiren ve şehit düşen Piyade Astsubay Kıdemli Başçavuş.", category: "anma" },
-    { date: "07-15", year: 2016, title: "Erol Olçok ve Abdullah Tayyip Olçok", description: "15 Temmuz Şehitler Köprüsü'nde darbecilere karşı dururken birlikte şehit düşen baba ve 16 yaşındaki oğlu.", category: "anma" },
     { date: "07-15", year: 2016, title: "Gölbaşı Özel Harekât Şehitleri", description: "Ankara Gölbaşı Özel Harekât Daire Başkanlığı'na düzenlenen hava saldırısında şehit düşen 51 kahraman polisimiz.", category: "anma" },
     { date: "07-16", year: 1060, title: "Çağrı Bey", description: "Büyük Selçuklu Devleti'nin kurucularından, Sultan Alparslan'ın babası ve efsanevi ordu komutanı vefat etti.", category: "anma" },
     { date: "07-16", year: 1964, title: "Rauf Orbay", description: "Millî Mücadele liderlerinden, Amasya Genelgesi imzacısı ve Türkiye’nin ilk Başbakanlarından Rauf Orbay vefat etti.", category: "anma" },
