@@ -105,6 +105,7 @@ window.MILLI_TAKVIM_EVENTS = [
     { date: "10-03", year: 2008, title: "Aktütün Karakolu Baskını", description: "Hakkâri Şemdinli'deki Aktütün Sınır Bölüğü'ne terör örgütü PKK tarafından düzenlenen saldırıda 17 askerimiz şehit düştü.", category: "anma" },
     { date: "10-06", year: 1923, title: "İstanbul’un Kurtuluşu", description: "6 Ekim 1923’te işgal kuvvetlerinin İstanbul’dan ayrılmasıyla şehir fiilen kurtuldu.", category: "tarih" },
     { date: "10-06", year: 1990, title: "Bahriye Üçok", description: "İlahiyatçı, akademisyen ve siyasetçi Doç. Dr. Bahriye Üçok, evine gönderilen bombalı paket sonucu şehit edildi.", category: "anma" },
+    { date: "10-08", year: 1996, title: "Şehit Hava Pilot Yüzbaşı Nail Erdoğan", description: "Ege Denizi'nde görevi esnasında Sakız Adası açıklarında Yunan jetinin füze saldırısıyla F-16 uçağının düşürülmesi sonucu şehit oldu.", category: "anma" },
     { date: "10-11", year: 1922, title: "Mudanya Ateşkes Antlaşması", description: "Milli Mücadele’nin askeri safhası sona erdi, Doğu Trakya ve İstanbul savaşsız kurtarıldı.", category: "tarih" },
     { date: "10-13", year: 1923, title: "Ankara’nın Başkent Oluşu", description: "13 Ekim 1923’te Ankara, Türkiye devletinin başkenti olarak kabul edildi.", category: "tarih" },
     { date: "10-17", year: 1448, title: "II. Kosova Zaferi", description: "Sultan II. Murad komutasındaki Osmanlı ordusu Haçlı ordusunu bozguna uğratarak Balkanlar'daki Türk hakimiyetini perçinledi.", category: "tarih" },
