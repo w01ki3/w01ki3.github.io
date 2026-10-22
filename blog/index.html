@@ -30,6 +30,20 @@
             document.write('<link rel="stylesheet" href="style.css?v=' + window.APP_VERSION + '">');
         })();
     </script>
+    <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
+    <script>
+        window.OneSignalDeferred = window.OneSignalDeferred || [];
+        OneSignalDeferred.push(async function(OneSignal) {
+            await OneSignal.init({
+                appId: '15967222-dd21-44e5-8e4a-6a16d4372416',
+                serviceWorkerPath: 'blog/sw.js',
+                serviceWorkerParam: {
+                    scope: '/blog/'
+                },
+                allowLocalhostAsSecureOrigin: true
+            });
+        });
+    </script>
 </head>
 
 <body>
