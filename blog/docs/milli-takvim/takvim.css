@@ -364,6 +364,65 @@
     padding: 0;
 }
 
+.mt-modal-actions {
+    margin-top: 16px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.mt-share-btn {
+    border: 1px solid var(--accent-color);
+    background: none;
+    color: var(--accent-color);
+    border-radius: 10px;
+    padding: 8px 14px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.mt-share-btn:hover {
+    background: var(--accent-color);
+    color: var(--surface-color);
+}
+
+.mt-share-btn:disabled {
+    opacity: 0.6;
+    cursor: default;
+}
+
+.mt-event-share {
+    margin-top: 8px;
+    border: 1px solid var(--border-color);
+    background: none;
+    color: var(--muted-color);
+    border-radius: 8px;
+    padding: 4px 10px;
+    font-size: 0.75rem;
+    cursor: pointer;
+}
+
+.mt-event-share:hover {
+    border-color: var(--accent-color);
+    color: var(--accent-color);
+}
+
+.mt-share-stage {
+    position: fixed;
+    top: 0;
+    left: -10000px;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.mt-share-stage .mt-modal-panel {
+    position: static;
+    width: 420px;
+    transform: none;
+    opacity: 1;
+    box-shadow: none;
+}
+
 @media (max-width: 1024px) {
     .mt-year-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
