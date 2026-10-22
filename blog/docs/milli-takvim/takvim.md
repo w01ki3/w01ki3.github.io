@@ -26,7 +26,7 @@
         <div class="mt-modal-list" id="mt-modal-list"></div>
         <div class="mt-modal-actions">
             <button type="button" class="mt-share-btn" id="mt-modal-share">
-                <span class="mt-share-icon" aria-hidden="true"></span> Görsel olarak paylaş
+                <span class="mt-share-icon" aria-hidden="true"></span>Paylaş
             </button>
         </div>
     </div>
