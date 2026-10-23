@@ -7,13 +7,60 @@
     const CELLS_PER_MONTH = 42;
     const HISTORICAL_EVENTS = window.MILLI_TAKVIM_EVENTS || [];
     const SHARE_LIB_URL = 'https://cdn.jsdelivr.net/npm/html-to-image@1.11.11/dist/html-to-image.min.js';
+    const SITE_URL = 'https://w01ki3.github.io';
+    const MAIN_SHARE_URL = SITE_URL + '/blog/#milli-takvim';
+    const SHARE_PAGE_BASE = SITE_URL + '/blog/docs/milli-takvim/paylas/';
+    const TR_MAP = {
+        'ç': 'c', 'Ç': 'c', 'ğ': 'g', 'Ğ': 'g', 'ı': 'i', 'İ': 'i',
+        'ö': 'o', 'Ö': 'o', 'ş': 's', 'Ş': 's', 'ü': 'u', 'Ü': 'u',
+        'â': 'a', 'Â': 'a', 'î': 'i', 'Î': 'i', 'û': 'u', 'Û': 'u',
+        'é': 'e', 'è': 'e', 'ê': 'e', 'á': 'a', 'à': 'a', 'ä': 'a',
+        'å': 'a', 'ø': 'o', 'æ': 'ae', 'ô': 'o', 'ñ': 'n', 'ó': 'o',
+        'ú': 'u', 'í': 'i'
+    };
 
     let year = new Date().getFullYear();
     let shareLibPromise = null;
     let searchQuery = '';
+    let currentDay = null;
+    let shareCtx = null;
+    let slugMap = null;
+
+    function slugify(input) {
+        return String(input)
+            .replace(/[^\x00-\x7F]/g, function(ch) { return TR_MAP[ch] || ''; })
+            .toLowerCase()
+            .replace(/[^a-z0-9]+/g, '-')
+            .replace(/^-+|-+$/g, '')
+            .replace(/-{2,}/g, '-');
+    }
+
+    function ensureSlugMap() {
+        if (slugMap) return slugMap;
+        slugMap = {};
+        const used = {};
+        HISTORICAL_EVENTS.forEach(function(ev, index) {
+            let base = slugify(ev.date + '-' + (ev.year || '') + '-' + ev.title);
+            if (!base) base = 'olay-' + (index + 1);
+            let slug = base;
+            let n = 2;
+            while (used[slug]) {
+                slug = base + '-' + n;
+                n += 1;
+            }
+            used[slug] = true;
+            slugMap[ev.date + '||' + ev.title] = slug;
+        });
+        return slugMap;
+    }
 
     function onEscape(e) {
         if (e.key !== 'Escape') return;
+        const shareModal = document.getElementById('mt-share-modal');
+        if (shareModal && !shareModal.hidden) {
+            closeModal(shareModal);
+            return;
+        }
         const eventModal = document.getElementById('mt-event-modal');
         if (eventModal && !eventModal.hidden) closeModal(eventModal);
     }
@@ -184,7 +231,8 @@
     }
 
     function buildShareStage(single) {
-        const panel = document.querySelector('.mt-modal-panel');
+        const eventModal = document.getElementById('mt-event-modal');
+        const panel = eventModal ? eventModal.querySelector('.mt-modal-panel') : null;
         if (!panel) return null;
 
         const clone = panel.cloneNode(true);
@@ -251,16 +299,166 @@
         });
     }
 
-    function sharePanel() {
-        const stage = buildShareStage(null);
-        if (!stage) return Promise.resolve();
-        return shareStage(stage, 'milli-takvim.png')
+    function slugForEvent(ev) {
+        const map = ensureSlugMap();
+        return map[ev.date + '||' + ev.title] || null;
+    }
+
+    function eventBySlug(slug) {
+        const map = ensureSlugMap();
+        for (let i = 0; i < HISTORICAL_EVENTS.length; i++) {
+            const ev = HISTORICAL_EVENTS[i];
+            if (map[ev.date + '||' + ev.title] === slug) return ev;
+        }
+        return null;
+    }
+
+    function eventShareContext(ev, monthIndex, day) {
+        const slug = slugForEvent(ev);
+        return {
+            title: ev.title,
+            meta: day + ' ' + MONTH_NAMES[monthIndex] + (ev.year ? ' ' + ev.year : ''),
+            description: ev.description || '',
+            shareUrl: slug ? SHARE_PAGE_BASE + slug + '.html' : MAIN_SHARE_URL,
+            shareText: ev.title + (ev.year ? ' (' + ev.year + ')' : '') + ' · Milli Takvim',
+            filename: 'milli-takvim-' + pad(day) + '-' + pad(monthIndex + 1) + '.png',
+            makeStage: function() {
+                return buildShareStage({
+                    title: ev.title,
+                    description: ev.description || '',
+                    category: ev.category,
+                    year: ev.year,
+                    monthIndex: monthIndex,
+                    day: day
+                });
+            }
+        };
+    }
+
+    function panelShareContext() {
+        return {
+            title: 'Milli Takvim',
+            meta: 'Milli Takvim',
+            description: 'Tarihteki önemli olaylar ve milli günler',
+            shareUrl: MAIN_SHARE_URL,
+            shareText: 'Milli Takvim · Tarihteki önemli olaylar ve milli günler',
+            filename: 'milli-takvim.png',
+            makeStage: function() { return buildShareStage(null); }
+        };
+    }
+
+    function showToast(message) {
+        let toast = document.getElementById('mt-toast');
+        if (!toast) {
+            toast = document.createElement('div');
+            toast.id = 'mt-toast';
+            toast.className = 'mt-toast';
+            toast.setAttribute('role', 'status');
+            document.body.appendChild(toast);
+        }
+        toast.textContent = message;
+        toast.classList.add('is-visible');
+        window.clearTimeout(showToast._timer);
+        showToast._timer = window.setTimeout(function() {
+            toast.classList.remove('is-visible');
+        }, 2800);
+    }
+
+    function copyText(text) {
+        if (navigator.clipboard && window.isSecureContext) {
+            return navigator.clipboard.writeText(text);
+        }
+        return new Promise(function(resolve, reject) {
+            const ta = document.createElement('textarea');
+            ta.value = text;
+            ta.setAttribute('readonly', '');
+            ta.style.position = 'fixed';
+            ta.style.left = '-9999px';
+            document.body.appendChild(ta);
+            ta.select();
+            try {
+                document.execCommand('copy');
+                resolve();
+            } catch (err) {
+                reject(err);
+            } finally {
+                ta.remove();
+            }
+        });
+    }
+
+    function openShareModal(ctx) {
+        const modal = document.getElementById('mt-share-modal');
+        if (!modal) return;
+        shareCtx = ctx;
+        const titleEl = document.getElementById('mt-share-title');
+        if (titleEl) titleEl.textContent = ctx.meta || ctx.title || 'Milli Takvim';
+        const descEl = document.getElementById('mt-share-desc');
+        if (descEl) descEl.textContent = ctx.description || '';
+        openModal(modal);
+    }
+
+    function openPopup(url) {
+        const win = window.open(url, '_blank', 'noopener,noreferrer,width=680,height=680');
+        if (win) win.focus();
+    }
+
+    function shareToInstagram() {
+        if (!shareCtx) return;
+        const url = shareCtx.shareUrl;
+        const isTouch = window.matchMedia && window.matchMedia('(pointer: coarse)').matches;
+        if (isTouch && typeof navigator.share === 'function') {
+            navigator.share({ title: shareCtx.title, text: shareCtx.shareText, url: url })
+                .catch(function(err) {
+                    if (err && err.name === 'AbortError') return;
+                    copyText(url).then(function() {
+                        showToast('Bağlantı kopyalandı. Instagram\'a yapıştırabilirsiniz.');
+                    }).catch(function() { showToast('Bağlantı kopyalanamadı.'); });
+                });
+            return;
+        }
+        copyText(url).then(function() {
+            showToast('Bağlantı kopyalandı. Instagram\'a yapıştırabilirsiniz.');
+        }).catch(function() {
+            showToast('Bağlantı kopyalanamadı.');
+        });
+    }
+
+    function shareToSocial(network) {
+        if (!shareCtx) return;
+        const url = shareCtx.shareUrl;
+        const text = shareCtx.shareText;
+        const encUrl = encodeURIComponent(url);
+
+        if (network === 'x') {
+            openPopup('https://twitter.com/intent/tweet?url=' + encUrl + '&text=' + encodeURIComponent(text));
+        } else if (network === 'facebook') {
+            openPopup('https://www.facebook.com/sharer/sharer.php?u=' + encUrl);
+        } else if (network === 'linkedin') {
+            openPopup('https://www.linkedin.com/sharing/share-offsite/?url=' + encUrl);
+        } else if (network === 'whatsapp') {
+            openPopup('https://wa.me/?text=' + encodeURIComponent(text + '\n' + url));
+        } else if (network === 'instagram') {
+            shareToInstagram();
+        }
+    }
+
+    function runShareImage(btn) {
+        if (!shareCtx) return;
+        const stage = shareCtx.makeStage();
+        if (!stage) return;
+        btn.disabled = true;
+        shareStage(stage, shareCtx.filename)
             .catch(function(err) { console.error('Paylaşım hatası:', err); })
-            .then(function() { stage.remove(); });
+            .then(function() {
+                stage.remove();
+                btn.disabled = false;
+            });
     }
 
     function openEventModal(monthIndex, day, dayEvents) {
         const modal = document.getElementById('mt-event-modal');
+        currentDay = { monthIndex: monthIndex, day: day, events: dayEvents };
         const kicker = document.getElementById('mt-modal-kicker');
         const title = document.getElementById('mt-modal-title');
         const meta = document.getElementById('mt-modal-meta');
@@ -310,27 +508,11 @@
                     const shareBtn = document.createElement('button');
                     shareBtn.type = 'button';
                     shareBtn.className = 'mt-event-share';
-                    shareBtn.textContent = 'Paylaş';
-                    shareBtn.setAttribute('aria-label', ev.title + ' olayını görsel olarak paylaş');
+                    shareBtn.innerHTML = '<i class="fa-solid fa-share" aria-hidden="true"></i><span>Paylaş</span>';
+                    shareBtn.setAttribute('aria-label', ev.title + ' olayını paylaş');
                     shareBtn.addEventListener('click', function(e) {
                         e.stopPropagation();
-                        const stage = buildShareStage({
-                            title: ev.title,
-                            description: ev.description || '',
-                            category: ev.category,
-                            year: ev.year,
-                            monthIndex: monthIndex,
-                            day: day
-                        });
-                        if (!stage) return;
-                        shareBtn.disabled = true;
-                        const fname = 'milli-takvim-' + pad(day) + '-' + pad(monthIndex + 1) + '.png';
-                        shareStage(stage, fname)
-                            .catch(function(err) { console.error('Paylaşım hatası:', err); })
-                            .then(function() {
-                                stage.remove();
-                                shareBtn.disabled = false;
-                            });
+                        openShareModal(eventShareContext(ev, monthIndex, day));
                     });
                     item.appendChild(shareBtn);
 
@@ -376,18 +558,49 @@
         const shareBtn = document.getElementById('mt-modal-share');
         if (shareBtn) {
             shareBtn.addEventListener('click', function() {
-                shareBtn.disabled = true;
-                sharePanel().then(function() { shareBtn.disabled = false; });
+                if (currentDay && currentDay.events.length === 1) {
+                    openShareModal(eventShareContext(currentDay.events[0], currentDay.monthIndex, currentDay.day));
+                } else {
+                    openShareModal(panelShareContext());
+                }
+            });
+        }
+
+        const shareModal = document.getElementById('mt-share-modal');
+        if (shareModal) {
+            shareModal.querySelectorAll('[data-mt-share-close]').forEach(function(el) {
+                el.addEventListener('click', function() { closeModal(shareModal); });
+            });
+            const imageBtn = document.getElementById('mt-share-image-btn');
+            if (imageBtn) {
+                imageBtn.addEventListener('click', function() { runShareImage(imageBtn); });
+            }
+            shareModal.querySelectorAll('[data-mt-social]').forEach(function(btn) {
+                btn.addEventListener('click', function() {
+                    shareToSocial(btn.getAttribute('data-mt-social'));
+                });
             });
         }
 
         document.addEventListener('keydown', onEscape);
 
-        const todayEvents = eventsForDay(today.getMonth(), today.getDate());
-        if (todayEvents.length > 0) {
+        const deepMatch = (window.location.hash || '').match(/^#milli-takvim\/(.+)$/);
+        const deepEvent = deepMatch ? eventBySlug(decodeURIComponent(deepMatch[1])) : null;
+
+        if (deepEvent) {
+            const deepMonth = parseInt(deepEvent.date.slice(0, 2), 10) - 1;
+            const deepDay = parseInt(deepEvent.date.slice(3, 5), 10);
+            const dayEvents = eventsForDay(deepMonth, deepDay);
             window.setTimeout(function() {
-                openEventModal(today.getMonth(), today.getDate(), todayEvents);
-            }, 650);
+                openEventModal(deepMonth, deepDay, dayEvents.length ? dayEvents : [deepEvent]);
+            }, 500);
+        } else {
+            const todayEvents = eventsForDay(today.getMonth(), today.getDate());
+            if (todayEvents.length > 0) {
+                window.setTimeout(function() {
+                    openEventModal(today.getMonth(), today.getDate(), todayEvents);
+                }, 650);
+            }
         }
     }
 

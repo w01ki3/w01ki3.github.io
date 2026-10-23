@@ -371,6 +371,9 @@
 }
 
 .mt-share-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
     border: 1px solid var(--accent-color);
     background: none;
     color: var(--accent-color);
@@ -392,6 +395,9 @@
 }
 
 .mt-event-share {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
     margin-top: 8px;
     border: 1px solid var(--border-color);
     background: none;
@@ -421,6 +427,153 @@
     transform: none;
     opacity: 1;
     box-shadow: none;
+}
+
+
+/* Sosyal medya paylaşım modalı (ekranın ortasında) */
+
+.mt-share-modal {
+    z-index: 2100;
+}
+
+.mt-share-modal .mt-modal-panel {
+    left: 50%;
+    top: 50%;
+    right: auto;
+    bottom: auto;
+    width: min(420px, calc(100vw - 32px));
+    text-align: center;
+    transform: translate(-50%, calc(-50% + 20px));
+}
+
+.mt-share-modal.is-open .mt-modal-panel {
+    transform: translate(-50%, -50%);
+}
+
+.mt-share-desc {
+    font-size: 0.85rem;
+    line-height: 1.55;
+    color: var(--muted-color);
+    margin: 0 0 4px;
+}
+
+.mt-share-image-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    margin: 20px 0 0;
+    padding: 10px 14px;
+    border: 1px solid var(--accent-color);
+    background: none;
+    color: var(--accent-color);
+    border-radius: 10px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.mt-share-image-btn:hover {
+    background: var(--accent-color);
+    color: var(--surface-color);
+}
+
+.mt-share-image-btn:disabled {
+    opacity: 0.6;
+    cursor: default;
+}
+
+.mt-share-divider {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 16px 0 12px;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--muted-color);
+}
+
+.mt-share-divider::before,
+.mt-share-divider::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: var(--border-color);
+}
+
+.mt-share-social {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.mt-social-btn {
+    width: 42px;
+    height: 42px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--border-color);
+    border-radius: 50%;
+    background: none;
+    color: var(--text-color);
+    font-size: 1.05rem;
+    cursor: pointer;
+    transition: transform 0.15s ease, background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+
+.mt-social-btn:hover {
+    transform: translateY(-2px);
+    border-color: transparent;
+    color: #fff;
+}
+
+.mt-social-x:hover {
+    background: #000;
+}
+
+.mt-social-facebook:hover {
+    background: #1877f2;
+}
+
+.mt-social-instagram:hover {
+    background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+}
+
+.mt-social-linkedin:hover {
+    background: #0a66c2;
+}
+
+.mt-social-whatsapp:hover {
+    background: #25d366;
+}
+
+.mt-toast {
+    position: fixed;
+    left: 50%;
+    bottom: 28px;
+    z-index: 2200;
+    max-width: calc(100vw - 40px);
+    padding: 10px 16px;
+    border-radius: 10px;
+    background: var(--text-color);
+    color: var(--surface-color);
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-align: center;
+    opacity: 0;
+    pointer-events: none;
+    transform: translate(-50%, 20px);
+    transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.mt-toast.is-visible {
+    opacity: 1;
+    transform: translate(-50%, 0);
 }
 
 @media (max-width: 1024px) {

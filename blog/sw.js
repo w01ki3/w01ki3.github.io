@@ -1,6 +1,6 @@
 importScripts('https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.sw.js');
 
-const APP_VERSION = '0.002';
+const APP_VERSION = '0.003';
 const CACHE_NAME = 'vk-gunce-' + APP_VERSION;
 const RUNTIME_CACHE = 'vk-gunce-runtime-' + APP_VERSION;
 const __v = APP_VERSION;
@@ -15,6 +15,7 @@ const PRECACHE_URLS = [
     './docs/milli-takvim/takvim.css?v=' + __v,
     './docs/milli-takvim/script.js?v=' + __v,
     './docs/milli-takvim/olaylar.js?v=' + __v,
+    'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css',
     'https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.5.1/github-markdown.min.css',
     'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css',
     'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css',

@@ -48,11 +48,11 @@ document.addEventListener('DOMContentLoaded', () => {
     function setTheme(theme) {
         document.documentElement.setAttribute('data-theme', theme);
         localStorage.setItem('theme', theme);
-        const icon = theme === 'dark' ? '🌙' : '🌞';
+        const icon = theme === 'dark' ? 'fa-star-and-crescent' : 'fa-sun';
         [themeToggleDesktop, themeToggleMobile].forEach(btn => {
             if (!btn) return;
             const span = btn.querySelector('.theme-icon');
-            if (span) span.textContent = icon;
+            if (span) span.className = 'theme-icon fa-solid ' + icon;
         });
         if (theme === 'dark') {
             highlightTheme.href = 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css';
@@ -219,7 +219,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function handleRoute() {
-        const hash = window.location.hash.substring(1);
+        const hash = window.location.hash.substring(1).split('/')[0];
         if (!hash || hash === 'home') {
             setLogoOverride('');
             setPageMeta('');
