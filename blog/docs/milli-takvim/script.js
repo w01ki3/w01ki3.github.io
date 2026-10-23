@@ -192,17 +192,15 @@
         clone.removeAttribute('aria-modal');
         clone.removeAttribute('aria-labelledby');
         clone.querySelectorAll('[id]').forEach(function(el) { el.removeAttribute('id'); });
-        clone.querySelectorAll('[data-mt-close], .mt-modal-close, .mt-modal-actions, .mt-event-share').forEach(function(el) {
+        clone.querySelectorAll('[data-mt-close], .mt-modal-close, .mt-modal-actions, .mt-event-share, .mt-modal-kicker').forEach(function(el) {
             el.remove();
         });
 
         if (single) {
             clone.querySelectorAll('.mt-event-card, .mt-event-group-title').forEach(function(el) { el.remove(); });
-            const kicker = clone.querySelector('.mt-modal-kicker');
             const title = clone.querySelector('h2');
             const meta = clone.querySelector('.mt-modal-meta');
             const desc = clone.querySelector('.mt-modal-desc');
-            if (kicker) kicker.textContent = categoryLabel(single.category);
             if (title) title.textContent = single.title || '';
             if (meta) meta.textContent = single.day + ' ' + MONTH_NAMES[single.monthIndex] +
                 (single.year ? ' ' + single.year : '');

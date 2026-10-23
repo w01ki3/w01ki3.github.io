@@ -16,8 +16,30 @@ document.addEventListener('DOMContentLoaded', () => {
         return theme === 'light' ? 'https://raw.githubusercontent.com/w01ki3/w01ki3/main/img/vkIcon.png' : 'https://raw.githubusercontent.com/w01ki3/w01ki3/main/img/vkIcon.png';
     }
 
+    let logoOverrideSrc = null;
+
+    function setLogoOverride(docId) {
+        logoOverrideSrc = docId === 'milli-takvim' ? '../GokTurk.jpg' : null;
+        updateLogos(document.documentElement.getAttribute('data-theme'));
+    }
+
+    const defaultTitle = document.title;
+    const iconLinks = Array.from(document.querySelectorAll('link[rel="icon"], link[rel="apple-touch-icon"]'));
+    const defaultIconHrefs = iconLinks.map(link => link.getAttribute('href'));
+    const brandTitleEl = document.querySelector('.brand-text strong');
+    const defaultBrandText = brandTitleEl ? brandTitleEl.textContent : '';
+
+    function setPageMeta(docId) {
+        const isCalendar = docId === 'milli-takvim';
+        document.title = isCalendar ? 'Milli Takvim' : defaultTitle;
+        iconLinks.forEach((link, i) => {
+            link.setAttribute('href', isCalendar ? '../GokTurk.jpg' : defaultIconHrefs[i]);
+        });
+        if (brandTitleEl) brandTitleEl.textContent = isCalendar ? 'Milli Takvim' : defaultBrandText;
+    }
+
     function updateLogos(theme) {
-        const src = getLogoSrc(theme);
+        const src = logoOverrideSrc || getLogoSrc(theme);
         document.querySelectorAll('img.mobile-logo, img.brand-logo, img.hero-logo').forEach(img => {
             if (img.getAttribute('src') !== src) img.setAttribute('src', src);
         });
@@ -199,12 +221,16 @@ document.addEventListener('DOMContentLoaded', () => {
     function handleRoute() {
         const hash = window.location.hash.substring(1);
         if (!hash || hash === 'home') {
+            setLogoOverride('');
+            setPageMeta('');
             renderHome();
             setActiveLink('');
             mainContent.scrollTop = 0;
             return;
         }
         const doc = docsConfig.find(d => d.id === hash) || docsConfig[0];
+        setLogoOverride(doc.id);
+        setPageMeta(doc.id);
         loadDoc(doc).then(() => setActiveLink(doc.id));
         mainContent.scrollTop = 0;
     }
