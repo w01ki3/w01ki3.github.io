@@ -11,12 +11,38 @@
     const MAIN_SHARE_URL = SITE_URL + '/blog/#milli-takvim';
     const SHARE_PAGE_BASE = SITE_URL + '/blog/docs/milli-takvim/paylas/';
     const TR_MAP = {
-        'ç': 'c', 'Ç': 'c', 'ğ': 'g', 'Ğ': 'g', 'ı': 'i', 'İ': 'i',
-        'ö': 'o', 'Ö': 'o', 'ş': 's', 'Ş': 's', 'ü': 'u', 'Ü': 'u',
-        'â': 'a', 'Â': 'a', 'î': 'i', 'Î': 'i', 'û': 'u', 'Û': 'u',
-        'é': 'e', 'è': 'e', 'ê': 'e', 'á': 'a', 'à': 'a', 'ä': 'a',
-        'å': 'a', 'ø': 'o', 'æ': 'ae', 'ô': 'o', 'ñ': 'n', 'ó': 'o',
-        'ú': 'u', 'í': 'i'
+        'ç': 'c',
+        'Ç': 'c',
+        'ğ': 'g',
+        'Ğ': 'g',
+        'ı': 'i',
+        'İ': 'i',
+        'ö': 'o',
+        'Ö': 'o',
+        'ş': 's',
+        'Ş': 's',
+        'ü': 'u',
+        'Ü': 'u',
+        'â': 'a',
+        'Â': 'a',
+        'î': 'i',
+        'Î': 'i',
+        'û': 'u',
+        'Û': 'u',
+        'é': 'e',
+        'è': 'e',
+        'ê': 'e',
+        'á': 'a',
+        'à': 'a',
+        'ä': 'a',
+        'å': 'a',
+        'ø': 'o',
+        'æ': 'ae',
+        'ô': 'o',
+        'ñ': 'n',
+        'ó': 'o',
+        'ú': 'u',
+        'í': 'i'
     };
 
     let year = new Date().getFullYear();
@@ -320,7 +346,7 @@
             meta: day + ' ' + MONTH_NAMES[monthIndex] + (ev.year ? ' ' + ev.year : ''),
             description: ev.description || '',
             shareUrl: slug ? SHARE_PAGE_BASE + slug + '.html' : MAIN_SHARE_URL,
-            shareText: ev.title + (ev.year ? ' (' + ev.year + ')' : '') + ' · Milli Takvim',
+            shareText: ev.title + ' (' + day + ' ' + MONTH_NAMES[monthIndex] + (ev.year ? ' ' + ev.year : '') + ')',
             filename: 'milli-takvim-' + pad(day) + '-' + pad(monthIndex + 1) + '.png',
             makeStage: function() {
                 return buildShareStage({
@@ -339,9 +365,9 @@
         return {
             title: 'Milli Takvim',
             meta: 'Milli Takvim',
-            description: 'Tarihteki önemli olaylar ve milli günler',
+            description: 'Hafızasını kaybeden bir toplum, geleceğin mücadelesini veremez',
             shareUrl: MAIN_SHARE_URL,
-            shareText: 'Milli Takvim · Tarihteki önemli olaylar ve milli günler',
+            shareText: 'Hafızasını kaybeden bir toplum, geleceğin mücadelesini veremez · Milli Takvimi incele',
             filename: 'milli-takvim.png',
             makeStage: function() { return buildShareStage(null); }
         };

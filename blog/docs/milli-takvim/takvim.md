@@ -34,7 +34,6 @@
     <div class="mt-modal-backdrop" data-mt-share-close></div>
     <div class="mt-modal-panel" role="dialog" aria-modal="true" aria-labelledby="mt-share-title">
         <button type="button" class="mt-modal-close" data-mt-share-close aria-label="Kapat">×</button>
-        <p class="mt-modal-kicker">Paylaş</p>
         <h2 id="mt-share-title">Milli Takvim</h2>
         <p class="mt-share-desc" id="mt-share-desc"></p>        
         <p class="mt-share-divider"><span>Sosyal medyada paylaş</span></p>

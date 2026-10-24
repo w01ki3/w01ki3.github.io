@@ -137,7 +137,7 @@ ${desc ? `<p class="mt-modal-desc">${htmlEscape(desc)}</p>` : ''}
 }
 
 function renderPage(ev, slug, imageHeight) {
-    const title = ev.title + (ev.year ? ' · ' + ev.year : '');
+    const title = ev.title + ' (' + dateLabel(ev) + ')';
     const description = truncate(ev.description, MAX_DESC) || ev.title;
     const url = pageUrl(slug);
     const redirect = '../../../index.html#milli-takvim/' + slug;

@@ -125,14 +125,14 @@ document.addEventListener('DOMContentLoaded', () => {
                             <h3>Milli Takvim</h3>
                             <p>Tarihteki önemli olaylar ve milli günler</p>
                         </div>
-                        <span class="hero-link-arrow">→</span>
+                        <i class="fa-solid fa-up-right-from-square"></i>
                     </a>
                     <a href="#b0100-onsoz" class="hero-link-card">
                         <div class="hero-link-content">
                             <h3>Neden Biz?</h3>
                             <p>neden Türkiye hedef? neden Türk hedef?</p>
                         </div>
-                        <span class="hero-link-arrow">→</span>
+                        <i class="fa-solid fa-up-right-from-square"></i>
                     </a>
                 </div>
                 <div class="hero-signature">
