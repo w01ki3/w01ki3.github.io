@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const isCalendar = docId === 'milli-takvim';
         document.title = isCalendar ? 'Milli Takvim' : defaultTitle;
         iconLinks.forEach((link, i) => {
-            link.setAttribute('href', isCalendar ? '../GokTurk.jpg' : defaultIconHrefs[i]);
+            link.setAttribute('href', isCalendar ? 'gokturk-192.png' : defaultIconHrefs[i]);
         });
         if (brandTitleEl) brandTitleEl.textContent = isCalendar ? 'Milli Takvim' : defaultBrandText;
     }

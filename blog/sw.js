@@ -1,6 +1,10 @@
-importScripts('https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.sw.js');
+try {
+    importScripts('https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.sw.js');
+} catch (e) {
+    console.warn('OneSignal SW yüklenemedi; çevrimdışı önbellek yine de etkin.', e);
+}
 
-const APP_VERSION = '0.008';
+const APP_VERSION = '0.009';
 const CACHE_NAME = 'vk-gunce-' + APP_VERSION;
 const RUNTIME_CACHE = 'vk-gunce-runtime-' + APP_VERSION;
 const __v = APP_VERSION;
@@ -9,6 +13,8 @@ const PRECACHE_URLS = [
     './',
     './index.html',
     './manifest.json',
+    './gokturk-192.png',
+    './gokturk-512.png',
     './style.css?v=' + __v,
     './config.js?v=' + __v,
     './app.js?v=' + __v,
@@ -26,7 +32,9 @@ const PRECACHE_URLS = [
 self.addEventListener('install', (event) => {
     self.skipWaiting();
     event.waitUntil(
-        caches.open(CACHE_NAME).then((cache) => cache.addAll(PRECACHE_URLS))
+        caches.open(CACHE_NAME).then((cache) =>
+            Promise.allSettled(PRECACHE_URLS.map((url) => cache.add(url)))
+        )
     );
 });
 
