@@ -1,6 +1,6 @@
 importScripts('https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.sw.js');
 
-const APP_VERSION = '0.003';
+const APP_VERSION = '0.008';
 const CACHE_NAME = 'vk-gunce-' + APP_VERSION;
 const RUNTIME_CACHE = 'vk-gunce-runtime-' + APP_VERSION;
 const __v = APP_VERSION;
