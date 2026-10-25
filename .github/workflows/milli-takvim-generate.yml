@@ -1,0 +1,48 @@
+name: Milli Takvim Dosya Üretimi
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - blog/docs/milli-takvim/olaylar.js
+      - blog/docs/milli-takvim/uret-paylas.mjs
+  workflow_dispatch:
+
+jobs:
+  generate-share-files:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install Playwright browser
+        run: npx playwright install --with-deps chromium
+
+      - name: Generate share files
+        run: npm run generate:milli-takvim
+
+      - name: Commit generated files
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add blog/docs/milli-takvim/paylas
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Generate milli takvim share files"
+            git push
+          fi
