@@ -1,6 +1,7 @@
 /**
  * Sosyal medya botları için önizleme (Open Graph) HTML paylas/<slug>.html üretir
  */
+import crypto from 'node:crypto';
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -10,6 +11,8 @@ const __dirname = path.dirname(fileURLToPath(
     import.meta.url));
 const EVENTS_FILE = path.join(__dirname, 'olaylar.js');
 const OUT_DIR = path.join(__dirname, 'paylas');
+/* Artımlı üretim için son durum kaydı: hangi slug hangi içerikle üretildi */
+const MANIFEST_FILE = path.join(OUT_DIR, '.manifest.json');
 
 const SITE = 'https://w01ki3.github.io';
 const PAGE_BASE = SITE + '/blog/docs/milli-takvim/paylas/';
@@ -184,19 +187,50 @@ const sandbox = {};
 new Function('window', src)(sandbox);
 const events = sandbox.MILLI_TAKVIM_EVENTS || [];
 
+function sha1(value) {
+    return crypto.createHash('sha1').update(String(value)).digest('hex');
+}
+
+/* Çıktının görünümünü etkileyen her şey bu imzada toplanır; değişirse tüm dosyalar yenilenir */
+const STYLE_SIGNATURE = sha1([
+    siteCss(),
+    CARD_THEME,
+    OG_IMAGE_W,
+    PANEL_W,
+    STAGE_PAD,
+    MAX_DESC,
+    SITE_NAME
+].join('\u0001'));
+
+/* Olayın paylaşım çıktısını etkileyen alanlar: date, year, title, description, category */
+function eventSignature(ev) {
+    return sha1([
+        ev.date,
+        ev.year == null ? '' : ev.year,
+        ev.title,
+        ev.description || '',
+        ev.category || ''
+    ].join('\u0001'));
+}
+
+function readManifest() {
+    try {
+        const parsed = JSON.parse(fs.readFileSync(MANIFEST_FILE, 'utf8'));
+        return parsed && typeof parsed === 'object' ? parsed : {};
+    } catch (err) {
+        return {};
+    }
+}
+
 fs.mkdirSync(OUT_DIR, { recursive: true });
 
+const previous = readManifest();
 const used = new Set();
-let generated = 0;
+const manifest = {};
+/* Sadece içeriği değişen veya dosyası eksik olan olaylar yeniden üretilir */
+const pending = [];
 
-const browser = await chromium.launch();
-const page = await browser.newPage({
-    viewport: { width: PANEL_W + STAGE_PAD * 2, height: 2000 },
-    deviceScaleFactor: CARD_SCALE
-});
-
-for (let index = 0; index < events.length; index++) {
-    const ev = events[index];
+events.forEach(function(ev, index) {
     let base = slugify(ev.date + '-' + (ev.year || '') + '-' + ev.title);
     if (!base) base = 'olay-' + (index + 1);
     let slug = base;
@@ -207,23 +241,61 @@ for (let index = 0; index < events.length; index++) {
     }
     used.add(slug);
 
-    await page.setContent(renderCard(ev), { waitUntil: 'load' });
-    await page.evaluate(function() {
-        return Promise.race([
-            document.fonts.ready,
-            new Promise(function(r) { setTimeout(r, 1500); })
-        ]);
+    const signature = eventSignature(ev);
+    manifest[slug] = { signature: signature, style: STYLE_SIGNATURE };
+
+    const prev = previous[slug];
+    const upToDate = prev &&
+        prev.signature === signature &&
+        prev.style === STYLE_SIGNATURE &&
+        fs.existsSync(path.join(OUT_DIR, slug + '.html')) &&
+        fs.existsSync(path.join(OUT_DIR, slug + '.png'));
+
+    if (!upToDate) pending.push({ ev: ev, slug: slug });
+});
+
+/* Güncel olay listesinde karşılığı olmayan dosyaları temizle (silinen veya adı değişen olaylar) */
+let removed = 0;
+fs.readdirSync(OUT_DIR).forEach(function(file) {
+    const slug = file.replace(/\.(html|png)$/, '');
+    if (slug === file || used.has(slug)) return;
+    fs.unlinkSync(path.join(OUT_DIR, file));
+    removed += 1;
+});
+
+let generated = 0;
+
+if (pending.length) {
+    const browser = await chromium.launch();
+    const page = await browser.newPage({
+        viewport: { width: PANEL_W + STAGE_PAD * 2, height: 2000 },
+        deviceScaleFactor: CARD_SCALE
     });
 
-    const stage = await page.$('.mt-share-stage');
-    const box = await stage.boundingBox();
-    await stage.screenshot({ path: path.join(OUT_DIR, slug + '.png') });
+    for (const item of pending) {
+        const ev = item.ev;
+        const slug = item.slug;
 
-    fs.writeFileSync(path.join(OUT_DIR, slug + '.html'), renderPage(ev, slug, Math.round(box.height * CARD_SCALE)), 'utf8');
+        await page.setContent(renderCard(ev), { waitUntil: 'load' });
+        await page.evaluate(function() {
+            return Promise.race([
+                document.fonts.ready,
+                new Promise(function(r) { setTimeout(r, 1500); })
+            ]);
+        });
 
-    generated += 1;
+        const stage = await page.$('.mt-share-stage');
+        const box = await stage.boundingBox();
+        await stage.screenshot({ path: path.join(OUT_DIR, slug + '.png') });
+
+        fs.writeFileSync(path.join(OUT_DIR, slug + '.html'), renderPage(ev, slug, Math.round(box.height * CARD_SCALE)), 'utf8');
+
+        generated += 1;
+    }
+
+    await browser.close();
 }
 
-await browser.close();
+fs.writeFileSync(MANIFEST_FILE, JSON.stringify(manifest, null, 2) + '\n', 'utf8');
 
-console.log(generated + ' olay sayfası + görsel üretildi -> ' + OUT_DIR);
+console.log(generated + ' olay üretildi, ' + (used.size - generated) + ' olay değişmedi, ' + removed + ' geçersiz dosya silindi -> ' + OUT_DIR);
