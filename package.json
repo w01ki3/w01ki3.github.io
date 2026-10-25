@@ -1,0 +1,12 @@
+{
+  "name": "w01ki3.github.io",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "generate:milli-takvim": "node blog/docs/milli-takvim/uret-paylas.mjs",
+    "uret": "node blog/docs/milli-takvim/uret-paylas.mjs"
+  },
+  "devDependencies": {
+    "playwright": "^1.49.0"
+  }
+}
