@@ -17,6 +17,7 @@ const MANIFEST_FILE = path.join(OUT_DIR, '.manifest.json');
 const SITE = 'https://w01ki3.github.io';
 const PAGE_BASE = SITE + '/blog/docs/milli-takvim/paylas/';
 const OG_IMAGE_W = 1200;
+const OG_IMAGE_H = 628;
 const SITE_NAME = 'Milli Takvim';
 const MAX_DESC = 200;
 
@@ -25,6 +26,11 @@ const CARD_THEME = 'dark';
 const PANEL_W = 420;
 const STAGE_PAD = 28;
 const CARD_SCALE = OG_IMAGE_W / (PANEL_W + STAGE_PAD * 2);
+const STAGE_W = PANEL_W + STAGE_PAD * 2;
+const STAGE_H = OG_IMAGE_H / CARD_SCALE;
+const PANEL_H = STAGE_H - STAGE_PAD * 2;
+const DESC_FONT_START = 15.2;
+const DESC_MIN_FONT = 8;
 const MONTHS_TR = ['Ocak', 'Şubat', 'Mart', 'Nisan', 'Mayıs', 'Haziran', 'Temmuz', 'Ağustos', 'Eylül', 'Ekim', 'Kasım', 'Aralık'];
 const STYLE_FILES = [
     path.join(__dirname, '..', '..', 'style.css'),
@@ -123,8 +129,36 @@ function renderCard(ev) {
 <style>
 ${siteCss()}
 html, body { height: auto; overflow: visible; }
-body { display: block; }
-.mt-share-stage { position: static; left: auto; top: auto; z-index: auto; display: inline-block; padding: ${STAGE_PAD}px; background-color: var(--bg-color); }
+body { display: block; margin: 0; }
+.mt-share-stage {
+    position: static;
+    left: auto;
+    top: auto;
+    z-index: auto;
+    display: block;
+    box-sizing: border-box;
+    width: ${STAGE_W}px;
+    height: ${STAGE_H}px;
+    padding: ${STAGE_PAD}px;
+    background-color: var(--bg-color);
+}
+.mt-share-stage .mt-modal-panel {
+    position: static;
+    box-sizing: border-box;
+    width: ${PANEL_W}px;
+    height: ${PANEL_H}px;
+    transform: none;
+    opacity: 1;
+    box-shadow: none;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+.mt-share-stage .mt-modal-desc {
+    margin-top: 0;
+    margin-bottom: 0;
+    overflow: hidden;
+}
 </style>
 </head>
 <body>
@@ -137,6 +171,74 @@ ${desc ? `<p class="mt-modal-desc">${htmlEscape(desc)}</p>` : ''}
 </div>
 </body>
 </html>`;
+}
+
+async function fitCardText(page) {
+    await page.evaluate(function(config) {
+        const panel = document.querySelector('.mt-share-stage .mt-modal-panel');
+        const desc = panel ? panel.querySelector('.mt-modal-desc') : null;
+        if (!panel || !desc) return;
+
+        const original = String(desc.textContent || '').trim();
+        if (!original) return;
+
+        function applyFont(size) {
+            const px = Math.max(config.minFont, size);
+            desc.style.fontSize = px + 'px';
+            desc.style.lineHeight = String(config.lineHeight);
+            desc.style.maxHeight = 'none';
+
+            const panelStyle = getComputedStyle(panel);
+            const panelRect = panel.getBoundingClientRect();
+            const descRect = desc.getBoundingClientRect();
+            const availableHeight = panelRect.bottom -
+                parseFloat(panelStyle.borderBottomWidth || '0') -
+                parseFloat(panelStyle.paddingBottom || '0') -
+                descRect.top;
+
+            desc.style.maxHeight = Math.max(0, Math.floor(availableHeight)) + 'px';
+        }
+
+        function fits() {
+            return panel.scrollHeight <= panel.clientHeight + 1 &&
+                desc.scrollHeight <= desc.clientHeight + 1;
+        }
+
+        let size = config.startFont;
+        applyFont(size);
+
+        while (size > config.minFont && !fits()) {
+            size -= 0.2;
+            applyFont(size);
+        }
+
+        if (fits()) return;
+
+        applyFont(config.minFont);
+
+        let low = 0;
+        let high = original.length;
+        let best = '';
+
+        while (low <= high) {
+            const mid = Math.floor((low + high) / 2);
+            const trimmed = original.slice(0, mid).replace(/[.,;:!?\\s-]+$/, '');
+            desc.textContent = trimmed && mid < original.length ? trimmed + '…' : original;
+
+            if (fits()) {
+                best = desc.textContent;
+                low = mid + 1;
+            } else {
+                high = mid - 1;
+            }
+        }
+
+        desc.textContent = best || '…';
+    }, {
+        startFont: DESC_FONT_START,
+        minFont: DESC_MIN_FONT,
+        lineHeight: 1.55
+    });
 }
 
 function renderPage(ev, slug, imageHeight) {
@@ -196,8 +298,11 @@ const STYLE_SIGNATURE = sha1([
     siteCss(),
     CARD_THEME,
     OG_IMAGE_W,
+    OG_IMAGE_H,
     PANEL_W,
     STAGE_PAD,
+    DESC_FONT_START,
+    DESC_MIN_FONT,
     MAX_DESC,
     SITE_NAME
 ].join('\u0001'));
@@ -268,7 +373,7 @@ let generated = 0;
 if (pending.length) {
     const browser = await chromium.launch();
     const page = await browser.newPage({
-        viewport: { width: PANEL_W + STAGE_PAD * 2, height: 2000 },
+        viewport: { width: STAGE_W, height: Math.ceil(STAGE_H) },
         deviceScaleFactor: CARD_SCALE
     });
 
@@ -283,12 +388,12 @@ if (pending.length) {
                 new Promise(function(r) { setTimeout(r, 1500); })
             ]);
         });
+        await fitCardText(page);
 
         const stage = await page.$('.mt-share-stage');
-        const box = await stage.boundingBox();
         await stage.screenshot({ path: path.join(OUT_DIR, slug + '.png') });
 
-        fs.writeFileSync(path.join(OUT_DIR, slug + '.html'), renderPage(ev, slug, Math.round(box.height * CARD_SCALE)), 'utf8');
+        fs.writeFileSync(path.join(OUT_DIR, slug + '.html'), renderPage(ev, slug, OG_IMAGE_H), 'utf8');
 
         generated += 1;
     }
