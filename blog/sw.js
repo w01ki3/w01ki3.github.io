@@ -4,7 +4,7 @@ try {
     console.warn('OneSignal SW yüklenemedi; çevrimdışı önbellek yine de etkin.', e);
 }
 
-const APP_VERSION = '0.010';
+const APP_VERSION = '0.011';
 const CACHE_NAME = 'vk-gunce-' + APP_VERSION;
 const RUNTIME_CACHE = 'vk-gunce-runtime-' + APP_VERSION;
 const __v = APP_VERSION;

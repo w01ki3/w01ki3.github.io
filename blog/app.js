@@ -107,8 +107,24 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    let skeletonTimer = null;
+
+    function renderSkeleton() {
+        contentEl.innerHTML = `
+            <div class="doc-skeleton" aria-hidden="true">
+                <div class="doc-skeleton-line doc-skeleton-line--title"></div>
+                <div class="doc-skeleton-line"></div>
+                <div class="doc-skeleton-line"></div>
+                <div class="doc-skeleton-line doc-skeleton-line--short"></div>
+                <div class="doc-skeleton-line"></div>
+                <div class="doc-skeleton-line doc-skeleton-line--short"></div>
+            </div>
+        `;
+    }
+
     // Render simple homepage (only logo + title)
     function renderHome() {
+        window.clearTimeout(skeletonTimer);
         if (window.MilliTakvim) window.MilliTakvim.destroy();
         contentEl.innerHTML = `
             <section class="home-hero simple-hero">
@@ -125,14 +141,14 @@ document.addEventListener('DOMContentLoaded', () => {
                             <h3>Milli Takvim</h3>
                             <p>Tarihteki önemli olaylar ve milli günler</p>
                         </div>
-                        <i class="fa-solid fa-up-right-from-square"></i>
+                        <i class="hero-link-arrow fa-solid fa-up-right-from-square"></i>
                     </a>
                     <a href="#b0100-onsoz" class="hero-link-card">
                         <div class="hero-link-content">
                             <h3>Neden Biz?</h3>
                             <p>neden Türkiye hedef? neden Türk hedef?</p>
                         </div>
-                        <i class="fa-solid fa-up-right-from-square"></i>
+                        <i class="hero-link-arrow fa-solid fa-up-right-from-square"></i>
                     </a>
                 </div>
                 <div class="hero-signature">
@@ -197,16 +213,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
     async function loadDoc(doc) {
         if (window.MilliTakvim) window.MilliTakvim.destroy();
+        // Kısa süren yüklemelerde titremeyi önlemek için iskeleti gecikmeli göster
+        window.clearTimeout(skeletonTimer);
+        skeletonTimer = window.setTimeout(renderSkeleton, 120);
         try {
             const res = await fetch(doc.file);
             if (!res.ok) throw new Error('Not found');
             const text = await res.text();
+            window.clearTimeout(skeletonTimer);
             contentEl.innerHTML = marked.parse(text);
             if (doc.id === 'milli-takvim') {
                 await ensureCalendarAssets();
                 if (window.MilliTakvim) window.MilliTakvim.init();
             }
         } catch (e) {
+            window.clearTimeout(skeletonTimer);
             contentEl.innerHTML = `<h1>Erişim Hatası</h1><p><strong>${doc.file}</strong> yüklenemedi.</p>`;
         }
     }
