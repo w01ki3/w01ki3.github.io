@@ -1,17 +1,19 @@
 <div class="milli-takvim" id="milli-takvim">
     <header class="mt-header">
         <p class="mt-kicker">Milli Takvim</p>
+        <p class="mt-tagline">Hafızasını kaybeden bir toplum, geleceğin mücadelesini veremez</p>
         <p class="mt-today-label" id="mt-today-label"></p>
         <label class="mt-search">
-            <span class="visually-hidden">Olay ara</span>
-            <input type="text" id="mt-search" placeholder="Ara…" autocomplete="off">
+            <span class="visually-hidden">Takvimde ara</span>
+            <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+            <input type="text" id="mt-search" placeholder="Takvimde ara…" autocomplete="off">
         </label>
+        <div class="mt-legend">
+            <span><i class="mt-dot mt-dot-tarih"></i> Tarihi olay</span>
+            <span><i class="mt-dot mt-dot-bayram"></i> Milli bayram</span>
+            <span><i class="mt-dot mt-dot-anma"></i> Anma</span>
+        </div>
     </header>
-    <div class="mt-legend">
-        <span><i class="mt-dot mt-dot-tarih"></i> Tarihi olay</span>
-        <span><i class="mt-dot mt-dot-bayram"></i> Milli bayram</span>
-        <span><i class="mt-dot mt-dot-anma"></i> Anma</span>
-    </div>
     <div class="mt-year-grid" id="mt-year-grid"></div>
 </div>
 
