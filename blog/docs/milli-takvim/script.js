@@ -307,7 +307,11 @@
             return lib.toBlob(node, {
                 pixelRatio: 2,
                 backgroundColor: getComputedStyle(node).backgroundColor || '#ffffff',
-                cacheBust: true
+                cacheBust: true,
+                // Projede gömülü webfont yok; html-to-image'ın cross-origin
+                // stylesheet'leri (örn. OneSignal CSS) okumasını engelleyerek
+                // SecurityError / CORS hatasını önlüyoruz.
+                skipFonts: true
             });
         }).then(function(blob) {
             if (!blob) throw new Error('Görsel üretilemedi');

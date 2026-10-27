@@ -4,7 +4,7 @@ try {
     console.warn('OneSignal SW yüklenemedi; çevrimdışı önbellek yine de etkin.', e);
 }
 
-const APP_VERSION = '0.012';
+const APP_VERSION = '0.013';
 const CACHE_NAME = 'vk-gunce-' + APP_VERSION;
 const RUNTIME_CACHE = 'vk-gunce-runtime-' + APP_VERSION;
 const __v = APP_VERSION;
@@ -90,7 +90,7 @@ self.addEventListener('fetch', (event) => {
                     }
                     return res;
                 })
-                .catch(() => caches.match(req))
+                .catch(() => caches.match(req).then((cached) => cached || Response.error()))
             );
             return;
         }
@@ -106,7 +106,7 @@ self.addEventListener('fetch', (event) => {
                         }
                         return res;
                     })
-                    .catch(() => cached);
+                    .catch(() => cached || Response.error());
             })
         );
         return;
@@ -123,7 +123,7 @@ self.addEventListener('fetch', (event) => {
                     }
                     return res;
                 })
-                .catch(() => cached);
+                .catch(() => cached || Response.error());
         })
     );
 });
