@@ -17,5 +17,5 @@ Bu yazdıklarımdan özetle; Avrupa kendi yalan hümanizmasını inşa ederken, 
 > **_“Ulusun, korkma! Nasıl böyle bir îmânı boğar”_**
 
 <br><br><br>
-<a href="#b0101-hun-cagi">Devam et [1. EVRE: Hun Çağı] >></a>
+<a class="doc-nav" href="#b0101-hun-cagi">Devam et [1. EVRE: Hun Çağı]</a>
 <br><br><br>

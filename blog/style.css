@@ -336,6 +336,27 @@ body {
 .content-shell {
     max-width: 1100px;
     margin: 0 auto;
+    padding: 32px 34px;
+    background-color: var(--surface-color);
+    border: 1px solid var(--border-color);
+    border-radius: 22px;
+    box-shadow: var(--shadow);
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+
+/* Ana sayfa kahramanı kendi kartına sahip olduğu için kabuk sade kalır */
+
+.content-shell:has(.home-hero) {
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.content-shell .markdown-body {
+    padding-bottom: 0;
 }
 
 .home-hero {
@@ -592,6 +613,164 @@ input:focus-visible,
     border-left-color: var(--border-color);
 }
 
+
+/* Bağlantı önizlemesi: md içindeki dış bağlantıların üzerine gelince görünür */
+
+.link-preview {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1200;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    max-width: 320px;
+    padding: 10px 12px;
+    background-color: var(--surface-color);
+    border: 1px solid var(--border-color);
+    border-radius: 14px;
+    box-shadow: var(--shadow);
+    opacity: 0;
+    transform: translateY(4px) scale(0.98);
+    transition: opacity 0.16s ease, transform 0.16s ease;
+    pointer-events: none;
+}
+
+.link-preview.visible {
+    opacity: 1;
+    transform: none;
+}
+
+.link-preview::after {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: var(--surface-color);
+    border: 1px solid var(--border-color);
+    transform: rotate(45deg);
+}
+
+.link-preview[data-placement="top"]::after {
+    bottom: -6px;
+    left: calc(var(--caret-x, 50%) - 5px);
+    border-top: none;
+    border-left: none;
+}
+
+.link-preview[data-placement="bottom"]::after {
+    top: -6px;
+    left: calc(var(--caret-x, 50%) - 5px);
+    border-right: none;
+    border-bottom: none;
+}
+
+.link-preview-icon {
+    position: relative;
+    flex: 0 0 auto;
+    display: grid;
+    place-items: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 9px;
+    background-color: var(--hover-bg);
+    border: 1px solid var(--border-color);
+    color: var(--accent-color);
+    font-size: 0.78rem;
+}
+
+.link-preview-icon img {
+    position: absolute;
+    inset: 4px;
+    width: calc(100% - 8px);
+    height: calc(100% - 8px);
+    object-fit: contain;
+    border-radius: 5px;
+}
+
+.link-preview-body {
+    min-width: 0;
+}
+
+.link-preview-domain {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.link-preview-tag {
+    padding: 1px 6px;
+    border-radius: 999px;
+    background-color: var(--accent-soft);
+    color: var(--accent-color);
+    font-size: 0.66rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+.link-preview-url {
+    margin-top: 3px;
+    font-size: 0.74rem;
+    line-height: 1.35;
+    color: var(--muted-color);
+    word-break: break-all;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+
+/* Sayfa sonundaki "devam et" bağlantıları: kart görünümü */
+
+.markdown-body a.doc-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 16px 20px;
+    background: linear-gradient(135deg, var(--accent-soft) 0%, var(--surface-color) 70%);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    box-shadow: var(--shadow);
+    color: var(--text-color);
+    font-weight: 600;
+    text-decoration: none;
+    transition: transform 0.18s ease, border-color 0.18s ease, box-shadow 0.18s ease;
+}
+
+.markdown-body a.doc-nav:hover {
+    transform: translateY(-2px);
+    border-color: var(--accent-color);
+    box-shadow: 0 16px 34px rgba(15, 23, 42, 0.14);
+    text-decoration: none;
+}
+
+.markdown-body a.doc-nav::after {
+    content: "→";
+    flex: 0 0 auto;
+    display: grid;
+    place-items: center;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background-color: var(--surface-color);
+    border: 1px solid var(--border-color);
+    color: var(--accent-color);
+    font-size: 1.05rem;
+    line-height: 1;
+    transition: transform 0.18s ease, border-color 0.18s ease;
+}
+
+.markdown-body a.doc-nav:hover::after {
+    transform: translateX(4px);
+    border-color: var(--accent-color);
+}
+
 @media (max-width: 1024px) {
     .home-hero {
         grid-template-columns: 1fr;
@@ -626,6 +805,10 @@ input:focus-visible,
     }
     .main-content {
         padding: 18px;
+    }
+    .content-shell {
+        padding: 22px 18px;
+        border-radius: 18px;
     }
     .simple-hero {
         padding: 32px 18px;

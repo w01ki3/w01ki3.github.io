@@ -54,5 +54,5 @@ Fakat bu gerçeği herkes bilmiyor. <br>
 Şimdi bir sonraki evrede mevyelerini görelim.
 
 <br><br><br>
-<a href="#b0104-aydinlanma-ve-modern-cag">Devam et [4. EVRE: Aydınlanma ve Modern Çağ]>></a>
+<a class="doc-nav" href="#b0104-aydinlanma-ve-modern-cag">Devam et [4. EVRE: Aydınlanma ve Modern Çağ]</a>
 <br><br><br>

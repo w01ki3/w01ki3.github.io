@@ -29,5 +29,5 @@ Kudüs 1099'da haçlılarca kuşatıldığında, şehir birkaç ay önce Türkle
 Batı yine ikiyüzlülüğünü göstermiş, sahte suçlular üretmiş, insanların dini değerlerinden yararlanarak savaş ve katliamlara sebep olmuş, bu aşamada Türk düşmanlığını filizlendirmiştir.
 
 <br><br><br>
-<a href="#b0103-osmanli-ve-matbaa-cagi">Devam et [3. EVRE: Osmanlı ve Matbaa Dönemi]>></a>
+<a class="doc-nav" href="#b0103-osmanli-ve-matbaa-cagi">Devam et [3. EVRE: Osmanlı ve Matbaa Dönemi]</a>
 <br><br><br>

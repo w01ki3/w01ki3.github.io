@@ -122,6 +122,133 @@ document.addEventListener('DOMContentLoaded', () => {
         `;
     }
 
+    // Dış bağlantı önizlemesi
+    const linkPreview = document.createElement('div');
+    linkPreview.className = 'link-preview';
+    linkPreview.setAttribute('aria-hidden', 'true');
+    document.body.appendChild(linkPreview);
+
+    const linkPreviewTags = {
+        pdf: 'PDF',
+        doc: 'Word',
+        docx: 'Word',
+        xls: 'Excel',
+        xlsx: 'Excel',
+        csv: 'CSV',
+        ppt: 'Sunum',
+        pptx: 'Sunum',
+        zip: 'Arşiv',
+        rar: 'Arşiv',
+        jpg: 'Görsel',
+        jpeg: 'Görsel',
+        png: 'Görsel',
+        webp: 'Görsel',
+        svg: 'Görsel',
+        mp3: 'Ses',
+        mp4: 'Video'
+    };
+
+    let linkPreviewTarget = null;
+
+    function escapePreviewText(value) {
+        return String(value).replace(/[&<>"']/g, (c) => ({
+            '&': '&amp;',
+            '<': '&lt;',
+            '>': '&gt;',
+            '"': '&quot;',
+            "'": '&#39;'
+        }[c]));
+    }
+
+    function resolveLinkPreview(href) {
+        let url;
+        try {
+            url = new URL(href, window.location.href);
+        } catch (e) {
+            return null;
+        }
+        if (url.protocol !== 'http:' && url.protocol !== 'https:') return null;
+        if (url.origin === window.location.origin) return null;
+        const ext = url.pathname.toLowerCase().match(/\.([a-z0-9]{2,5})$/);
+        return {
+            host: url.hostname.replace(/^www\./, ''),
+            path: (url.pathname + url.search) || '/',
+            tag: ext ? (linkPreviewTags[ext[1]] || '') : ''
+        };
+    }
+
+    function hideLinkPreview() {
+        linkPreviewTarget = null;
+        linkPreview.classList.remove('visible');
+    }
+
+    function showLinkPreview(link) {
+        const info = resolveLinkPreview(link.getAttribute('href'));
+        if (!info) return;
+        const favicon = 'https://www.google.com/s2/favicons?domain=' + encodeURIComponent(info.host) + '&amp;sz=64';
+        linkPreview.innerHTML =
+            '<span class="link-preview-icon">' +
+            '<i class="fa-solid fa-link" aria-hidden="true"></i>' +
+            '<img src="' + favicon + '" alt="">' +
+            '</span>' +
+            '<span class="link-preview-body">' +
+            '<span class="link-preview-domain">' + escapePreviewText(info.host) +
+            (info.tag ? '<span class="link-preview-tag">' + escapePreviewText(info.tag) + '</span>' : '') +
+            '</span>' +
+            '<span class="link-preview-url">' + escapePreviewText(info.path) + '</span>' +
+            '</span>';
+        const icon = linkPreview.querySelector('img');
+        icon.addEventListener('error', () => icon.remove(), { once: true });
+
+        linkPreview.classList.add('visible');
+        positionLinkPreview(link);
+    }
+
+    function positionLinkPreview(link) {
+        const gap = 12;
+        const rect = link.getBoundingClientRect();
+        const panel = linkPreview.getBoundingClientRect();
+        const left = Math.min(Math.max(8, rect.left + rect.width / 2 - panel.width / 2), window.innerWidth - panel.width - 8);
+        let top = rect.top - panel.height - gap;
+        let placement = 'top';
+        if (top < 8) {
+            top = Math.min(rect.bottom + gap, window.innerHeight - panel.height - 8);
+            placement = 'bottom';
+        }
+        linkPreview.style.left = left + 'px';
+        linkPreview.style.top = top + 'px';
+        linkPreview.dataset.placement = placement;
+        const caretX = Math.min(Math.max(14, rect.left + rect.width / 2 - left), panel.width - 14);
+        linkPreview.style.setProperty('--caret-x', caretX + 'px');
+    }
+
+    function handleLinkPreviewEnter(target) {
+        const link = target.closest && target.closest('a[href]');
+        if (!link || link === linkPreviewTarget) return;
+        if (!resolveLinkPreview(link.getAttribute('href'))) return;
+        linkPreviewTarget = link;
+        showLinkPreview(link);
+    }
+
+    const hoverCapable = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+
+    contentEl.addEventListener('mouseover', (e) => {
+        if (hoverCapable) handleLinkPreviewEnter(e.target);
+    });
+
+    contentEl.addEventListener('mouseout', (e) => {
+        const link = e.target.closest && e.target.closest('a[href]');
+        if (!link || link !== linkPreviewTarget) return;
+        if (e.relatedTarget && link.contains(e.relatedTarget)) return;
+        hideLinkPreview();
+    });
+
+    contentEl.addEventListener('focusin', (e) => handleLinkPreviewEnter(e.target));
+    contentEl.addEventListener('focusout', hideLinkPreview);
+
+    mainContent.addEventListener('scroll', hideLinkPreview, { passive: true });
+    window.addEventListener('resize', hideLinkPreview);
+
     // Render simple homepage (only logo + title)
     function renderHome() {
         window.clearTimeout(skeletonTimer);
@@ -240,6 +367,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function handleRoute() {
+        hideLinkPreview();
         const hash = window.location.hash.substring(1).split('/')[0];
         if (!hash || hash === 'home') {
             setLogoOverride('');
