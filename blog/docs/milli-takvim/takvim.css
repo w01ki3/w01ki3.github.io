@@ -178,10 +178,8 @@
 .mt-legend span {
     display: inline-flex;
     align-items: center;
-    gap: 7px;
-    padding: 6px 13px;
-    background: var(--surface-color);
-    font-weight: 500;
+    gap: 3px;
+    font-weight: 400;
 }
 
 .mt-dot {

@@ -1,7 +1,7 @@
 <div class="milli-takvim" id="milli-takvim">
     <header class="mt-header">
         <p class="mt-kicker">Milli Takvim</p>
-        <p class="mt-tagline">Hafızasını kaybeden bir toplum, geleceğin mücadelesini veremez</p>
+        <p class="mt-tagline">Hafızasını kaybeden bir toplum, geleceğin mücadelesini veremez </p>
         <p class="mt-today-label" id="mt-today-label"></p>
         <label class="mt-search">
             <span class="visually-hidden">Takvimde ara</span>
