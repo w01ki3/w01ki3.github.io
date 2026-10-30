@@ -1,28 +1,4 @@
-En büyük Türk!
 
-Şuan yattığı yerden bile savaşan ve yenilemeyen Mustafa Kemal.
-
-Ama Kimine göre mason, kimine göre Selanik dönmesi, kimine göre ingiliz, kimine göre Osmanlıyı yıkan adam, kimine göre dedesinin mezar taşını okuyamamasının sebebi. Bunlar saydıkça bitmez.
-
-Açıkçası size göre ne olduğu umrumda bile değil, hakaret etmediğin sürece... çünkü kişiliği hedef alan hakaret, bir fikir değil; ancak minnet duygusunun ve tarih bilgisinin eksikliğidir.
-İşte bu tam olarak net bir gerçek ve durum özetidir.
-
-Azıcık minnet duygusu olan bir birey zaten bunları sorgular ve gerçeği görebilir. Ve sonraki Asıl soru şu olur; "Bu kadar iftira neden?"
-
-Mustafa Kemal Atatürk'e yönelik tarihsel ve güncel karalama kampanyaları ile iftiraların arkasında temel sosyo-politik, idolojik ve stratejik nedenler bulunmakta.
-
-Karşımıza bir kaç temel neden çıkıyor;
-- Radikal devrimler sonrası değişime tepki
-- Eşit vatandaşlık haklarının feodalitenin işine gelmemesi (devlet yapısındaki değişiklik)
-- Emperyalizm karşıtlığının yarattığı rahatsızlık
-- Toplumsal hafıza kaybı, milli şuurun zayıflaması
-
-Bu temel nedenleri destekleyecek argümanlarında olması lazım. Ve bunlardan biri The New York Times gazetesi haberleri.
-
-Bir dönem (6 Ağustos 1923) abd ve Türkiye arasında ticari antlaşmayı engellemek için kara propaganda aracı olarak kullanılan bu gazete, amerikanın en büyük gazetelerinden. 1923-1927 arası 4 yıllık süreçte; Amerika'daki Türkiye karşıtları, Amerikan kamuoyunun ve senatosunun antlaşmaya karşı çıkmasını sağlamak için New York Times gazetesi etkin bir kara propaganda aracı olarak kullandı.
-
-
----
 
 
 

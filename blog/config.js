@@ -12,6 +12,10 @@ const docsConfig = [
     { id: 'b0105-gunumuzde-devam-eden-propaganda', title: 'Günümüzde devam eden propaganda', file: 'docs/neden-biz/b0105-gunumuzde-devam-eden-propaganda.md', category: 'Neden Biz?' },
 
     // --------------------------------------------------
+    // Atatürk
+    // --------------------------------------------------
+    // { id: 'en-buyuk-turk', title: 'En Büyük TÜRK', file: 'docs/atatürk/en-buyuk-turk.md', category: 'Atatürk' },
+    // --------------------------------------------------
     // bağımsız fikirler
     // --------------------------------------------------
     // { id: 'dijital-somurgecilik-ve-ai', title: 'Dijital Sömürgecilik ve AI', file: 'docs/bagimsiz-fikirler/dijital-somurgecilik-ve-ai.md', category: 'Bağımsız Fikirler' },

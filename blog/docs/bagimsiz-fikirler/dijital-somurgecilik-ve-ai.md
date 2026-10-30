@@ -2,17 +2,15 @@
 
 ### Sömürgemiyiz?
 
-Gerçekler acıdır... ve ben maalesef sömürge haline geldiğimizi düşünüyorum. Bu basite indirgenmeyecek, dikkatle üzerine durulması gereken ve ölümcül bir konu... Ve hangi yetkili Türkiye içerisinde milli bir teknoloji geliştiriyor merak ediyorum. Günlerce bunu sorguluyorum; üzülüyorum ve bazen kafayı yiyorum.
+Gerçekler acıdır... ve maalesef biz sömürgeyiz. Bu basite indirgenmeyecek, dikkatle üzerine durulması gereken ve ölümcül bir konu... Ve hangi yetkili Türkiye içerisinde milli bir teknoloji geliştiriyor merak ediyorum. Günlerce bunu sorguluyorum; üzülüyorum ve bazen kafayı yiyorum.
 
 ### Teknolojiye karşı durmak!
 
-Bu teknolojiye karşı olan kişilerin mantalitesini de anlayabilmiş değilim. "**Ben yapay zekaya karşıyım**" diyebilirsin tabi. Peki soralım; Sanayileşmeye engel olabildin mi? Olamadın. O dönemde çok fazla sayıda insan iş gücünü kaybettiğini söyleyerek bu düzene karşı çıktı. Başarılı olabildi mi? Olamadı. 
+"**Ben yapay zekaya karşıyım**" diyebilirsin tabi. Peki soralım; Sanayileşmeye engel olabildin mi? Olamadın. O dönemde çok fazla sayıda insan iş gücünü kaybettiğini söyleyerek bu düzene karşı çıktı. Başarılı olabildi mi? Olamadı. 
 
-Değişim gelir, teknoloji gelir ve sen buna karşı duramazsın. Buna karşı olmak bağnazlıktır. Bu kaçınılmaz, bu gelecek. Mühim olan bizle birlikte mi gelecek, bizi sömürgeleştirmek için mi gelecek?
+Bu teknolojik devrim kaçınılmazdır; asıl mesele bu devrimin bizi sömürgeleştirmesine seyirci kalmak yerine, sürece yön veren aktörlerden biri olabilmektir.
 
-
-
-Teknolojiye karşı durmak, 19. yüzyılın başlarında Sanayi Devrimi'ne ve fabrikasyon dikiş makinelerine isyan eden zanaatkârların düştüğü hataya düşmektir. O dönemde makineleşmeyi "şeytan işi" veya "mertliğin bozulması" olarak gören zihniyet bugün bize nasıl absürt geliyorsa, yapay zekâya topyekün karşı çıkan bağnazlık da çok değil, 10 yıl içinde aynı şekilde yargılanacaktır. Bu teknolojik devrim kaçınılmazdır; asıl mesele bu devrimin bizi sömürgeleştirmesine seyirci kalmak yerine, sürece yön veren aktörlerden biri olabilmektir.
+Teknolojiye karşı durmak, 19. yüzyılın başlarında Sanayi Devrimi'ne isyan eden zanaatkârların düştüğü hataya düşmektir. O dönemde makineleşmeyi "şeytan işi" olarak gören zihniyet bugün bize nasıl absürt geliyorsa, yapay zekâya topyekün karşı çıkan bağnazlık da çok değil, 10 yıl içinde aynı şekilde yargılanacaktır. 
 
 ### Otonom Yapay Zekâ ve İşletim Sistemlerinde Dönüşüm
 
@@ -25,8 +23,6 @@ Ankara'daki bir genç ile New York veya Tokyo'daki bir genci aynı dijital dilde
 Milli bir işletim sistemine sahip değiliz, kullandığımız bilgisayar ve telefonlarımızdaki işletim sistemleri milli değil...  
 
 Milli bir işletim sistemine, donanıma veya sunucu altyapısına sahip olmamamız bizi küresel bir bağımlılık sarmalına çekiyor. Bugün ücretsiz ya da para ödeyerek kullandığımız yabancı sistemlerin, yarın kullanım koşullarını tamamen aleyhimize değiştirmeyeceğinin hiçbir garantisi yoktur.
-
-
 
 ## Çözüm: Millileşme ve Dijital İhracat
 
