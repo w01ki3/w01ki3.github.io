@@ -15,6 +15,10 @@
     "signature": "b30c874d410074d33f41ba4024064111abe01f75",
     "style": "ec13dc2c75e32a3d1abf2c19697a0d0cc5a8c430"
   },
+  "01-09-2022-sehit-enes-koc": {
+    "signature": "6581e6a82bc1e2a9383c5aebe41786d48d3f5389",
+    "style": "ec13dc2c75e32a3d1abf2c19697a0d0cc5a8c430"
+  },
   "01-10-1921-birinci-inonu-zaferi": {
     "signature": "45ea64e522659fbe133303086d7737fcacdcfcad",
     "style": "ec13dc2c75e32a3d1abf2c19697a0d0cc5a8c430"
@@ -55,8 +59,20 @@
     "signature": "eb0d947d9cef8a0c1416e17f5aa8017a721cd315",
     "style": "ec13dc2c75e32a3d1abf2c19697a0d0cc5a8c430"
   },
+  "02-02-2022-sehit-tarik-tarcan": {
+    "signature": "3b212b051f860e570837404d7507182e06e07c44",
+    "style": "ec13dc2c75e32a3d1abf2c19697a0d0cc5a8c430"
+  },
   "02-13-2021-gara-sehitleri": {
     "signature": "70c1d251443f08836d0fb122a3cf741116bdf074",
+    "style": "ec13dc2c75e32a3d1abf2c19697a0d0cc5a8c430"
+  },
+  "02-14-2021-sehit-suleyman-sungur": {
+    "signature": "bca62e5b6f7b6becd7e4b7776f2049a884a70a37",
+    "style": "ec13dc2c75e32a3d1abf2c19697a0d0cc5a8c430"
+  },
+  "02-14-2021-sehit-muslum-altintas-ve-adil-kabakli": {
+    "signature": "edc9ac648b1adce01b37d8e37fb918013d36235e",
     "style": "ec13dc2c75e32a3d1abf2c19697a0d0cc5a8c430"
   },
   "02-17-1926-turk-medeni-kanununun-kabulu": {
@@ -263,6 +279,10 @@
     "signature": "76322655eaeceb69c599c897fb0d5c7da1b3fb3a",
     "style": "ec13dc2c75e32a3d1abf2c19697a0d0cc5a8c430"
   },
+  "07-05-2022-sehit-yusuf-gurler": {
+    "signature": "b449f6cc31fc7e3294a708409d0c5ed234d3ba60",
+    "style": "ec13dc2c75e32a3d1abf2c19697a0d0cc5a8c430"
+  },
   "07-15-2016-omer-halisdemir": {
     "signature": "9e13beb93db568e1f3f00577c12dccf48fee8652",
     "style": "ec13dc2c75e32a3d1abf2c19697a0d0cc5a8c430"
@@ -309,6 +329,10 @@
   },
   "08-01-1571-kibrisin-fethi": {
     "signature": "8bde4457a45b1f7b986f60fc689388544237483e",
+    "style": "ec13dc2c75e32a3d1abf2c19697a0d0cc5a8c430"
+  },
+  "08-02-2022-sehit-yusuf-sofioglu": {
+    "signature": "25f86b4c8ba136e027a1975d9cb9eceabbde698d",
     "style": "ec13dc2c75e32a3d1abf2c19697a0d0cc5a8c430"
   },
   "08-04-1922-enver-pasa": {
