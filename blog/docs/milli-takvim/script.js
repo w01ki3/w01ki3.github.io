@@ -228,6 +228,8 @@
 
     function openModal(el) {
         el.hidden = false;
+        const body = el.querySelector('.mt-modal-body');
+        if (body) body.scrollTop = 0;
         requestAnimationFrame(function() {
             el.classList.add('is-open');
         });

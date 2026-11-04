@@ -411,7 +411,12 @@
     position: absolute;
     right: 20px;
     bottom: 20px;
+    display: flex;
+    flex-direction: column;
     width: min(430px, calc(100vw - 32px));
+    max-height: calc(100vh - 40px);
+    max-height: calc(100dvh - 40px);
+    overflow: hidden;
     background: var(--surface-color);
     color: var(--text-color);
     border: 1px solid var(--border-color);
@@ -426,6 +431,17 @@
 .mt-modal.is-open .mt-modal-panel {
     transform: translateY(0);
     opacity: 1;
+}
+
+
+/* Panel içeriği ekrana sığmadığında yalnızca gövde kayar,
+   kapat butonu ve alt aksiyonlar yerinde kalır. */
+
+.mt-modal-body {
+    flex: 1 1 auto;
+    min-height: 0;
+    overflow-y: auto;
+    overscroll-behavior: contain;
 }
 
 .mt-modal-close {
@@ -517,6 +533,7 @@
 }
 
 .mt-modal-actions {
+    flex: none;
     margin-top: 16px;
     display: flex;
     justify-content: flex-end;
@@ -577,10 +594,17 @@
 
 .mt-share-stage .mt-modal-panel {
     position: static;
+    display: block;
     width: 420px;
+    max-height: none;
+    overflow: visible;
     transform: none;
     opacity: 1;
     box-shadow: none;
+}
+
+.mt-share-stage .mt-modal-body {
+    overflow: visible;
 }
 
 
@@ -596,6 +620,8 @@
     right: auto;
     bottom: auto;
     width: min(420px, calc(100vw - 32px));
+    max-height: calc(100vh - 32px);
+    max-height: calc(100dvh - 32px);
     text-align: center;
     transform: translate(-50%, calc(-50% + 20px));
 }
@@ -763,5 +789,7 @@
         left: 12px;
         width: auto;
         bottom: 12px;
+        max-height: calc(100vh - 24px);
+        max-height: calc(100dvh - 24px);
     }
 }
