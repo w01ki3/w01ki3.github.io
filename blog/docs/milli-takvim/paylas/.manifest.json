@@ -31,8 +31,8 @@
     "signature": "bfbc785ed5ffec70b119d7e60d41d60fed8f463b",
     "style": "ec13dc2c75e32a3d1abf2c19697a0d0cc5a8c430"
   },
-  "01-23-2025-sehit-astsubay-ustcavus-ufuk-akinci": {
-    "signature": "7f1a2917c2366c74d239dbdf8b8f741e5f6341f7",
+  "01-23-2025-sehit-ufuk-akinci": {
+    "signature": "e019b1dfb5d78929ce5bb47d6c5699d557627b53",
     "style": "ec13dc2c75e32a3d1abf2c19697a0d0cc5a8c430"
   },
   "01-24-1993-ugur-mumcu": {
@@ -47,8 +47,8 @@
     "signature": "5b2d35f945f42ee9e97b1436ba5af96a064aab2e",
     "style": "ec13dc2c75e32a3d1abf2c19697a0d0cc5a8c430"
   },
-  "01-30-2016-sehit-uzman-cavus-selcuk-paker": {
-    "signature": "3a1feb7ae3972ddbc505ad4c108f9f58ef89b1e5",
+  "01-30-2016-sehit-selcuk-paker": {
+    "signature": "3f287b928bd881d4f2dd0185f07bcbdf1b6da064",
     "style": "ec13dc2c75e32a3d1abf2c19697a0d0cc5a8c430"
   },
   "01-31-1990-muammer-aksoy": {
@@ -112,11 +112,11 @@
     "style": "ec13dc2c75e32a3d1abf2c19697a0d0cc5a8c430"
   },
   "03-09-2016-hendek-operasyonlari-sehitleri": {
-    "signature": "d9902fa3c977ddb2adb2b2ba425b001b0631c20c",
+    "signature": "ba3cfb41a180e83c7354e2aad64e50231beba846",
     "style": "ec13dc2c75e32a3d1abf2c19697a0d0cc5a8c430"
   },
   "03-11-1935-yusuf-akcura": {
-    "signature": "211e4062170de682f67e9e6354eb8f83f1d7e769",
+    "signature": "16d5cec16db4f9cf14190409ccdbbd1af1740d0d",
     "style": "ec13dc2c75e32a3d1abf2c19697a0d0cc5a8c430"
   },
   "03-11-1988-sehit-ogretmen-huseyin-aydemir": {
@@ -585,6 +585,10 @@
   },
   "11-04-1993-sehit-ahmet-cem-ersever": {
     "signature": "ad0abb6efcf5f1430c3c33520985756ddf1eb38f",
+    "style": "ec13dc2c75e32a3d1abf2c19697a0d0cc5a8c430"
+  },
+  "11-04-2021-sehit-sadik-aparangil-ve-sehit-caner-celik": {
+    "signature": "cc0021cac1c62b262fe67a0c8e1c44f0e7d019eb",
     "style": "ec13dc2c75e32a3d1abf2c19697a0d0cc5a8c430"
   },
   "11-05-1994-mardin-baskavak-koyu-sehit-ogretmenleri": {
