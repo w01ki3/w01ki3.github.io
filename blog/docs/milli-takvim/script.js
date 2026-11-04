@@ -49,6 +49,8 @@
     let shareLibPromise = null;
     let searchQuery = '';
     let currentDay = null;
+    let carouselEvents = [];
+    let carouselIndex = 0;
     let shareCtx = null;
     let slugMap = null;
 
@@ -268,12 +270,11 @@
         clone.removeAttribute('aria-modal');
         clone.removeAttribute('aria-labelledby');
         clone.querySelectorAll('[id]').forEach(function(el) { el.removeAttribute('id'); });
-        clone.querySelectorAll('[data-mt-close], .mt-modal-close, .mt-modal-actions, .mt-event-share, .mt-modal-kicker').forEach(function(el) {
+        clone.querySelectorAll('[data-mt-close], .mt-modal-close, .mt-modal-actions, .mt-modal-kicker, .mt-carousel, .mt-carousel-count').forEach(function(el) {
             el.remove();
         });
 
         if (single) {
-            clone.querySelectorAll('.mt-event-card, .mt-event-group-title').forEach(function(el) { el.remove(); });
             const title = clone.querySelector('h2');
             const meta = clone.querySelector('.mt-modal-meta');
             const desc = clone.querySelector('.mt-modal-desc');
@@ -424,7 +425,7 @@
         if (!modal) return;
         shareCtx = ctx;
         const titleEl = document.getElementById('mt-share-title');
-        if (titleEl) titleEl.textContent = ctx.meta || ctx.title || 'Milli Takvim';
+        if (titleEl) titleEl.textContent = ctx.title || ctx.meta || 'Milli Takvim';
         const descEl = document.getElementById('mt-share-desc');
         if (descEl) descEl.textContent = ctx.description || '';
         openModal(modal);
@@ -495,65 +496,124 @@
         const title = document.getElementById('mt-modal-title');
         const meta = document.getElementById('mt-modal-meta');
         const desc = document.getElementById('mt-modal-desc');
-        const list = document.getElementById('mt-modal-list');
+        const count = document.getElementById('mt-carousel-count');
         const first = dayEvents[0];
 
         kicker.textContent = categoryLabel(first.category);
         title.textContent = first.title;
         meta.textContent = day + ' ' + MONTH_NAMES[monthIndex] + (first.year ? ' ' + first.year : '');
         desc.textContent = first.description || '';
-        list.innerHTML = '';
 
-        if (dayEvents.length > 1) {
-            const categoryOrder = ['bayram', 'tarih', 'anma'];
-            const grouped = {};
-            dayEvents.forEach(function(ev) {
-                const cat = ev.category || 'tarih';
-                if (!grouped[cat]) grouped[cat] = [];
-                grouped[cat].push(ev);
-            });
-
+        const multi = dayEvents.length > 1;
+        if (multi) {
             title.textContent = day + ' ' + MONTH_NAMES[monthIndex];
             desc.textContent = '';
             meta.textContent = '';
             kicker.textContent = '';
-
-            categoryOrder.forEach(function(cat) {
-                const events = grouped[cat];
-                if (!events || events.length === 0) return;
-
-                const groupHeader = document.createElement('h5');
-                groupHeader.className = 'mt-event-group-title';
-                groupHeader.textContent = categoryLabel(cat);
-                list.appendChild(groupHeader);
-
-                events.forEach(function(ev) {
-                    const item = document.createElement('article');
-                    item.className = 'mt-event-card';
-                    const h = document.createElement('h4');
-                    h.textContent = ev.title;
-                    const p = document.createElement('p');
-                    p.textContent = (ev.year ? ev.year + ' · ' : '') + (ev.description || '');
-                    item.appendChild(h);
-                    item.appendChild(p);
-
-                    const shareBtn = document.createElement('button');
-                    shareBtn.type = 'button';
-                    shareBtn.className = 'mt-event-share';
-                    shareBtn.innerHTML = '<i class="fa-solid fa-share" aria-hidden="true"></i><span>Paylaş</span>';
-                    shareBtn.setAttribute('aria-label', ev.title + ' olayını paylaş');
-                    shareBtn.addEventListener('click', function(e) {
-                        e.stopPropagation();
-                        openShareModal(eventShareContext(ev, monthIndex, day));
-                    });
-                    item.appendChild(shareBtn);
-
-                    list.appendChild(item);
-                });
-            });
+            buildCarousel(dayEvents, monthIndex, day);
+        } else {
+            const carousel = document.getElementById('mt-carousel');
+            if (carousel) carousel.hidden = true;
+            carouselEvents = [];
+            carouselIndex = 0;
+            if (count) count.textContent = '';
         }
 
         openModal(modal);
+    }
+
+    function carouselStep(track) {
+        const first = track.children[0];
+        if (!first) return 0;
+        const second = track.children[1];
+        if (second) return second.offsetLeft - first.offsetLeft;
+        return first.getBoundingClientRect().width;
+    }
+
+    function applyCarouselTransform() {
+        const track = document.getElementById('mt-carousel-track');
+        if (!track) return;
+        const step = carouselStep(track);
+        if (!step) return;
+        track.style.transform = 'translateX(' + (-carouselIndex * step) + 'px)';
+    }
+
+    function buildCarousel(events, monthIndex, day) {
+        const carousel = document.getElementById('mt-carousel');
+        const track = document.getElementById('mt-carousel-track');
+        const dots = document.getElementById('mt-carousel-dots');
+        if (!carousel || !track || !dots) return;
+
+        carouselEvents = events;
+        carouselIndex = 0;
+        track.innerHTML = '';
+        dots.innerHTML = '';
+
+        events.forEach(function(ev, i) {
+            const slide = document.createElement('article');
+            slide.className = 'mt-carousel-slide';
+            slide.setAttribute('role', 'group');
+            slide.setAttribute('aria-roledescription', 'slayt');
+            slide.setAttribute('aria-label', (i + 1) + ' / ' + events.length);
+
+            const badge = document.createElement('span');
+            badge.className = 'mt-cat-badge mt-cat-' + (ev.category || 'tarih');
+            badge.textContent = categoryLabel(ev.category);
+
+            const h = document.createElement('h4');
+            h.textContent = ev.title;
+
+            const p = document.createElement('p');
+            p.textContent = (ev.year ? ev.year + ' · ' : '') + (ev.description || '');
+
+            slide.appendChild(badge);
+            slide.appendChild(h);
+            slide.appendChild(p);
+            track.appendChild(slide);
+
+            const dot = document.createElement('button');
+            dot.type = 'button';
+            dot.className = 'mt-carousel-dot';
+            dot.setAttribute('role', 'tab');
+            dot.setAttribute('aria-label', categoryLabel(ev.category) + ': ' + ev.title);
+            dot.addEventListener('click', function() { scrollToSlide(i); });
+            dots.appendChild(dot);
+        });
+
+        carousel.hidden = false;
+        // Yeni gün açılırken eski konumdan kayma animasyonu olmasın.
+        track.style.transition = 'none';
+        track.style.transform = 'translateX(0)';
+        void track.offsetWidth;
+        track.style.transition = '';
+        updateCarousel();
+    }
+
+    function scrollToSlide(i) {
+        if (!carouselEvents.length) return;
+        carouselIndex = Math.max(0, Math.min(carouselEvents.length - 1, i));
+        applyCarouselTransform();
+        updateCarousel();
+    }
+
+    function updateCarousel() {
+        const dots = document.getElementById('mt-carousel-dots');
+        const count = document.getElementById('mt-carousel-count');
+        const prev = document.getElementById('mt-carousel-prev');
+        const next = document.getElementById('mt-carousel-next');
+        if (!carouselEvents.length) return;
+
+        const index = carouselIndex;
+
+        if (dots) {
+            Array.prototype.forEach.call(dots.children, function(dot, i) {
+                dot.classList.toggle('is-active', i === index);
+                dot.setAttribute('aria-selected', i === index ? 'true' : 'false');
+            });
+        }
+        if (count) count.textContent = (index + 1) + '/' + carouselEvents.length;
+        if (prev) prev.disabled = index === 0;
+        if (next) next.disabled = index === carouselEvents.length - 1;
     }
 
     function refresh() {
@@ -590,11 +650,70 @@
         const shareBtn = document.getElementById('mt-modal-share');
         if (shareBtn) {
             shareBtn.addEventListener('click', function() {
-                if (currentDay && currentDay.events.length === 1) {
+                if (!currentDay) return;
+                if (currentDay.events.length === 1) {
                     openShareModal(eventShareContext(currentDay.events[0], currentDay.monthIndex, currentDay.day));
+                } else if (carouselEvents.length) {
+                    const ev = carouselEvents[carouselIndex] || carouselEvents[0];
+                    openShareModal(eventShareContext(ev, currentDay.monthIndex, currentDay.day));
                 } else {
                     openShareModal(panelShareContext());
                 }
+            });
+        }
+
+        const carouselTrack = document.getElementById('mt-carousel-track');
+        if (carouselTrack) {
+            const prev = document.getElementById('mt-carousel-prev');
+            const next = document.getElementById('mt-carousel-next');
+
+            if (prev) prev.addEventListener('click', function() { scrollToSlide(carouselIndex - 1); });
+            if (next) next.addEventListener('click', function() { scrollToSlide(carouselIndex + 1); });
+
+            carouselTrack.addEventListener('keydown', function(e) {
+                if (e.key === 'ArrowLeft') {
+                    e.preventDefault();
+                    scrollToSlide(carouselIndex - 1);
+                } else if (e.key === 'ArrowRight') {
+                    e.preventDefault();
+                    scrollToSlide(carouselIndex + 1);
+                }
+            });
+
+            let drag = null;
+            carouselTrack.addEventListener('pointerdown', function(e) {
+                if (!carouselEvents.length) return;
+                if (e.pointerType === 'mouse' && e.button !== 0) return;
+                const step = carouselStep(carouselTrack);
+                if (!step) return;
+                drag = { id: e.pointerId, startX: e.clientX, base: -carouselIndex * step };
+                carouselTrack.classList.add('is-dragging');
+                carouselTrack.setPointerCapture(e.pointerId);
+            });
+            carouselTrack.addEventListener('pointermove', function(e) {
+                if (!drag || e.pointerId !== drag.id) return;
+                carouselTrack.style.transform = 'translateX(' + (drag.base + (e.clientX - drag.startX)) + 'px)';
+            });
+
+            function endDrag(e) {
+                if (!drag || e.pointerId !== drag.id) return;
+                const dx = e.type === 'pointercancel' ? 0 : (e.clientX - drag.startX);
+                const step = carouselStep(carouselTrack) || 0;
+                carouselTrack.classList.remove('is-dragging');
+                if (carouselTrack.hasPointerCapture && carouselTrack.hasPointerCapture(drag.id)) {
+                    carouselTrack.releasePointerCapture(drag.id);
+                }
+                drag = null;
+                const threshold = step * 0.2;
+                if (dx <= -threshold) scrollToSlide(carouselIndex + 1);
+                else if (dx >= threshold) scrollToSlide(carouselIndex - 1);
+                else scrollToSlide(carouselIndex);
+            }
+            carouselTrack.addEventListener('pointerup', endDrag);
+            carouselTrack.addEventListener('pointercancel', endDrag);
+
+            window.addEventListener('resize', function() {
+                if (carouselEvents.length) applyCarouselTransform();
             });
         }
 

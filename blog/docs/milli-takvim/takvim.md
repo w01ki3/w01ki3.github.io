@@ -23,10 +23,22 @@
         <button type="button" class="mt-modal-close" data-mt-close aria-label="Kapat">×</button>
         <div class="mt-modal-body">
             <p class="mt-modal-kicker" id="mt-modal-kicker"></p>
-            <h2 id="mt-modal-title"></h2>
+            <div class="mt-modal-heading">
+                <h2 id="mt-modal-title"></h2>
+                <span class="mt-carousel-count" id="mt-carousel-count" aria-live="polite"></span>
+            </div>
             <p class="mt-modal-meta" id="mt-modal-meta"></p>
             <p class="mt-modal-desc" id="mt-modal-desc"></p>
-            <div class="mt-modal-list" id="mt-modal-list"></div>
+            <div class="mt-carousel" id="mt-carousel" hidden>
+                <div class="mt-carousel-viewport">
+                    <div class="mt-carousel-track" id="mt-carousel-track" tabindex="0" role="group" aria-roledescription="karusel" aria-label="Günün olayları"></div>
+                </div>
+                <div class="mt-carousel-controls">
+                    <button type="button" class="mt-carousel-nav" id="mt-carousel-prev" aria-label="Önceki olay"><i class="fa-solid fa-chevron-left" aria-hidden="true"></i></button>
+                    <div class="mt-carousel-dots" id="mt-carousel-dots" role="tablist" aria-label="Olay seçimi"></div>
+                    <button type="button" class="mt-carousel-nav" id="mt-carousel-next" aria-label="Sonraki olay"><i class="fa-solid fa-chevron-right" aria-hidden="true"></i></button>
+                </div>
+            </div>
         </div>
         <div class="mt-modal-actions">
             <button type="button" class="mt-share-btn" id="mt-modal-share"><i class="fa-solid fa-share" aria-hidden="true"></i><span>Paylaş</span></button>

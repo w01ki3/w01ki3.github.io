@@ -444,6 +444,175 @@
     overscroll-behavior: contain;
 }
 
+
+/* Çoklu olay: transform tabanlı karusel.
+   Native scroll/snap kullanılmaz; konum yalnızca JS'teki indeksten
+   türetilir. Böylece modal gizliyken ölçüm yapılması gerekmez ve
+   yeniden açılışta kilitlenme yaşanmaz. */
+
+.mt-carousel {
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+    margin-top: 14px;
+}
+
+.mt-carousel[hidden] {
+    display: none;
+}
+
+
+/* Kırpma alanı (viewport) sabit kalır; yalnızca ray (track) kaydırılır.
+   Kırpma rayın kendisinde olsaydı ray ile birlikte kayar ve sonraki
+   slaytlar görünür pencereye hiç girmezdi. */
+
+.mt-carousel-viewport {
+    overflow: hidden;
+    /* Slaytın kenarlığı kırpma sınırına tam oturup anti-aliasing ile
+       kaybolmasın diye yatayda 2px pay bırakılır. */
+    padding: 0 2px;
+}
+
+.mt-carousel-track {
+    display: flex;
+    gap: 12px;
+    cursor: grab;
+    touch-action: pan-y;
+    will-change: transform;
+    transition: transform 0.32s cubic-bezier(0.2, 0.8, 0.25, 1);
+}
+
+.mt-carousel-track.is-dragging {
+    cursor: grabbing;
+    transition: none;
+}
+
+.mt-carousel-slide {
+    flex: 0 0 100%;
+    box-sizing: border-box;
+    -webkit-user-select: none;
+    user-select: none;
+    padding: 14px 16px;
+    border: 1px solid var(--border-color);
+    border-radius: 14px;
+    background: var(--surface-color);
+}
+
+.mt-carousel-slide h4 {
+    margin: 10px 0 6px;
+    padding: 0;
+    border: none;
+    font-size: 1rem;
+    line-height: 1.35;
+}
+
+.mt-carousel-slide p {
+    margin: 0;
+    font-size: 0.88rem;
+    line-height: 1.55;
+    color: var(--muted-color);
+}
+
+.mt-cat-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 3px 10px;
+    border-radius: 999px;
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+.mt-cat-badge::before {
+    content: "";
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: currentColor;
+}
+
+.mt-cat-bayram {
+    color: var(--mt-bayram);
+    background: var(--mt-bayram-soft);
+}
+
+.mt-cat-tarih {
+    color: var(--mt-tarih);
+    background: var(--mt-tarih-soft);
+}
+
+.mt-cat-anma {
+    color: var(--mt-anma);
+    background: var(--mt-anma-soft);
+}
+
+.mt-carousel-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 14px;
+}
+
+.mt-carousel-nav {
+    display: grid;
+    place-items: center;
+    width: 34px;
+    height: 34px;
+    border: 1px solid var(--border-color);
+    border-radius: 50%;
+    background: none;
+    color: var(--muted-color);
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: border-color 0.15s ease, color 0.15s ease;
+}
+
+.mt-carousel-nav:hover {
+    border-color: var(--accent-color);
+    color: var(--accent-color);
+}
+
+.mt-carousel-nav:disabled {
+    opacity: 0.4;
+    cursor: default;
+}
+
+.mt-carousel-dots {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.mt-carousel-dot {
+    width: 8px;
+    height: 8px;
+    padding: 0;
+    border: none;
+    border-radius: 50%;
+    background: var(--border-color);
+    cursor: pointer;
+    transition: width 0.2s ease, background 0.2s ease;
+}
+
+.mt-carousel-dot.is-active {
+    width: 22px;
+    border-radius: 999px;
+    background: var(--accent-color);
+}
+
+.mt-carousel-count {
+    flex: none;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--muted-color);
+    font-variant-numeric: tabular-nums;
+    white-space: nowrap;
+}
+
 .mt-modal-close {
     position: absolute;
     top: 12px;
@@ -485,6 +654,29 @@
     line-height: 1.3;
 }
 
+
+/* Başlık ile olay sayacı (1/3) aynı satırda; sayaç sağ kenara yaslı.
+   Sağdan boşluk, kapatma butonuyla çakışmayı önler. */
+
+.mt-modal-heading {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 12px;
+    margin: 0 0 8px;
+    padding-right: 30px;
+}
+
+.mt-modal-panel .mt-modal-heading h2,
+.markdown-body .mt-modal-panel .mt-modal-heading h2 {
+    margin: 0;
+    min-width: 0;
+}
+
+.mt-share-stage .mt-modal-heading {
+    padding-right: 0;
+}
+
 .mt-modal-meta {
     margin-bottom: 10px;
     font-size: 0.82rem;
@@ -496,40 +688,6 @@
 .mt-modal-desc {
     font-size: 0.9rem;
     line-height: 1.6;
-}
-
-.mt-event-group-title {
-    margin: 16px 0 6px;
-    padding: 0;
-    border: none;
-    font-size: 0.72rem;
-    font-weight: 700;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: var(--accent-color);
-}
-
-.mt-event-group-title:first-child {
-    margin-top: 8px;
-}
-
-.mt-event-card {
-    margin-top: 10px;
-    padding: 12px 14px;
-    border: 1px solid var(--border-color);
-    border-radius: 12px;
-}
-
-.mt-event-card h3,
-.mt-event-card h4 {
-    margin: 0 0 4px;
-    padding: 0;
-    border: none;
-    font-size: 0.95rem;
-}
-
-.mt-event-card p {
-    font-size: 0.9rem;
 }
 
 .mt-modal-actions {
@@ -562,26 +720,6 @@
 .mt-share-btn:disabled {
     opacity: 0.6;
     cursor: default;
-}
-
-.mt-event-share {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    margin-top: 8px;
-    padding: 4px 10px;
-    border: 1px solid var(--border-color);
-    border-radius: 8px;
-    background: none;
-    color: var(--muted-color);
-    font-size: 0.75rem;
-    cursor: pointer;
-    transition: border-color 0.15s ease, color 0.15s ease;
-}
-
-.mt-event-share:hover {
-    border-color: var(--accent-color);
-    color: var(--accent-color);
 }
 
 .mt-share-stage {
