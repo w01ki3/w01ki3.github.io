@@ -195,7 +195,16 @@ window.MILLI_TAKVIM_EVENTS = [
     { date: "11-13", year: 2022, title: "İstiklal Caddesi Terör Saldırısı", description: "İstanbul Taksim İstiklal Caddesi'nde PKK/YPG'li teröristçe düzenlenen bombalı saldırıda 6 sivil vatandaşımız şehit oldu, 81 kişi yaralandı.", category: "anma" },
     { date: "11-14", year: 1944, title: "Ahıska Türkleri Sürgünü", description: "Ahıska bölgesinde yaşayan yaklaşık 100.000 Türk, Sovyet yönetimi tarafından insanlık dışı şartlarda ve hayvan vagonlarında kış mevsiminde Orta Asya'ya sürgün edilmiştir. Bu zorlu süreçte açlık, soğuk ve hastalıklar nedeniyle yaklaşık 17.000 kişi hayatını kaybetmiştir. Ruhları Şâd Olsun.", category: "anma" },
     { date: "11-15", year: 1983, title: "Kuzey Kıbrıs Türk Cumhuriyeti'nin İlanı", description: "Kuzey Kıbrıs Türk Cumhuriyeti, Kıbrıs Türk halkının haklı mücadelesi ve kendi kaderini tayin hakkı doğrultusunda 15 Kasım 1983 tarihinde ilan edilmiştir.", category: "tarih" },
-    { date: "11-21", year: 2022, title: "Şehit Öğretmen Ayşenur Alkan", description: "Gaziantep Karkamış'ta terör örgütü PKK/YPG'nin okula yönelik roketli saldırısında şehit düşen öğretmenimiz Ayşenur Alkan. Aynı saldırıda 5 yaşındaki Hasan Karataş isimli bir evladımızda hayatını kaybetti Aziz Ruhları Şâd Olsun.", category: "anma" },
+    {
+        date: "11-21",
+        year: 2022,
+        title: "Şehit Öğretmen Ayşenur Alkan",
+        description: "Gaziantep Karkamış'ta terör örgütü PKK/YPG'nin okula yönelik roketli saldırısında şehit düşen öğretmenimiz Ayşenur Alkan. Aynı saldırıda 5 yaşındaki Hasan Karataş isimli bir evladımızda hayatını kaybetti Aziz Ruhları Şâd Olsun.",
+        category: "anma",
+        sources: [
+            { label: "Terör örgütü YPG/PKK'nın Karkamış'a roketli saldırısında 2 kişi hayatını kaybetti", url: "https://www.aa.com.tr/tr/gundem/teror-orgutu-ypg-pkknin-karkamisa-roketli-saldirisinda-2-kisi-hayatini-kaybetti/2743911", publisher: "Anadolu Ajansı" },
+        ]
+    },
     { date: "11-22", year: 1948, title: "Fahrettin Paşa (Çöl Kaplanı)", description: "Medine Müdafii, Kutsal Emanetleri İstanbul’a ulaştırarak koruyan 'Çöl Kaplanı' Ömer Fahrettin Paşa vefat etti. Aziz ruhu şâd olsun.", category: "anma" },
     { date: "11-24", year: 1072, title: "Sultan Alparslan", description: "Malazgirt zaferiyle Anadolu'yu Türk yurdu yapan Büyük Selçuklu Hükümdarı Sultan Alparslan vefat etti.", category: "anma" },
     { date: "11-24", year: 1928, title: "Öğretmenler Günü", description: "Mustafa Kemal Atatürk’e 24 Kasım 1928’de “Başöğretmen” unvanının verilişi anısına kutlanır.", category: "anma" },
