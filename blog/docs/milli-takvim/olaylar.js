@@ -15,6 +15,16 @@ window.MILLI_TAKVIM_EVENTS = [
     { date: "01-31", year: 1990, title: "Muammer Aksoy", description: "Atatürkçü Düşünce Derneği kurucusu Prof. Dr. Muammer Aksoy suikast sonucu şehit edildi.", category: "anma" },
     { date: "02-01", year: 1979, title: "Abdi İpekçi", description: "Gazeteci ve yazar Abdi İpekçi uğradığı suikast sonucu hayatını kaybetti.", category: "anma" },
     { date: "02-02", year: 2022, title: "Şehit Tarık Tarcan", description: "Hakkâri'nin Derecik ilçesindeki hudut birliğinde PKK terör örgütü mensuplarınca açılan ateş sonucu ağır yaralanarak kaldırıldığı hastanede 2 Şubat 2022 tarihinde şehit düşen kahraman askerimiz Piyade Er Tarık Tarcan. Aziz Ruhu Şâd Olsun.", category: "anma" },
+    {
+        date: "02-03",
+        year: 1964,
+        title: "Bigalı Mehmet Çavuş",
+        description: "Çanakkale Savaşları'nda 4 Mart 1915'te Seddülbahir'de tüfeği bozulunca istihkâm küreği ve taşlarla düşmana saldırarak destan yazan, 'Mehmetçik' adının isim babası kabul edilen kahraman askerimiz vefat etti. Aziz Ruhu Şâd Olsun.",
+        category: "anma",
+        sources: [
+            { label: "Çanakkale Zaferi'nin kahramanı Bigalı Mehmet Çavuş", url: "https://www.trthaber.com/haber/gundem/canakkale-zaferinin-kahramani-bigali-mehmet-cavus-565498.html", publisher: "TRT Haber" }
+        ]
+    },
     { date: "02-13", year: 2021, title: "Gara Şehitleri", description: "Terör örgütü PKK tarafından mağarada alıkoyulan 13 silahsız asker, polis ve sivil vatandaşımız şehit edildi.", category: "anma" },
     { date: "02-14", year: 2021, title: "Şehit Süleyman Sungur", description: "Siirt'in Pervari ilçesi Doğan köyü kırsalında PKK terör örgütü tarafından açılan ateş sonucu şehit düşen kahraman askerimiz Jandarma Er Süleyman Sungur. Aziz Ruhu Şâd Olsun.", category: "anma" },
     { date: "02-14", year: 2021, title: "Şehit Müslüm Altıntaş ve Adil Kabaklı", description: "Pençe-Kartal 2 Operasyonu'nda PKK terör örgütü tarafından alıkonularak şehit edilen kahraman askerlerimiz Piyade Er Müslüm Altıntaş ve Tankçı Er Adil Kabaklı. Aziz Ruhları Şâd Olsun.", category: "anma" },
@@ -58,6 +68,16 @@ window.MILLI_TAKVIM_EVENTS = [
     { date: "05-28", year: 1919, title: "Havza Genelgesi", description: "Mustafa Kemal Paşa'nın işgallere karşı ilk resmi protesto çağrısı olan Havza Genelgesi yayımlandı.", category: "tarih" },
     { date: "05-29", year: 1453, title: "İstanbul’un Fethi", description: "Fatih Sultan Mehmet komutasındaki Osmanlı ordusu 29 Mayıs 1453’te İstanbul’u fethetti.", category: "tarih" },
     { date: "05-31", year: 1237, title: "Sultan I. Alaeddin Keykubad", description: "Anadolu Selçuklu Devleti'ni en parlak dönemine ulaştıran büyük devlet adamı ve mimar hükümdar vefat etti.", category: "anma" },
+    {
+        date: "06-05",
+        year: 1915,
+        title: "Ezineli Yahya Çavuş",
+        description: "25 Nisan 1915'te Ertuğrul Koyu'nda 67 eriyle 3.000 kişilik İngiliz çıkarmasını saatlerce sahilde durduran 26. Alay 3. Tabur 10. Bölük Takım Komutanı Ezineli Yahya Çavuş, 3. Kirte Muharebesi'nde yaralanarak 5 Haziran 1915'te şehit oldu. Aziz Ruhu Şâd Olsun.",
+        category: "anma",
+        sources: [
+            { label: "Yahya Çavuş Şehitliği ve Anıtı", url: "https://www.canakkale.gov.tr/yahya-cavus-sehitligi-ve-aniti", publisher: "T.C. Çanakkale Valiliği" }
+        ]
+    },
     { date: "06-09", year: 2017, title: "Aybüke Yalçın", description: "Batman'ın Kozluk ilçesinde PKK'lı teröristlerin düzenlediği hain saldırıda 22 yaşında şehit düşen Müzik Öğretmeni.", category: "anma" },
     { date: "06-14", year: 1107, title: "Sultan I. Kılıç Arslan", description: "I. Haçlı Seferi'ne karşı Anadolu'yu savunan, Habur Nehri'ni geçerken şehit düşen Anadolu Selçuklu Sultanı.", category: "anma" },
     { date: "06-15", year: 1950, title: "MAH / MİT Mensubu Arif Necip Kaskatı", description: "Bulgaristan'da Türkiye aleyhindeki faaliyetleri takip eden MAH (MİT) mensubu Arif Necip Kaskatı, Bulgaristan sınırından Edirne'ye geçerken pusuya düşürülerek şehit edildi. Aziz Ruhu Şâd Olsun.", category: "anma" },
@@ -90,6 +110,17 @@ window.MILLI_TAKVIM_EVENTS = [
     { date: "08-10", year: 1915, title: "Anafartalar Zaferi", description: "Mustafa Kemal Bey komutasındaki Türk ordusu Gelibolu Anafartalar'da düşman taarruzunu ezerek tarihi bir zafer kazandı.", category: "tarih" },
     { date: "08-10", year: 1920, title: "Sevr Antlaşması'nın İmzalanması", description: "Osmanlı Devleti'ni parçalayarak Türk milletine yaşama hakkı tanımayan Sevr Antlaşması imzalandı. TBMM antlaşmayı tanımadı ve imzalayanları vatan haini ilan etti.", category: "tarih" },
     { date: "08-11", year: 2017, title: "Eren Bülbül ve Ferhat Gedik", description: "Trabzon Maçka’da teröristler tarafından şehit edilen Eren Bülbül ve onu korumak için siper olan Astsubay Ferhat Gedik. Ruhları şâd olsun.", category: "anma" },
+    {
+        date: "08-13",
+        year: 1915,
+        title: "57. Alay Komutanı Hüseyin Avni Bey",
+        description: "25 Nisan 1915'te Arıburnu/Conkbayırı'nda Anzak çıkarmasını durduran şanlı 57. Alay'ın komutanı Yarbay Hüseyin Avni Bey, 13 Ağustos 1915'te şehit düştü. Aziz Ruhu Şâd Olsun.",
+        category: "anma",
+        sources: [
+            { label: "57. Piyade Alayı Şehitliği", url: "https://canakkaletarihialan.gov.tr/tr/ziyaret/sehitlikveanitlar/57-piyade-alayi-sehitligi", publisher: "Çanakkale Tarihi Alan Başkanlığı" },
+            { label: "57. Alay Bilgilendirme Kılavuzu", url: "https://kocaeli.gsb.gov.tr/Public/Edit/images/IM/55/57AlayBilgilendirmeKilavuzu.pdf", publisher: "T.C. Gençlik ve Spor Bakanlığı" }
+        ]
+    },
     { date: "08-15", year: 1389, title: "I. Kosova Zaferi", description: "Sultan I. Murad komutasındaki Osmanlı ordusu Haçlı müttefik ordusunu mağlup etti; Sultan Murad savaş meydanında şehit düştü.", category: "tarih" },
     { date: "08-15", year: 1984, title: "Eruh ve Şemdinli Terör Saldırıları", description: "PKK terör örgütünün Siirt Eruh ve Hakkâri Şemdinli'de gerçekleştirdiği ilk hain eylemde Süleyman Aydın şehit düştü.", category: "anma" },
     { date: "08-16", year: 1919, title: "Alaşehir Kongresi", description: "Ege Kuva-yı Millîye teşkilatlarının ikmal ve savunma hatlarını güçlendiren Alaşehir Kongresi toplandı.", category: "tarih" },
@@ -179,6 +210,17 @@ window.MILLI_TAKVIM_EVENTS = [
         sources: [
             { label: "Türk Dünyası Ansiklopedisi", url: "https://turkdunyasiansiklopedisi.gov.tr/detay/31/Engin-Ar%C4%B1k", publisher: "T.C. Atatürk Kültür, Dil ve Tarih Yüksek Kurumu" },
             { label: "Türk Fizik Derneği", url: "https://www.yumpu.com/tr/document/read/55429875/aramzdanayrlanlar", publisher: "Aramızdan ayrılanlar (2008 yılı baskısı)" },
+        ]
+    },
+    {
+        date: "12-01",
+        year: 1939,
+        title: "Seyit Onbaşı (Seyit Ali Çabuk)",
+        description: "18 Mart 1915'te Rumeli Mecidiye Tabyası'nda 276 kilogramlık top mermisini tek başına sırtlayarak HMS Ocean zırhlısını vuran ve Çanakkale Deniz Zaferi'nin sembolü olan Koca Seyit, 1 Aralık 1939'da vefat etti. Aziz Ruhu Şâd Olsun.",
+        category: "anma",
+        sources: [
+            { label: "Çanakkale Kahramanı Koca Seyit", url: "http://www.havran.gov.tr/kocaseyit", publisher: "Havran Kaymakamlığı" },
+            { label: "Corporal Seyit (Seyit Onbaşı)", url: "https://www.awm.gov.au/collection/A05301", publisher: "Australian War Memorial" }
         ]
     },
     { date: "12-05", year: 1934, title: "Kadınlara Seçme ve Seçilme Hakkı", description: "Türk kadınlarına milletvekili seçme ve seçilme hakkı tanıyan anayasa değişikliği kabul edildi.", category: "tarih" },

@@ -76,6 +76,8 @@
         <button type="button" class="mt-modal-close" data-mt-sources-close aria-label="Kapat">×</button>
         <div class="mt-modal-body">
             <h2 id="mt-sources-title">Kaynaklar</h2>
+            <p class="mt-sources-date" id="mt-sources-date" hidden></p>
+            <p class="mt-sources-list-title" id="mt-sources-list-title">Kaynaklar</p>
             <ul class="mt-sources-list" id="mt-sources-list"></ul>
         </div>
     </div>

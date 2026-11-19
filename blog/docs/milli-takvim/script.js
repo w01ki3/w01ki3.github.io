@@ -464,11 +464,26 @@
         const modal = document.getElementById('mt-sources-modal');
         const list = document.getElementById('mt-sources-list');
         const title = document.getElementById('mt-sources-title');
+        const dateEl = document.getElementById('mt-sources-date');
+        const listTitle = document.getElementById('mt-sources-list-title');
         if (!modal || !list) return;
         const sources = validSources(ev);
         if (!sources.length) return;
 
-        if (title) title.textContent = ev && ev.title ? 'Kaynaklar · ' + ev.title : 'Kaynaklar';
+        // Olay başlığı ana başlık; tarih onun altında ayrı bir satır, "Kaynaklar" ise listenin başlığı
+        const hasTitle = !!(ev && ev.title);
+        if (title) title.textContent = hasTitle ? ev.title : 'Kaynaklar';
+        if (listTitle) listTitle.hidden = !hasTitle;
+
+        if (dateEl) {
+            const monthIndex = parseInt(String((ev && ev.date) || '').slice(0, 2), 10) - 1;
+            const day = parseInt(String((ev && ev.date) || '').slice(3, 5), 10);
+            const dateStr = day && MONTH_NAMES[monthIndex]
+                ? day + ' ' + MONTH_NAMES[monthIndex] + (ev.year ? ' ' + ev.year : '')
+                : '';
+            dateEl.textContent = dateStr;
+            dateEl.hidden = !dateStr;
+        }
 
         list.innerHTML = '';
         sources.forEach(function(s) {

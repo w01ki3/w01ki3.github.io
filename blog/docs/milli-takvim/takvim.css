@@ -760,11 +760,47 @@
     transform: translate(-50%, -50%);
 }
 
+/* Başlığın altındaki tarih satırı: küçük, ince ve sönük */
+
+.mt-sources-modal .mt-modal-panel h2 {
+    margin-bottom: 0;
+}
+
+.mt-sources-date,
+.markdown-body .mt-sources-date {
+    margin: 3px 0 0;
+    font-size: 0.78rem;
+    font-weight: 500;
+    font-style: italic;
+    letter-spacing: 0.02em;
+    color: var(--muted-color);
+}
+
+.mt-sources-date[hidden] {
+    display: none;
+}
+
+/* Kaynak maddelerinin üstündeki liste başlığı */
+
+.mt-sources-list-title,
+.markdown-body .mt-sources-list-title {
+    margin: 16px 0 0;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent-color);
+}
+
+.mt-sources-list-title[hidden] {
+    display: none;
+}
+
 /* GitHub markdown temasının ul/li/a stillerini ezmek için .markdown-body öneki */
 
 .markdown-body .mt-sources-list {
     list-style: none;
-    margin: 14px 0 0;
+    margin: 8px 0 0;
     padding: 0;
     display: flex;
     flex-direction: column;
