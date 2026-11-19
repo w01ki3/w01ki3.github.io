@@ -41,6 +41,7 @@
             </div>
         </div>
         <div class="mt-modal-actions">
+            <button type="button" class="mt-share-btn mt-sources-btn" id="mt-modal-sources" hidden><i class="fa-solid fa-book-open" aria-hidden="true"></i><span>Kaynaklar</span></button>
             <button type="button" class="mt-share-btn" id="mt-modal-share"><i class="fa-solid fa-share" aria-hidden="true"></i><span>Paylaş</span></button>
         </div>
     </div>
@@ -65,6 +66,17 @@
                 <i class="fa-solid fa-image" aria-hidden="true"></i>
                 <span>Görsel paylaş</span>
             </button>
+        </div>
+    </div>
+</div>
+
+<div class="mt-modal mt-sources-modal" id="mt-sources-modal" hidden>
+    <div class="mt-modal-backdrop" data-mt-sources-close></div>
+    <div class="mt-modal-panel" role="dialog" aria-modal="true" aria-labelledby="mt-sources-title">
+        <button type="button" class="mt-modal-close" data-mt-sources-close aria-label="Kapat">×</button>
+        <div class="mt-modal-body">
+            <h2 id="mt-sources-title">Kaynaklar</h2>
+            <ul class="mt-sources-list" id="mt-sources-list"></ul>
         </div>
     </div>
 </div>

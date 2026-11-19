@@ -726,6 +726,89 @@
     cursor: default;
 }
 
+
+/* Kaynaklar butonu: Paylaş ile aynı görünüm, aksiyon satırında sola yaslı.
+   margin-right:auto sayesinde Paylaş butonu (gizli olsa da olmasa da) sağda kalır. */
+
+.mt-sources-btn {
+    margin-right: auto;
+}
+
+.mt-sources-btn[hidden] {
+    display: none;
+}
+
+
+/* Kaynaklar modalı: Paylaş modalı gibi ekran ortasında açılır. */
+
+.mt-sources-modal {
+    z-index: 2100;
+}
+
+.mt-sources-modal .mt-modal-panel {
+    left: 50%;
+    top: 50%;
+    right: auto;
+    bottom: auto;
+    width: min(460px, calc(100vw - 32px));
+    max-height: calc(100vh - 32px);
+    max-height: calc(100dvh - 32px);
+    transform: translate(-50%, calc(-50% + 20px));
+}
+
+.mt-sources-modal.is-open .mt-modal-panel {
+    transform: translate(-50%, -50%);
+}
+
+/* GitHub markdown temasının ul/li/a stillerini ezmek için .markdown-body öneki */
+
+.markdown-body .mt-sources-list {
+    list-style: none;
+    margin: 14px 0 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.markdown-body .mt-sources-list li {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    padding: 12px 14px;
+    border: 1px solid var(--border-color);
+    border-radius: var(--mt-radius-sm);
+    background: var(--accent-soft);
+}
+
+.markdown-body .mt-sources-list a {
+    color: var(--accent-color);
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-decoration: none;
+    overflow-wrap: anywhere;
+}
+
+.markdown-body .mt-sources-list a:hover {
+    text-decoration: underline;
+}
+
+/* Adresi olmayan kaynak etiketi: bağlantı değil, normal metin olarak */
+
+.markdown-body .mt-sources-list .mt-source-label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-color);
+    overflow-wrap: anywhere;
+}
+
+.mt-source-meta {
+    font-size: 0.78rem;
+    color: var(--muted-color);
+    overflow-wrap: anywhere;
+}
+
+
 .mt-share-stage {
     position: fixed;
     top: 0;

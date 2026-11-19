@@ -84,6 +84,11 @@
 
     function onEscape(e) {
         if (e.key !== 'Escape') return;
+        const sourcesModal = document.getElementById('mt-sources-modal');
+        if (sourcesModal && !sourcesModal.hidden) {
+            closeModal(sourcesModal);
+            return;
+        }
         const shareModal = document.getElementById('mt-share-modal');
         if (shareModal && !shareModal.hidden) {
             closeModal(shareModal);
@@ -431,6 +436,73 @@
         openModal(modal);
     }
 
+    // Kaynaklar: label zorunlu; url ve publisher opsiyonel olabilir
+    function validSources(ev) {
+        const list = (ev && ev.sources) || [];
+        return list.filter(function(s) {
+            return s && typeof s.label === 'string' && s.label.trim() !== '';
+        });
+    }
+
+    // O an gösterilen olay: tek olayda o olay, karuselde aktif slayt
+    function currentEvent() {
+        if (!currentDay) return null;
+        if (currentDay.events.length === 1) return currentDay.events[0];
+        if (carouselEvents.length) return carouselEvents[carouselIndex] || carouselEvents[0];
+        return null;
+    }
+
+    // Kaynağı olmayan olayda butonu gizle
+    function updateSourcesButton() {
+        const btn = document.getElementById('mt-modal-sources');
+        if (!btn) return;
+        btn.hidden = validSources(currentEvent()).length === 0;
+    }
+
+    // Kaynak listesini DOM ile kurar (innerHTML ile dize birleştirme yapılmaz)
+    function openSourcesModal(ev) {
+        const modal = document.getElementById('mt-sources-modal');
+        const list = document.getElementById('mt-sources-list');
+        const title = document.getElementById('mt-sources-title');
+        if (!modal || !list) return;
+        const sources = validSources(ev);
+        if (!sources.length) return;
+
+        if (title) title.textContent = ev && ev.title ? 'Kaynaklar · ' + ev.title : 'Kaynaklar';
+
+        list.innerHTML = '';
+        sources.forEach(function(s) {
+            const li = document.createElement('li');
+
+            // Geçerli bir http/https adresi varsa tıklanabilir bağlantı,
+            // yoksa etiket yalnızca metin olarak gösterilir.
+            const hasUrl = typeof s.url === 'string' && /^https?:\/\//i.test(s.url);
+            let labelEl;
+            if (hasUrl) {
+                labelEl = document.createElement('a');
+                labelEl.href = s.url;
+                labelEl.target = '_blank';
+                labelEl.rel = 'noopener noreferrer';
+            } else {
+                labelEl = document.createElement('span');
+                labelEl.className = 'mt-source-label';
+            }
+            labelEl.textContent = s.label;
+            li.appendChild(labelEl);
+
+            if (s.publisher) {
+                const meta = document.createElement('span');
+                meta.className = 'mt-source-meta';
+                meta.textContent = s.publisher;
+                li.appendChild(meta);
+            }
+
+            list.appendChild(li);
+        });
+
+        openModal(modal);
+    }
+
     function openPopup(url) {
         const win = window.open(url, '_blank', 'noopener,noreferrer,width=680,height=680');
         if (win) win.focus();
@@ -519,6 +591,7 @@
             if (count) count.textContent = '';
         }
 
+        updateSourcesButton();
         openModal(modal);
     }
 
@@ -614,6 +687,8 @@
         if (count) count.textContent = (index + 1) + '/' + carouselEvents.length;
         if (prev) prev.disabled = index === 0;
         if (next) next.disabled = index === carouselEvents.length - 1;
+
+        updateSourcesButton();
     }
 
     function refresh() {
@@ -659,6 +734,21 @@
                 } else {
                     openShareModal(panelShareContext());
                 }
+            });
+        }
+
+        const sourcesBtn = document.getElementById('mt-modal-sources');
+        if (sourcesBtn) {
+            sourcesBtn.addEventListener('click', function() {
+                const ev = currentEvent();
+                if (ev) openSourcesModal(ev);
+            });
+        }
+
+        const sourcesModal = document.getElementById('mt-sources-modal');
+        if (sourcesModal) {
+            sourcesModal.querySelectorAll('[data-mt-sources-close]').forEach(function(el) {
+                el.addEventListener('click', function() { closeModal(sourcesModal); });
             });
         }
 

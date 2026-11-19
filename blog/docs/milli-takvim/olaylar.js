@@ -170,7 +170,17 @@ window.MILLI_TAKVIM_EVENTS = [
     { date: "11-24", year: 1928, title: "Öğretmenler Günü", description: "Mustafa Kemal Atatürk’e 24 Kasım 1928’de “Başöğretmen” unvanının verilişi anısına kutlanır.", category: "anma" },
     { date: "11-25", year: 734, title: "Bilge Kağan", description: "Orhun Abideleri'ni diktiren, Türk milletine töre ve devlet bırakan II. Göktürk Kağanlığı hükümdarı Bilge Kağan vefat etti.", category: "anma" },
     { date: "11-25", year: 1922, title: "Sütçü İmam", description: "Maraş'ta düşmana ilk kurşunu sıkarak şehirdeki direniş meşalesini yakan Sütçü İmam vefat etti.", category: "anma" },
-    { date: "11-30", year: 2007, title: "Prof. Dr. Engin Arık", description: "CERN çalışmalarına öncülük eden ve Türkiye'nin toryum enerjisi projelerini yürüten parçacık fiziği uzmanı bilim insanımız uçak kazasında (şüpheli) 5 bilim insanımızla birlikte hayatını kaybetti.", category: "anma" },
+    {
+        date: "11-30",
+        year: 2007,
+        title: "Prof. Dr. Engin Arık",
+        description: "CERN çalışmalarına öncülük eden ve Türkiye'nin toryum enerjisi projelerini yürüten parçacık fiziği uzmanı bilim insanımız uçak kazasında (şüpheli) 5 bilim insanımızla birlikte hayatını kaybetti.",
+        category: "anma",
+        sources: [
+            { label: "Türk Dünyası Ansiklopedisi", url: "https://turkdunyasiansiklopedisi.gov.tr/detay/31/Engin-Ar%C4%B1k", publisher: "T.C. Atatürk Kültür, Dil ve Tarih Yüksek Kurumu" },
+            { label: "Türk Fizik Derneği", url: "https://www.yumpu.com/tr/document/read/55429875/aramzdanayrlanlar", publisher: "Aramızdan ayrılanlar (2008 yılı baskısı)" },
+        ]
+    },
     { date: "12-05", year: 1934, title: "Kadınlara Seçme ve Seçilme Hakkı", description: "Türk kadınlarına milletvekili seçme ve seçilme hakkı tanıyan anayasa değişikliği kabul edildi.", category: "tarih" },
     { date: "12-10", year: 2016, title: "Beşiktaş Vodafone Park Saldırısı", description: "İstanbul Beşiktaş'ta maç çıkışı çevik kuvvet polislerimizi hedef alan ikiz terör saldırısında 39'u polis 46 vatandaşımız şehit düştü.", category: "anma" },
     { date: "12-12", year: 2023, title: "Şehit Piyade Teğmen Eril Alperen Emir", description: "Pençe-Kilit Harekâtı bölgesinde bölücü terör örgütü mensuplarının taciz ateşi sonucu Piyade Teğmen Eril Alperen Emir şehit oldu.", category: "anma" },
