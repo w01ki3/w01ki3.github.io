@@ -73,6 +73,4 @@ Tüm bu savaş taktikleri, kullanılan araç ve gereçler kültürel etkileşiml
 - Hunların altın ve gümüş üzerine kırmızı lal taşı ve değerli taşlar kakarak ürettiği takılar, tüm Avrupa Cermen krallıklarının resmi krallık sanatına dönüşmüştür. Cermen kral ve prensleri güçlerini ve meşruiyetlerini göstermek için Hun tarzı taşlı kemer tokaları ve miğferler takmışlardır.
 - M.S. 449'da Attila'nın otağına giden Doğu Roma elçisi Priskos, Hun sarayında Hun gibi giyinen, Roma vatandaşı olan Yunanlı bir tüccarla karşılaşmasını aktarır. Tüccar, Hun toplumundaki özgürlük, düşük vergi ve adalet anlayışının Roma'nın yozlaşmış bürokrasisinden çok daha iyi olduğunu söyleyerek Hun yaşam tarzını savunmuştur.
 
-<br><br><br>
 <a class="doc-nav" href="#b0102-orta-cag-ve-hacli-seferleri">Devam et [2. EVRE: Orta Çağ ve Haçlı Seferleri]</a>
-<br><br><br>

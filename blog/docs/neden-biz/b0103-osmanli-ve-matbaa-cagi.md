@@ -53,6 +53,4 @@ Fakat bu gerçeği herkes bilmiyor. <br>
 Önceki evrelerde tohumu atıldı, filizlendi dediğimiz Türk düşmanlığı artık bir mevye verecek bir ağaç haline geldi.
 Şimdi bir sonraki evrede mevyelerini görelim.
 
-<br><br><br>
 <a class="doc-nav" href="#b0104-aydinlanma-ve-modern-cag">Devam et [4. EVRE: Aydınlanma ve Modern Çağ]</a>
-<br><br><br>

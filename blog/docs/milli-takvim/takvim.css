@@ -1,7 +1,10 @@
 /* ==== Milli Takvim · görsel tema ==== */
 
+/* Takvim görünümünde içerik kabuğu tam genişliği doldursun; yan boşluk kalmasın */
 .mt-page .markdown-body {
-    max-width: 1180px;
+    max-width: none;
+    padding-left: 0;
+    padding-right: 0;
 }
 
 
@@ -126,7 +129,8 @@
 .mt-search {
     position: relative;
     display: block;
-    max-width: 320px;
+    /* Ekranla orantılı genişler; 320px altına düşmez, 720px'i geçmez */
+    max-width: clamp(320px, 42vw, 720px);
     margin: auto;
 }
 
@@ -210,7 +214,7 @@
 
 .mt-year-grid {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 18px;
 }
 
@@ -906,6 +910,13 @@
     }
     .mt-day--match {
         animation: none;
+    }
+}
+
+/* 1024–1600 px arası: 3 sütun */
+@media (max-width: 1600px) {
+    .mt-year-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
     }
 }
 

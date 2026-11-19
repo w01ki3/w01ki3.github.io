@@ -77,26 +77,68 @@ document.addEventListener('DOMContentLoaded', () => {
     if (mobileMenuBtn) mobileMenuBtn.addEventListener('click', toggleMobileMenu);
     if (sidebarOverlay) sidebarOverlay.addEventListener('click', toggleMobileMenu);
 
-    // Build sidebar from docsConfig
-    let currentCategory = '';
-    docsConfig.forEach(doc => {
-        if (doc.category !== currentCategory) {
-            const catEl = document.createElement('div');
-            catEl.className = 'nav-category';
-            catEl.textContent = doc.category;
-            navContainer.appendChild(catEl);
-            currentCategory = doc.category;
-        }
-
+    // Build sidebar from docsConfig (kategoriler açılır-kapanır)
+    function createNavLink(doc) {
         const link = document.createElement('a');
         link.href = `#${doc.id}`;
         link.id = `nav-${doc.id}`;
         link.className = 'nav-item';
         link.textContent = doc.title;
         link.addEventListener('click', () => {
-            if (window.innerWidth <= 768) toggleMobileMenu();
+            if (window.innerWidth <= 1200) toggleMobileMenu();
         });
-        navContainer.appendChild(link);
+        return link;
+    }
+
+    let currentCategory = '';
+    let currentGroupInner = null;
+    docsConfig.forEach(doc => {
+        // Kategorisiz içerikler doğrudan listenin en üstünde görünür
+        if (!doc.category) {
+            navContainer.appendChild(createNavLink(doc));
+            return;
+        }
+
+        if (doc.category !== currentCategory) {
+            const group = document.createElement('div');
+            group.className = 'nav-group';
+
+            const btn = document.createElement('button');
+            btn.type = 'button';
+            btn.className = 'nav-category';
+            btn.setAttribute('aria-expanded', 'false');
+
+            const label = document.createElement('span');
+            label.className = 'nav-category-label';
+            label.textContent = doc.category;
+
+            const chevron = document.createElement('i');
+            chevron.className = 'nav-category-chevron fa-solid fa-chevron-down';
+            chevron.setAttribute('aria-hidden', 'true');
+
+            btn.appendChild(label);
+            btn.appendChild(chevron);
+
+            const items = document.createElement('div');
+            items.className = 'nav-group-items';
+            const inner = document.createElement('div');
+            inner.className = 'nav-group-inner';
+            items.appendChild(inner);
+
+            btn.addEventListener('click', () => {
+                const open = group.classList.toggle('open');
+                btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+            });
+
+            group.appendChild(btn);
+            group.appendChild(items);
+            navContainer.appendChild(group);
+
+            currentCategory = doc.category;
+            currentGroupInner = inner;
+        }
+
+        currentGroupInner.appendChild(createNavLink(doc));
     });
 
     // Marked/highlight options
@@ -364,6 +406,14 @@ document.addEventListener('DOMContentLoaded', () => {
         document.querySelectorAll('.sidebar-nav a').forEach(a => a.classList.remove('active'));
         const el = document.getElementById(`nav-${id}`);
         if (el) el.classList.add('active');
+
+        // Bulunduğumuz sayfanın bulunduğu kategori açık, diğerleri kapalı olsun
+        document.querySelectorAll('.nav-group').forEach(group => {
+            const isActive = !!id && !!group.querySelector(`#nav-${id}`);
+            group.classList.toggle('open', isActive);
+            const btn = group.querySelector('.nav-category');
+            if (btn) btn.setAttribute('aria-expanded', isActive ? 'true' : 'false');
+        });
     }
 
     function handleRoute() {
@@ -417,7 +467,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 window.location.hash = `#${r.id}`;
                 searchResults.classList.add('hidden');
                 searchInput.value = '';
-                if (window.innerWidth <= 768 && sidebar.classList.contains('open')) toggleMobileMenu();
+                if (window.innerWidth <= 1200 && sidebar.classList.contains('open')) toggleMobileMenu();
             });
             searchResults.appendChild(li);
         });

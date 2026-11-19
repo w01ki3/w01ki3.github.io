@@ -276,17 +276,46 @@ body {
     -webkit-overflow-scrolling: touch;
 }
 
+
+/* Açılır-kapanır kategori grubu */
+
+.nav-group {
+    margin-bottom: 2px;
+}
+
 .nav-category {
     display: flex;
     align-items: center;
     gap: 8px;
-    margin: 20px 0 8px;
-    padding-left: 10px;
+    width: 100%;
+    margin: 12px 0 4px;
+    padding: 8px 10px;
+    background: none;
+    border: none;
+    border-radius: 8px;
+    font-family: inherit;
     font-size: 0.72rem;
     text-transform: uppercase;
     color: var(--accent-color);
     font-weight: 700;
     letter-spacing: 0.07em;
+    cursor: pointer;
+    text-align: left;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.nav-category:hover {
+    background-color: var(--hover-bg);
+}
+
+.nav-category:focus-visible {
+    outline: 2px solid var(--accent-color);
+    outline-offset: 1px;
+}
+
+.nav-category-label {
+    order: 0;
+    white-space: nowrap;
 }
 
 
@@ -294,9 +323,40 @@ body {
 
 .nav-category::after {
     content: "";
+    order: 1;
     flex: 1;
     height: 1px;
     background-color: var(--border-color);
+}
+
+.nav-category-chevron {
+    order: 2;
+    font-size: 0.62rem;
+    color: var(--muted-color);
+    transition: transform 0.28s ease, color 0.2s;
+}
+
+.nav-category:hover .nav-category-chevron {
+    color: var(--accent-color);
+}
+
+.nav-group.open .nav-category-chevron {
+    transform: rotate(180deg);
+}
+
+.nav-group-items {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.28s ease;
+}
+
+.nav-group.open .nav-group-items {
+    grid-template-rows: 1fr;
+}
+
+.nav-group-inner {
+    overflow: hidden;
+    min-height: 0;
 }
 
 .sidebar-nav a {
@@ -334,7 +394,6 @@ body {
 }
 
 .content-shell {
-    max-width: 1100px;
     margin: 0 auto;
     padding: 32px 34px;
     background-color: var(--surface-color);
@@ -530,7 +589,6 @@ input:focus-visible,
 .markdown-body {
     background-color: transparent !important;
     color: var(--text-color) !important;
-    max-width: 780px;
     margin: 0 auto;
     padding-bottom: 48px;
 }
@@ -732,6 +790,9 @@ input:focus-visible,
     align-items: center;
     justify-content: space-between;
     gap: 20px;
+    /* Ekranla orantılı genişlik; kartı sağa yasla */
+    max-width: clamp(280px, 40vw, 460px);
+    margin: 32px 0 32px auto;
     padding: 16px 20px;
     background: linear-gradient(135deg, var(--accent-soft) 0%, var(--surface-color) 70%);
     border: 1px solid var(--border-color);
@@ -777,7 +838,7 @@ input:focus-visible,
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
     .mobile-header {
         display: flex;
     }
