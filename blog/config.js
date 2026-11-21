@@ -18,7 +18,7 @@ const docsConfig = [
     // --------------------------------------------------
     // bağımsız fikirler
     // --------------------------------------------------
-    // { id: 'dijital-somurgecilik-ve-ai', title: 'Dijital Sömürgecilik ve AI', file: 'docs/bagimsiz-fikirler/dijital-somurgecilik-ve-ai.md', category: 'Bağımsız Fikirler' },
+    { id: 'dijital-somurgecilik-ve-ai', title: 'Dijital Sömürgecilik ve AI', file: 'docs/bagimsiz-fikirler/dijital-somurgecilik-ve-ai.md', category: 'Bağımsız Fikirler' },
     { id: 'gunumuzde-teskilat-nasil-olmali', title: 'Günümüzde teşkilat nasıl olmalı?', file: 'docs/bagimsiz-fikirler/gunumuzde-teskilat-nasil-olmali.md', category: 'Bağımsız Fikirler' },
 
 

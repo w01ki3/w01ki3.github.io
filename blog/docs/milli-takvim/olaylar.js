@@ -205,10 +205,47 @@ window.MILLI_TAKVIM_EVENTS = [
             { label: "Terör örgütü YPG/PKK'nın Karkamış'a roketli saldırısında 2 kişi hayatını kaybetti", url: "https://www.aa.com.tr/tr/gundem/teror-orgutu-ypg-pkknin-karkamisa-roketli-saldirisinda-2-kisi-hayatini-kaybetti/2743911", publisher: "Anadolu Ajansı" },
         ]
     },
-    { date: "11-22", year: 1948, title: "Fahrettin Paşa (Çöl Kaplanı)", description: "Medine Müdafii, Kutsal Emanetleri İstanbul’a ulaştırarak koruyan 'Çöl Kaplanı' Ömer Fahrettin Paşa vefat etti. Aziz ruhu şâd olsun.", category: "anma" },
-    { date: "11-24", year: 1072, title: "Sultan Alparslan", description: "Malazgirt zaferiyle Anadolu'yu Türk yurdu yapan Büyük Selçuklu Hükümdarı Sultan Alparslan vefat etti.", category: "anma" },
-    { date: "11-24", year: 1928, title: "Öğretmenler Günü", description: "Mustafa Kemal Atatürk’e 24 Kasım 1928’de “Başöğretmen” unvanının verilişi anısına kutlanır.", category: "anma" },
-    { date: "11-25", year: 734, title: "Bilge Kağan", description: "Orhun Abideleri'ni diktiren, Türk milletine töre ve devlet bırakan II. Göktürk Kağanlığı hükümdarı Bilge Kağan vefat etti.", category: "anma" },
+    {
+        date: "11-22",
+        year: 1948,
+        title: "Fahrettin Paşa (Çöl Kaplanı)",
+        description: "Medine Müdafii, Kutsal Emanetleri İstanbul’a ulaştırarak koruyan 'Çöl Kaplanı' Ömer Fahrettin Paşa vefat etti. Aziz ruhu şâd olsun.",
+        category: "anma",
+        sources: [
+            { label: "İngiliz Belgelerine göre Medine Müdafii Fahrettin Paşa", url: "https://belleten.gov.tr/tam-metin-pdf/445/tur", publisher: "Belleten – Türk Tarih Kurumu (C. 36, S. 143, 1972)" },
+            { label: "Türk-Arap İlişkilerinin Son Kırılma Noktası: Medine’nin Tahliyesi", url: "https://atamdergi.gov.tr/eng/full-text-pdf/230/tur", publisher: "Atatürk Araştırma Merkezi Dergisi (C. XXVI, S. 78, 2010)" }
+        ]
+    },
+    {
+        date: "11-24",
+        year: 1072,
+        title: "Sultan Alparslan",
+        description: "Malazgirt zaferiyle Anadolu'yu Türk yurdu yapan Büyük Selçuklu Hükümdarı Sultan Alparslan vefat etti.",
+        category: "anma",
+        sources: [
+            { label: "Sultan Alp Arslan Nasıl Öldürüldü?", url: "https://dergipark.org.tr/tr/download/article-file/285680", publisher: "Muharrem Kesik – USAD (Güz 2016, S. 5, ss. 95-115)" }
+        ]
+    },
+    {
+        date: "11-24",
+        year: 1928,
+        title: "Öğretmenler Günü",
+        description: "Harf Devrimi’yle başlayan Millet Mektepleri seferberliğinde 24 Kasım 1928’de Mustafa Kemal Atatürk’e “Başöğretmen” unvanı verildi; milletine okuma yazma öğreten bu öğretmenin hatırası, o günden beri her 24 Kasım’da Öğretmenler Günü olarak yaşatılır.",
+        category: "anma",
+        sources: [
+            { label: "Başöğretmen Atatürk ve Harf Devrimi", url: "https://www.add.org.tr/wp-content/uploads/2021/11/Basogretmen-Ataturk-ve-Harf-Devrimi.pdf", publisher: "Atatürkçü Düşünce Derneği" }
+        ]
+    },
+    {
+        date: "11-25",
+        year: 734,
+        title: "Bilge Kağan",
+        description: "Orhun Abideleri'ni diktiren, Türk milletine töre ve devlet bırakan II. Göktürk Kağanlığı hükümdarı Bilge Kağan vefat etti.",
+        category: "anma",
+        sources: [
+            { label: "Gök-Türklerin Sonu ve Belgeleri", url: "https://belleten.gov.tr/eng/full-text-pdf/2495/tur", publisher: "Ahmet Taşağıl – Belleten (C. 63, S. 236, 1999)" }
+        ]
+    },
     { date: "11-25", year: 1922, title: "Sütçü İmam", description: "Maraş'ta düşmana ilk kurşunu sıkarak şehirdeki direniş meşalesini yakan Sütçü İmam vefat etti.", category: "anma" },
     {
         date: "11-30",
@@ -232,12 +269,61 @@ window.MILLI_TAKVIM_EVENTS = [
             { label: "Corporal Seyit (Seyit Onbaşı)", url: "https://www.awm.gov.au/collection/A05301", publisher: "Australian War Memorial" }
         ]
     },
-    { date: "12-05", year: 1934, title: "Kadınlara Seçme ve Seçilme Hakkı", description: "Türk kadınlarına milletvekili seçme ve seçilme hakkı tanıyan anayasa değişikliği kabul edildi.", category: "tarih" },
-    { date: "12-10", year: 2016, title: "Beşiktaş Vodafone Park Saldırısı", description: "İstanbul Beşiktaş'ta maç çıkışı çevik kuvvet polislerimizi hedef alan ikiz terör saldırısında 39'u polis 46 vatandaşımız şehit düştü.", category: "anma" },
-    { date: "12-12", year: 2023, title: "Şehit Piyade Teğmen Eril Alperen Emir", description: "Pençe-Kilit Harekâtı bölgesinde bölücü terör örgütü mensuplarının taciz ateşi sonucu Piyade Teğmen Eril Alperen Emir şehit oldu.", category: "anma" },
-    { date: "12-15", year: 1921, title: "Şerife Bacı", description: "İnebolu'dan Kastamonu'ya kış şartlarında kağnıyla cephane taşırken kucağındaki bebeği ve mühimmatı korumak isterken donarak şehit oldu.", category: "anma" },
-    { date: "12-17", year: 2016, title: "Kayseri Terör Saldırısı", description: "Kayseri 1. Komando Tugayı'ndan çarşı iznine çıkan silahsız askerlerimizi taşıyan halk otobüsüne PKK'lı teröristlerce düzenlenen bombalı saldırıda 15 erimiz şehit düştü.", category: "anma" },
-    { date: "12-18", year: 2002, title: "Necip Hablemitoğlu", description: "Tarihçi ve akademisyen Dr. Necip Hablemitoğlu evinin önünde uğradığı suikast sonucu şehit edildi.", category: "anma" },
+    {
+        date: "12-05",
+        year: 1934,
+        title: "Kadınlara Seçme ve Seçilme Hakkı",
+        description: "Pek çok Avrupa ülkesinden önce, Türk kadınına milletvekili seçme ve seçilme hakkı verildi. Böylece Türk kadını, töremizde ve özümüzde olduğu gibi, yalnızca evinin değil, ülkesinin geleceğinde de söz sahibi oldu.",
+        category: "tarih",
+        sources: [
+            { label: "Kadınlara Seçme ve Seçilme Hakkı Verilmesinin Türk Kamuoyundaki Yankıları", url: "https://atamdergi.gov.tr/eng/full-text-pdf/69/tur", publisher: "Seviay Özer – Atatürk Araştırma Merkezi Dergisi (C. XXIX, S. 85, 2013)" },
+            { label: "Türk Kadının Siyasete Giriş Süreci ve İlk Kadın Saylav Mihri İffet Pektaş", url: "https://dergipark.org.tr/tr/download/article-file/818838", publisher: "Salhadin Gök & Özlem Kılınççeker – Mecmua Uluslararası Sosyal Bilimler Dergisi (2019)" },
+        ]
+    },
+    {
+        date: "12-10",
+        year: 2016,
+        title: "Beşiktaş Vodafone Park Saldırısı",
+        description: "İstanbul Beşiktaş'ta maç çıkışı çevik kuvvet polislerimizi hedef alan ikiz terör saldırısında 39'u polis 46 vatandaşımız şehit düştü.",
+        category: "anma",
+        sources: [
+            { label: "İstanbul'da terör saldırısı", url: "https://www.aa.com.tr/tr/gunun-basliklari/istanbulda-teror-saldirisi/703506", publisher: "Anadolu Ajansı" },
+            { label: "İstanbul Beşiktaş'ta terör saldırısı", url: "https://www.trthaber.com/haber/turkiye/istanbul-besiktasta-teror-saldirisi-287405.html", publisher: "TRT Haber" },
+            { label: "İstanbul Vodafone Arena saldırısı: 44 kişi hayatını kaybetti", url: "https://www.bbc.com/turkce/haberler-turkiye-38278551", publisher: "BBC Türkçe" }
+        ]
+    },
+    {
+        date: "12-12",
+        year: 2023,
+        title: "Şehit Piyade Teğmen Eril Alperen Emir",
+        description: "Pençe-Kilit Operasyonu bölgesinde bölücü terör örgütü PKK tarafından düzenlenen saldırıda, Şırnak 23. Piyade Tümen Komutanlığı’nda görevli 25 yaşındaki Piyade Teğmen Eril Alperen Emir şehit düştü. Aziz Ruhu Şâd Olsun.",
+        category: "anma",
+        sources: [
+            { label: "Pençe-Kilit Operasyonu Bölgesinde Bir Kahraman Silah Arkadaşımız Şehit Oldu", url: "https://www.msb.gov.tr/SlaytHaber/4454b103d94340eea1470ded7f24dfc6", publisher: "T.C. Millî Savunma Bakanlığı" },
+        ]
+    },
+    {
+        date: "12-15",
+        year: 1921,
+        title: "Şerife Bacı",
+        description: "İnebolu'dan Kastamonu'ya kış şartlarında kağnıyla cephane taşırken kucağındaki bebeği ve mühimmatı korumak isterken donarak şehit oldu. Aziz ruhu şâd olsun.",
+        category: "anma",
+        sources: [
+            { label: "Milli Mücadele Döneminde Kastamonu'da Kurulan Cemiyetler", url: "https://atamdergi.gov.tr/tam-metin-pdf/790/tur", publisher: "Faruk Söylemez – Atatürk Araştırma Merkezi Dergisi (C. XII, S. 34, 1996)" },
+            { label: "Millî Mücadele Döneminde Kastamonu", url: "https://www.tuba.gov.tr/files/yayinlar/tarih-serisi/TUBA-978-625-8352-69-6_ch01.pdf", publisher: "Ercan Çelebi – TÜBA Tarih Serisi" }
+        ]
+    },
+    {
+        date: "12-17",
+        year: 2016,
+        title: "Kayseri Terör Saldırısı",
+        description: "Kayseri 1. Komando Tugayı'ndan çarşı iznine çıkan silahsız askerlerimizi taşıyan halk otobüsüne PKK'lı teröristlerce düzenlenen bombalı saldırıda 15 erimiz şehit düştü. Aziz Ruhları Şâd Olsun.",
+        category: "anma",
+        sources: [
+            { label: "Şehitlerimiz Memleketlerine Uğurlandı", url: "https://www.kayseri.gov.tr/sehitlerimiz-memleketlerine-ugurlandi", publisher: "T.C. Kayseri Valiliği" }
+        ]
+    },
+    { date: "12-18", year: 2002, title: "Necip Hablemitoğlu", description: "Tarihçi ve akademisyen Dr. Necip Hablemitoğlu evinin önünde uğradığı suikast sonucu şehit edildi. Aziz Ruhu Şâd Olsun.", category: "anma" },
     { date: "12-19", year: 2009, title: "Ali Tatar", description: "Kumpas davaları sürecinde haksızlığa uğrayarak hayatına son veren Deniz Yarbay Ali Tatar’ı anma günü.", category: "anma" },
     { date: "12-22", year: 2023, title: "Şehit Teğmen Ramazan Günay", description: "Pençe-Kilit Operasyonu bölgesinde terör örgütü PKK mensupları ile girilen çatışmada şehit düşen kahraman subayımız Piyade Teğmen Ramazan Günay. Aziz Ruhu Şâd Olsun.", category: "anma" },
     { date: "12-22", year: 1914, title: "Sarıkamış Şehitlerini Anma", description: "Sarıkamış Harekâtı’nda ağır kış şartları ve donarak şehit düşen binlerce vatan evladının anıldığı gün.", category: "anma" },
