@@ -246,7 +246,19 @@ window.MILLI_TAKVIM_EVENTS = [
             { label: "Gök-Türklerin Sonu ve Belgeleri", url: "https://belleten.gov.tr/eng/full-text-pdf/2495/tur", publisher: "Ahmet Taşağıl – Belleten (C. 63, S. 236, 1999)" }
         ]
     },
-    { date: "11-25", year: 1922, title: "Sütçü İmam", description: "Maraş'ta düşmana ilk kurşunu sıkarak şehirdeki direniş meşalesini yakan Sütçü İmam vefat etti.", category: "anma" },
+    {
+        date: "11-25",
+        year: 1922,
+        title: "Sütçü İmam",
+        description: "Maraş'ta düşmana ilk kurşunu sıkarak şehirdeki direniş meşalesini yakan Sütçü İmam vefat etti. Aziz Ruhu Şâd Olsun.",
+        category: "anma",
+        sources: [
+            { label: "Maraş'ın Örgütlü Bir Şekilde Savunulması", url: "https://dergipark.org.tr/tr/download/article-file/1031266", publisher: "Ahmet Eyicil – KSÜ Sosyal Bilimler Dergisi (C. 17, Özel Sayı, 2020, ss. 59-88)" },
+            { label: "Millî Mücadelenin İlk Zaferi: Maraş Millî Mücadelesi ve Maraş'ın Kahramanlığı", url: "https://dergipark.org.tr/tr/download/article-file/901654", publisher: "Nejla Günay – Türkiyat Mecmuası (C. 29, Özel Sayı, 2019, ss. 47-74), DOI: 10.26650/iuturkiyat.665123" },
+            { label: "Maraş'ın Düşman İşgalinden Kurtulmasında Atatürk'ün Rolü", url: "https://atamdergi.gov.tr/tam-metin-pdf/602/tur", publisher: "Yaşar Akbıyık – Atatürk Araştırma Merkezi Dergisi (C. IV, S. 10, 1987, ss. 225-231)" },
+            { label: "Birinci Dünya Harbi Sonunda Maraş'ın İtilaf Devletlerince İşgali ve Maraş Savunması", url: "https://dergipark.org.tr/tr/download/article-file/495856", publisher: "F. Rezzan Ünalp – Gazi Akademik Bakış (C. 11, S. 22, 2018, ss. 205-235), DOI: 10.19060/gav.437809" }
+        ]
+    },
     {
         date: "11-30",
         year: 2007,
@@ -306,7 +318,7 @@ window.MILLI_TAKVIM_EVENTS = [
         date: "12-15",
         year: 1921,
         title: "Şerife Bacı",
-        description: "İnebolu'dan Kastamonu'ya kış şartlarında kağnıyla cephane taşırken kucağındaki bebeği ve mühimmatı korumak isterken donarak şehit oldu. Aziz ruhu şâd olsun.",
+        description: "İnebolu'dan Kastamonu'ya kış şartlarında kağnıyla cephane taşırken kucağındaki bebeği ve mühimmatı korumak isterken donarak şehit oldu. Aziz Ruhu Şâd Olsun.",
         category: "anma",
         sources: [
             { label: "Milli Mücadele Döneminde Kastamonu'da Kurulan Cemiyetler", url: "https://atamdergi.gov.tr/tam-metin-pdf/790/tur", publisher: "Faruk Söylemez – Atatürk Araştırma Merkezi Dergisi (C. XII, S. 34, 1996)" },
@@ -323,13 +335,54 @@ window.MILLI_TAKVIM_EVENTS = [
             { label: "Şehitlerimiz Memleketlerine Uğurlandı", url: "https://www.kayseri.gov.tr/sehitlerimiz-memleketlerine-ugurlandi", publisher: "T.C. Kayseri Valiliği" }
         ]
     },
-    { date: "12-18", year: 2002, title: "Necip Hablemitoğlu", description: "Tarihçi ve akademisyen Dr. Necip Hablemitoğlu evinin önünde uğradığı suikast sonucu şehit edildi. Aziz Ruhu Şâd Olsun.", category: "anma" },
-    { date: "12-19", year: 2009, title: "Ali Tatar", description: "Kumpas davaları sürecinde haksızlığa uğrayarak hayatına son veren Deniz Yarbay Ali Tatar’ı anma günü.", category: "anma" },
+    {
+        date: "12-18",
+        year: 2002,
+        title: "Necip Hablemitoğlu",
+        description: "Tarihçi ve akademisyen Dr. Necip Hablemitoğlu evinin önünde uğradığı suikast sonucu şehit edildi. Aziz Ruhu Şâd Olsun.",
+        category: "anma",
+        sources: [
+            { label: "Hablemitoğlu suikastının üzerinden 22 yıl geçti", url: "https://www.aa.com.tr/tr/gundem/hablemitoglu-suikastinin-uzerinden-22-yil-gecti/3426512", publisher: "Anadolu Ajansı (Abdullah Sarıca) – 18 Aralık 2024" },
+            { label: "Hablemitoğlu suikastının üzerinden 23 yıl geçti (İnfografik)", url: "https://www.aa.com.tr/tr/info/infografik/49286", publisher: "Anadolu Ajansı – 18 Aralık 2025" },
+        ]
+    },
+    { date: "12-19", year: 2009, title: "Ali Tatar", description: "Kumpas davaları sürecinde haksızlığa uğrayarak hayatına son veren Deniz Yarbay Ali Tatar. Aziz Ruhu Şâd Olsun.", category: "anma" },
     { date: "12-22", year: 2023, title: "Şehit Teğmen Ramazan Günay", description: "Pençe-Kilit Operasyonu bölgesinde terör örgütü PKK mensupları ile girilen çatışmada şehit düşen kahraman subayımız Piyade Teğmen Ramazan Günay. Aziz Ruhu Şâd Olsun.", category: "anma" },
-    { date: "12-22", year: 1914, title: "Sarıkamış Şehitlerini Anma", description: "Sarıkamış Harekâtı’nda ağır kış şartları ve donarak şehit düşen binlerce vatan evladının anıldığı gün.", category: "anma" },
+    {
+        date: "12-22",
+        year: 1914,
+        title: "Sarıkamış Şehitlerini Anma",
+        description: "Sarıkamış Harekâtı’nda ağır kış şartları ve donarak şehit düşen binlerce vatan evladını rahmet ve minnetle anıyoruz. Aziz Ruhları Şâd Olsun.",
+        category: "anma",
+        sources: [
+            { label: "Birinci Dünya Savaşı'nda Sarıkamış Muharebeleri (22 Aralık 1914 - 10 Ocak 1915) PDF", url: "https://dergipark.org.tr/tr/download/article-file/1479857", publisher: "Sayim Türkman – Atatürk Yolu Dergisi, sy. 67 (2020)" },
+            { label: "Sarıkamış Harekâtı Esnasında Cephede Yaşananlar ve Anadolu'ya Etkileri PDF", url: "https://dergipark.org.tr/tr/download/article-file/2153413", publisher: "Hümmet Kanal – AÜ DTCF Dergisi, 54/2 (2014)" }
+        ]
+    },
     { date: "12-25", year: 1973, title: "İsmet İnönü", description: "Millî Mücadele'nin Batı Cephesi Komutanı, İnönü Zaferlerinin mimarı ve Türkiye'nin ilk Başbakanı İsmet İnönü vefat etti.", category: "anma" },
-    { date: "12-26", year: 1925, title: "Miladi Takvimin Kabulü", description: "26 Aralık 1925’te kabul edilen kanunla uluslararası miladi takvime geçildi; 1 Ocak 1926 itibarıyla yürürlüğe girdi.", category: "tarih" },
-    { date: "12-27", year: 1919, title: "Atatürk’ün Ankara’ya Gelişi", description: "Mustafa Kemal Paşa ve Temsil Heyeti Ankara’ya gelerek Milli Mücadele’nin merkezini kurdu.", category: "tarih" },
+    {
+        date: "12-26",
+        year: 1925,
+        title: "Miladi Takvimin Kabulü",
+        description: "26 Aralık 1925’te kabul edilen kanunla uluslararası miladi takvime geçildi; 1 Ocak 1926 itibarıyla yürürlüğe girdi.",
+        category: "tarih",
+        sources: [
+            { label: "Takvimde Tarih Mebdeinin Tebdili Hakkında Kanun (Kanun No. 698) PDF", url: "https://www.mevzuat.gov.tr/MevzuatMetin/1.3.698.pdf", publisher: "T.C. Mevzuat Bilgi Sistemi – Resmî Gazete, 2 Ocak 1926, sy. 260" },
+            { label: "Türkiye Büyük Millet Meclisi’nde Takvimler ve 'Ru'yet-i Hilâl' Üzerine Bir Müzakere PDF", url: "https://isamveri.org/pdfdrg/D00033/2013_49_3/2013_49_3_BULUTM.pdf", publisher: "Mehmet Bulut – İSAM, İslâm Araştırmaları Dergisi, sy. 49/3 (2013)" },
+            { label: "Kültür ve Toplumsal Alanda Gerçekleştirilen İnkılâp Hareketleri (Takvim İnkılabı) PDF", url: "https://ait.hacettepe.edu.tr/egitim/ait203204/II5.pdf", publisher: "Hacettepe Üniversitesi – Atatürk İlkeleri ve İnkılap Tarihi Enstitüsü" }
+        ]
+    },
+    {
+        date: "12-27",
+        year: 1919,
+        title: "Atatürk’ün Ankara’ya Gelişi",
+        description: "Mustafa Kemal Paşa ve Temsil Heyeti Ankara’ya gelerek Milli Mücadele’nin merkezini kurdu.",
+        category: "tarih",
+        sources: [
+            { label: "85. Yılında Mustafa Kemal Paşa’nın Ankara’ya Gelişi PDF", url: "https://dergipark.org.tr/tr/download/article-file/20622", publisher: "Oğuz Aytepe – Atatürk Yolu Dergisi (Ankara Ü.), S 29-30 (2002)" },
+            { label: "Atatürk’ün Ankara’ya Gelişi: 'Milli Temsil Meselesi' PDF", url: "https://dergipark.org.tr/tr/download/article-file/73908", publisher: "Mustafa Turan – Gazi Akademik Bakış, C. 5, S. 10 (2012)" }
+        ]
+    },
     { date: "12-27", year: 1936, title: "Mehmet Akif Ersoy", description: "İstiklal Marşı şairimiz, vatan ve hürriyet şairi Mehmet Akif Ersoy İstanbul’da vefat etti.", category: "anma" },
     { date: "12-27", year: 1941, title: "Mustafa Çokay", description: "Alaş Orda Hükümeti üyesi, Türkistan Millî Birliği kurucusu ve bağımsızlık meşalesini yakan lider vefat etti.", category: "anma" },
 ];
