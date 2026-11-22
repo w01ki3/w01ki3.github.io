@@ -373,6 +373,16 @@ window.MILLI_TAKVIM_EVENTS = [
         ]
     },
     {
+        date: "12-26",
+        year: 1997,
+        title: "Cahit Arf",
+        description: "Cebir ve sayılar teorisi alanındaki çalışmalarıyla dünyaca ün kazanan, 'Arf Değişmezi' ve 'Hasse-Arf Teoremi'ne adını veren Türk matematikçisi Cahit Arf vefat etti.",
+        category: "anma",
+        sources: [
+            { label: "Makine Düşünebilir mi ve Nasıl Düşünebilir? PDF", url: "https://archive.org/download/makine-dusunebilir-mi-ve-nasil-dusunebilir/MakineDusunebilirMiVeNasilDusunebilir.pdf", publisher: "Cahit Arf – Atatürk Üniversitesi Halk Konferansları, 1959" }
+        ]
+    },
+    {
         date: "12-27",
         year: 1919,
         title: "Atatürk’ün Ankara’ya Gelişi",
