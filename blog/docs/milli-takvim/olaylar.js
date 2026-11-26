@@ -259,6 +259,7 @@ window.MILLI_TAKVIM_EVENTS = [
             { label: "Birinci Dünya Harbi Sonunda Maraş'ın İtilaf Devletlerince İşgali ve Maraş Savunması", url: "https://dergipark.org.tr/tr/download/article-file/495856", publisher: "F. Rezzan Ünalp – Gazi Akademik Bakış (C. 11, S. 22, 2018, ss. 205-235), DOI: 10.19060/gav.437809" }
         ]
     },
+    { date: "11-26", year: 1994, title: "Şehit Selahattin Yaprak", description: "Diyarbakır'ın Dicle ilçesi Haleysi Sırtları'nda bölücü terör örgütü pkk mensuplarıyla girilen çatışmada Jandarma Teğmen Selahattin Yaprak şehit olmuştur. Aziz Ruhu Şâd Olsun.", category: "anma" },
     {
         date: "11-30",
         year: 2007,
